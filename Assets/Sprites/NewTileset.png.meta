@@ -1,0 +1,731 @@
+fileFormatVersion: 2
+guid: 79ae21a0fda7e3348b299e1159dbaa7d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7557778528135617597
+    second: NewTileset_0
+  - first:
+      213: -7110813743414211020
+    second: NewTileset_1
+  - first:
+      213: 4845209930380422503
+    second: NewTileset_2
+  - first:
+      213: 5033043827377323205
+    second: NewTileset_3
+  - first:
+      213: 4642622916337423596
+    second: NewTileset_4
+  - first:
+      213: 8233884188825909836
+    second: NewTileset_5
+  - first:
+      213: 8612551648952343717
+    second: NewTileset_6
+  - first:
+      213: -1827337606844406023
+    second: NewTileset_7
+  - first:
+      213: 135901995953606264
+    second: NewTileset_8
+  - first:
+      213: -807402079141305767
+    second: NewTileset_9
+  - first:
+      213: -2870343317209229782
+    second: NewTileset_10
+  - first:
+      213: 8280280572792533553
+    second: NewTileset_11
+  - first:
+      213: -5421332900849188367
+    second: NewTileset_12
+  - first:
+      213: -4033450687536539375
+    second: NewTileset_13
+  - first:
+      213: -3322895893722909714
+    second: NewTileset_14
+  - first:
+      213: -2335838004452523724
+    second: NewTileset_15
+  - first:
+      213: 3025209529857081245
+    second: NewTileset_16
+  - first:
+      213: -4425623808154553656
+    second: NewTileset_17
+  - first:
+      213: -5803956059597226501
+    second: NewTileset_18
+  - first:
+      213: 6848334039385010855
+    second: NewTileset_19
+  - first:
+      213: -3693802056299553331
+    second: NewTileset_20
+  - first:
+      213: -2230415443220259326
+    second: NewTileset_21
+  - first:
+      213: 5303413667064644024
+    second: NewTileset_22
+  - first:
+      213: 5721936843779242938
+    second: NewTileset_23
+  - first:
+      213: 8727170394059714664
+    second: NewTileset_24
+  - first:
+      213: -6266273869499527036
+    second: NewTileset_25
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 1
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 1
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 1
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 8192
+    resizeAlgorithm: 1
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 8192
+    resizeAlgorithm: 1
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: NewTileset_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6720
+        width: 2715
+        height: 1613
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86bb41cba0cda8f46a863522f2baaded
+      internalID: 7557778528135617597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewTileset_1
+      rect:
+        serializedVersion: 2
+        x: 3184
+        y: 6764
+        width: 969
+        height: 1527
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00465c066b0b8e044996e254d345fcba
+      internalID: -7110813743414211020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewTileset_2
+      rect:
+        serializedVersion: 2
+        x: 4344
+        y: 6732
+        width: 1078
+        height: 1550
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb35fbe83c425c647b60ca7d21f58d78
+      internalID: 4845209930380422503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewTileset_3
+      rect:
+        serializedVersion: 2
+        x: 5683
+        y: 6716
+        width: 1001
+        height: 1541
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fc85179541bc034fa968afa3d1ac80e
+      internalID: 5033043827377323205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewTileset_4
+      rect:
+        serializedVersion: 2
+        x: 7014
+        y: 6488
+        width: 1198
+        height: 1845
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b148cb097abf0f6478c20ac9d13cbddd
+      internalID: 4642622916337423596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewTileset_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4999
+        width: 2715
+        height: 1621
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b17bb4ca3018dce49ab616d410cb4a93
+      internalID: 8233884188825909836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewTileset_6
+      rect:
+        serializedVersion: 2
+        x: 3066
+        y: 5939
+        width: 1115
+        height: 634
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2795542efe30b75428ddcd0a60cd03d6
+      internalID: 8612551648952343717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewTileset_7
+      rect:
+        serializedVersion: 2
+        x: 4291
+        y: 5939
+        width: 1115
+        height: 634
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b80d547d4793eb54b98e050173f27f94
+      internalID: -1827337606844406023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewTileset_8
+      rect:
+        serializedVersion: 2
+        x: 5626
+        y: 5939
+        width: 1115
+        height: 634
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf88a67e8c9e47f4e85bec826b2d3c80
+      internalID: 135901995953606264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewTileset_9
+      rect:
+        serializedVersion: 2
+        x: 3245
+        y: 5320
+        width: 603
+        height: 549
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f7720707752e41468f4a85536c1d0a2
+      internalID: -807402079141305767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewTileset_10
+      rect:
+        serializedVersion: 2
+        x: 4527
+        y: 5320
+        width: 602
+        height: 539
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99ee718214c8c0043bbd3692c3bb1cc4
+      internalID: -2870343317209229782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewTileset_11
+      rect:
+        serializedVersion: 2
+        x: 5964
+        y: 5365
+        width: 443
+        height: 443
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a6db38634050a04884f3a4bfc67022e
+      internalID: 8280280572792533553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewTileset_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3249
+        width: 2715
+        height: 1619
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f5199a04992d89408e7f78291a2b0bc
+      internalID: -5421332900849188367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewTileset_13
+      rect:
+        serializedVersion: 2
+        x: 5252
+        y: 3615
+        width: 1814
+        height: 1571
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98cc64bca9e20f74c9d60e6113f89e68
+      internalID: -4033450687536539375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewTileset_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1425
+        width: 2715
+        height: 1620
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db52fcca88ac0e944be061f55894db4a
+      internalID: -3322895893722909714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewTileset_15
+      rect:
+        serializedVersion: 2
+        x: 3605
+        y: 3032
+        width: 1000
+        height: 88
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5f0e269f04b1c94d99952b49e4524e6
+      internalID: -2335838004452523724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewTileset_16
+      rect:
+        serializedVersion: 2
+        x: 6228
+        y: 3027
+        width: 1000
+        height: 92
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa10627b88bf9d640a0d21947da6b4d2
+      internalID: 3025209529857081245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewTileset_17
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 2712
+        height: 1251
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 094db0a28b997094b94ebbbf8d879a3e
+      internalID: -4425623808154553656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewTileset_18
+      rect:
+        serializedVersion: 2
+        x: 3674
+        y: 1417
+        width: 1000
+        height: 89
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67ca36e92759e8d43af9397113442e79
+      internalID: -5803956059597226501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewTileset_19
+      rect:
+        serializedVersion: 2
+        x: 6158
+        y: 1383
+        width: 1000
+        height: 78
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 465ad294d9ec7fa458555eff69c7d7f5
+      internalID: 6848334039385010855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewTileset_20
+      rect:
+        serializedVersion: 2
+        x: 2845
+        y: 4426
+        width: 1760
+        height: 564
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 352dea1576a1341408c8ce2f1b04410f
+      internalID: -3693802056299553331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewTileset_21
+      rect:
+        serializedVersion: 2
+        x: 2962
+        y: 3749
+        width: 1877
+        height: 568
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 911a2f7eb536df64bbad98add3abde7d
+      internalID: -2230415443220259326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewTileset_22
+      rect:
+        serializedVersion: 2
+        x: 6547
+        y: 5370
+        width: 1786
+        height: 467
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07662a39ebfb4ce4b9851d570e2f471b
+      internalID: 5303413667064644024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewTileset_23
+      rect:
+        serializedVersion: 2
+        x: 6968
+        y: 6124
+        width: 1150
+        height: 283
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8760c1169111d894cb53f14de6e7ad1e
+      internalID: 5721936843779242938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewTileset_24
+      rect:
+        serializedVersion: 2
+        x: 7145
+        y: 3775
+        width: 1008
+        height: 1329
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bccff1735cd4cb4a809188892794f05
+      internalID: 8727170394059714664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
