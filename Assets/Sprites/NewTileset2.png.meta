@@ -116,6 +116,8 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -124,9 +126,9 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
-    aniso: -1
-    mipBias: -100
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -147,9 +149,12 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
   applyGammaDecoding: 1
   platformSettings:
   - serializedVersion: 3
@@ -855,6 +860,37 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      Autumn tree: -2425578454553338428
+      Autumn ground: -3076248519296618027
+      Autumn_mesh: -120114893202869588
+      Snowman: 1433552063040709388
+      Spring_mesh: -7617229872490267365
+      Summer ground: 2573523580174870334
+      Autumn_part: 9187527517849050637
+      Snow_part: 3081864655456947427
+      Cloud_1: 2763532480053631153
+      umbrella: -4076882652580689253
+      Winter_mesh: -8804724641440392992
+      Spring_part: 3714306156921711719
+      NewTileset2_28: 1973648320585403837
+      NewTileset2_21: 9168279570557050443
+      NewTileset2_20: -8732571066447081648
+      Blue bin: 751168114895791952
+      Yellow bin: 7207493939282697404
+      NewTileset2_15: 8008212542174682150
+      Green bin: -3314317798091111746
+      Winter tree: 5341018381860881340
+      Cloud_2: -1327256813320480581
+      Spring tree: -3277905207620862899
+      Snow: -5243602175262044443
+      Winter ground: -8335994409991099368
+      NewTileset2_9: -7867527029282038520
+      Ground: 8061776278285822997
+      Cloud_3: 6099117564111322544
+      NewTileset2_29: -6179494667457800640
+      Summer tree: -8431108095439270873
+      Red bin: -4471653783921007578
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

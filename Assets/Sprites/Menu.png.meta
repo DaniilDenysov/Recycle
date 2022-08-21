@@ -83,6 +83,8 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -91,9 +93,9 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
-    aniso: -1
-    mipBias: -100
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -114,9 +116,12 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
   applyGammaDecoding: 0
   platformSettings:
   - serializedVersion: 3
@@ -228,7 +233,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 865d55af101f29270800000000000000
-      internalID: 8255926057720730984
+      internalID: -275939537401066862
       vertices: []
       indices: 
       edges: []
@@ -249,7 +254,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: b5cdfef190a7fd480800000000000000
-      internalID: -8872238561287480229
+      internalID: 2406227903653740696
       vertices: []
       indices: 
       edges: []
@@ -270,7 +275,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 5cd40d42d87ad0d50800000000000000
-      internalID: 6705199644874395077
+      internalID: -894268473198475317
       vertices: []
       indices: 
       edges: []
@@ -411,6 +416,18 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      QuitV3: -2067535388042838268
+      MenuV3: -275939537401066862
+      ReloadV2: -894268473198475317
+      PlayV2: -198938125430884413
+      PlayV3: -6401181650942206485
+      MenuV2: -2059569626129090143
+      ContinueV2: 5042183929242809000
+      ContinueV3: 4651023577581015936
+      StatsV3: 1241894451957635108
+      ReloadV3: 2406227903653740696
+      BtnV1: 4708945720312227554
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

@@ -83,6 +83,8 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -91,9 +93,9 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
-    aniso: -1
-    mipBias: -100
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -114,9 +116,12 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
   applyGammaDecoding: 0
   platformSettings:
   - serializedVersion: 3
@@ -600,6 +605,27 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      Random_4: -7190725122232164634
+      Random_19: 4447373653231000845
+      Random_10: -3224984980740445086
+      Random_0: 8573962228187662794
+      Random_1: 1595881749751395749
+      Random_3: 2121929383340766125
+      Random_16: -3420314903032984481
+      Random_5: -3943177985439990803
+      Random_12: -1323507747975509935
+      Random_6: -4377017976134663524
+      Random_8: -1862408338089893966
+      Random_13: 8321669173321155659
+      Random_2: 7648811786910014181
+      Random_18: -5765583487235588237
+      Random_17: 8344047656007656933
+      Random_11: 9031357088309419663
+      Random_14: -2584373298850101623
+      Random_7: -3965183947815998277
+      Random_9: -2582439570873663199
+      Random_15: 7856112335720816182
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

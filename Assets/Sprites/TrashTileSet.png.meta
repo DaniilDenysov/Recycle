@@ -122,6 +122,8 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -130,9 +132,9 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
-    aniso: -1
-    mipBias: -100
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -153,9 +155,12 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
   applyGammaDecoding: 1
   platformSettings:
   - serializedVersion: 3
@@ -924,6 +929,40 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      Ball: 6183361231513986522
+      Mail: -5867423032873254027
+      Fish: -3189643208722660743
+      Bottle2: -2599464729637497939
+      Vine: 5084683887362548303
+      OpenedMail: -9169205728492625952
+      TrashTileSet_6: 8560667898492094190
+      Lamp: 13713754306410196
+      TrashTileSet_7: -3254915745737146362
+      Cola: -1448155510937778420
+      Pineapple: -6545942668158478358
+      Ham: -3027040773251555606
+      Watermelon: 7584791981398961752
+      Battery: 4118262137724128353
+      Paper: 1703936633361389849
+      Ball3: -3046061563360097024
+      TrashTileSet_10: -5116860684128493571
+      TrashTileSet_5: 2344176192866007782
+      TrashTileSet_13: 2938330783249348377
+      TrashTileSet_8: -8639410423236923101
+      Bottle3: -8074812660476184156
+      Ball2: 6288593998526097270
+      Lemonade: -340062892755723993
+      TrashTileSet_11: 6865154697782697985
+      Bottle1: -3981201445765978611
+      TrashTileSet_12: -4148270789883098996
+      Box: -3556043342287743731
+      Jack: -1320584842770471633
+      MilkBottle: -7235899738646898257
+      coffee: 6796005922643274827
+      pepsi: -3258774318804801720
+      Apple: -6740145719989391333
+      TrashTileSet_9: -6636981846050516621
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
