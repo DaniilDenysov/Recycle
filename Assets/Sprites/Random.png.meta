@@ -221,7 +221,7 @@ TextureImporter:
       name: Random_2
       rect:
         serializedVersion: 2
-        x: 1617
+        x: 1618
         y: 2640
         width: 699
         height: 697
@@ -242,10 +242,10 @@ TextureImporter:
       name: Random_3
       rect:
         serializedVersion: 2
-        x: 2370
-        y: 2634
-        width: 824
-        height: 709
+        x: 2375
+        y: 2633
+        width: 699
+        height: 697
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}

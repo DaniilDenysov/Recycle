@@ -22,20 +22,25 @@ public class MainMenu : MonoBehaviour
         ActivateMenu(GameMode);
         ActivateMenu(Settings);
         Debug.Log("Season:" + season);
-        for (int i = 0; i < Settings.Length; i++)
+        if (PlayerPrefs.HasKey("Music"))
         {
-           
-            if (i == season)
-            {
-                Debug.Log(Settings[i].name);
-                seasonSeed = Settings[i].GetComponentInChildren<Dropdown>();
-                master_volume = Settings[i].GetComponentInChildren<Slider>();
-                help = Settings[i].GetComponentInChildren<Toggle>();
-                break;
-            }
+            if (PlayerPrefs.GetInt("Music") != 1) mixer.SetFloat("Master", -10);
+            else mixer.SetFloat("Master", -80);
         }
-        UpdateSettings();
-        
+        /* for (int i = 0; i < Settings.Length; i++)
+         {
+
+             if (i == season)
+             {
+                 Debug.Log(Settings[i].name);
+                 seasonSeed = Settings[i].GetComponentInChildren<Dropdown>();
+                 master_volume = Settings[i].GetComponentInChildren<Slider>();
+                 help = Settings[i].GetComponentInChildren<Toggle>();
+                 break;
+             }
+         }
+         UpdateSettings();*/
+
     }
 
     public void Help (bool state)

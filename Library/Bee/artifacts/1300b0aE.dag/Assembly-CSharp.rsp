@@ -373,6 +373,7 @@
 -r:"Library/Bee/artifacts/1300b0aE.dag/UnityEngine.SpatialTracking.ref.dll"
 -r:"Library/Bee/artifacts/1300b0aE.dag/UnityEngine.UI.ref.dll"
 -r:"Library/Bee/artifacts/1300b0aE.dag/UnityEngine.XR.LegacyInputHelpers.ref.dll"
+"Assets/ImageSlider.cs"
 "Assets/Scripts/Bucket.cs"
 "Assets/Scripts/Cloud.cs"
 "Assets/Scripts/MainMenuController.cs"
@@ -397,6 +398,7 @@
 "Assets/Scripts/TrashController.cs"
 "Assets/Scripts/UniversalSceneController.cs"
 "Assets/Scripts/WeatherChanger.cs"
+"Assets/SettingsManager.cs"
 "Assets/Sprites/PartMover.cs"
 -langversion:9.0
 
