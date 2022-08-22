@@ -46,10 +46,6 @@ public class MainMenu : MonoBehaviour
 
     public void UpdateSettings()
     {
-        if (PlayerPrefs.HasKey("Season"))
-        {
-            seasonSeed.value = PlayerPrefs.GetInt("Season");
-        }
         if (PlayerPrefs.HasKey("Master"))
         {
             Debug.Log(PlayerPrefs.GetFloat("Master"));

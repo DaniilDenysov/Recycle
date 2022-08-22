@@ -131,10 +131,10 @@ TextureImporter:
       name: RecyclingSettingsUI_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 429
-        width: 192
-        height: 25
+        x: 2
+        y: 302
+        width: 357
+        height: 57
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -152,10 +152,10 @@ TextureImporter:
       name: RecyclingSettingsUI_1
       rect:
         serializedVersion: 2
-        x: 204
-        y: 424
-        width: 32
-        height: 31
+        x: 373
+        y: 302
+        width: 356
+        height: 57
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -173,10 +173,10 @@ TextureImporter:
       name: RecyclingSettingsUI_2
       rect:
         serializedVersion: 2
-        x: 388
-        y: 426
-        width: 192
-        height: 25
+        x: 0
+        y: 216
+        width: 359
+        height: 78
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -194,10 +194,10 @@ TextureImporter:
       name: RecyclingSettingsUI_3
       rect:
         serializedVersion: 2
-        x: 711
-        y: 422
-        width: 32
-        height: 32
+        x: 373
+        y: 216
+        width: 356
+        height: 78
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -215,10 +215,10 @@ TextureImporter:
       name: RecyclingSettingsUI_4
       rect:
         serializedVersion: 2
-        x: 0
-        y: 388
-        width: 356
-        height: 25
+        x: 1
+        y: 149
+        width: 357
+        height: 57
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -236,10 +236,10 @@ TextureImporter:
       name: RecyclingSettingsUI_5
       rect:
         serializedVersion: 2
-        x: 388
-        y: 385
-        width: 355
-        height: 26
+        x: 372
+        y: 149
+        width: 356
+        height: 57
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -258,9 +258,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 319
-        width: 356
-        height: 58
+        y: 62
+        width: 358
+        height: 78
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -278,10 +278,10 @@ TextureImporter:
       name: RecyclingSettingsUI_7
       rect:
         serializedVersion: 2
-        x: 388
-        y: 317
-        width: 355
-        height: 57
+        x: 372
+        y: 62
+        width: 356
+        height: 78
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -300,9 +300,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 235
-        width: 363
-        height: 74
+        y: 0
+        width: 78
+        height: 54
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -320,10 +320,10 @@ TextureImporter:
       name: RecyclingSettingsUI_9
       rect:
         serializedVersion: 2
-        x: 380
-        y: 232
-        width: 363
-        height: 74
+        x: 130
+        y: 10
+        width: 33
+        height: 33
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -333,216 +333,6 @@ TextureImporter:
       bones: []
       spriteID: c4f6eb26739588347be52e5ca5be8016
       internalID: 1604018850
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: RecyclingSettingsUI_10
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 195
-        width: 192
-        height: 25
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b7e2595a9c6439448a75df1f7274ec4f
-      internalID: 1189484409
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: RecyclingSettingsUI_11
-      rect:
-        serializedVersion: 2
-        x: 202
-        y: 192
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 16c24748a5f390640a55126a94b8bf26
-      internalID: 51015718
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: RecyclingSettingsUI_12
-      rect:
-        serializedVersion: 2
-        x: 383
-        y: 187
-        width: 192
-        height: 25
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c97234314f67f55479fd36a7c0bbc4bb
-      internalID: 351612015
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: RecyclingSettingsUI_13
-      rect:
-        serializedVersion: 2
-        x: 711
-        y: 192
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ab631c39c0c359e4497432acc99b5cd6
-      internalID: 194711766
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: RecyclingSettingsUI_14
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 155
-        width: 356
-        height: 25
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8a71d9c120584734a8d857a0dca2f62f
-      internalID: -1043175131
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: RecyclingSettingsUI_15
-      rect:
-        serializedVersion: 2
-        x: 388
-        y: 155
-        width: 355
-        height: 25
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2c1522062cb5c464f8c8f77ebcbe9bd4
-      internalID: 2001938688
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: RecyclingSettingsUI_16
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 84
-        width: 356
-        height: 57
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 424863be8a3a285468011cd2173e5e09
-      internalID: -1570393549
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: RecyclingSettingsUI_17
-      rect:
-        serializedVersion: 2
-        x: 388
-        y: 86
-        width: 355
-        height: 57
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d97d0b2183d885447a0d3c2e4c809ab1
-      internalID: -1340343386
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: RecyclingSettingsUI_18
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 363
-        height: 73
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1ff75fce978786f46ae3010a182cd7c6
-      internalID: -678818133
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: RecyclingSettingsUI_19
-      rect:
-        serializedVersion: 2
-        x: 380
-        y: 2
-        width: 363
-        height: 74
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a32181558d134ae43ba4493b837a66a2
-      internalID: -2102392091
       vertices: []
       indices: 
       edges: []
@@ -558,26 +348,16 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      RecyclingSettingsUI_18: -678818133
       RecyclingSettingsUI_3: -693221031
       RecyclingSettingsUI_7: 1122619881
-      RecyclingSettingsUI_16: -1570393549
       RecyclingSettingsUI_0: 935018133
-      RecyclingSettingsUI_12: 351612015
       RecyclingSettingsUI_1: 421019200
-      RecyclingSettingsUI_17: -1340343386
       RecyclingSettingsUI_8: -1713451173
       RecyclingSettingsUI_6: -627347777
       RecyclingSettingsUI_5: -526900527
-      RecyclingSettingsUI_14: -1043175131
-      RecyclingSettingsUI_15: 2001938688
-      RecyclingSettingsUI_13: 194711766
       RecyclingSettingsUI_4: 475653024
       RecyclingSettingsUI_2: 432954887
-      RecyclingSettingsUI_19: -2102392091
       RecyclingSettingsUI_9: 1604018850
-      RecyclingSettingsUI_11: 51015718
-      RecyclingSettingsUI_10: 1189484409
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
