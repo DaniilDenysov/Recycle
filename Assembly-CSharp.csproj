@@ -60,12 +60,14 @@
     <Compile Include="Assets\Scripts\Bucket.cs" />
     <Compile Include="Assets\Scripts\Spawn.cs" />
     <Compile Include="Assets\Scripts\NewCode\PauseManager.cs" />
+    <Compile Include="Assets\SettingsManager.cs" />
     <Compile Include="Assets\Scripts\MainMenuController.cs" />
     <Compile Include="Assets\Scripts\NewCode\SpawnGarbage.cs" />
     <Compile Include="Assets\Scripts\PanelController.cs" />
     <Compile Include="Assets\Scripts\TrashController.cs" />
     <Compile Include="Assets\Scripts\NewCode\SceneManagment.cs" />
     <Compile Include="Assets\Scripts\UniversalSceneController.cs" />
+    <Compile Include="Assets\ImageSlider.cs" />
     <Compile Include="Assets\Scripts\NewCode\VerticalDropdown.cs" />
     <Compile Include="Assets\Scripts\NewCode\MapManager.cs" />
     <Compile Include="Assets\Scripts\WeatherChanger.cs" />
@@ -78,8 +80,6 @@
     <Compile Include="Assets\Scripts\NewCode\Bin.cs" />
     <Compile Include="Assets\Scripts\Cloud.cs" />
     <Compile Include="Assets\Scripts\NewCode\BinChanger.cs" />
-    <Compile Include="Assets\ImageSlider.cs" />
-    <Compile Include="Assets\SettingsManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
