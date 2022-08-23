@@ -80,6 +80,7 @@
     <Compile Include="Assets\Scripts\NewCode\Bin.cs" />
     <Compile Include="Assets\Scripts\Cloud.cs" />
     <Compile Include="Assets\Scripts\NewCode\BinChanger.cs" />
+    <Compile Include="Assets\EffectsManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

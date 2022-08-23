@@ -3,13 +3,24 @@ using UnityEngine.UI;
 
 public class ScoreManager : MonoBehaviour
 {
-    public float Score, Level, CurrentLevelScore;
-    [SerializeField] private Text Display;  
+    public float Score, Level, CurrentLevelScore,Increase = 1;
+    [SerializeField] private Text Display;
+    public bool Protection;
 
     public void AddScore(float score)
     {
-        if (Score + score > Level * 10) Level += 1;
-        Score += score;
+        if (score > 0)
+        {
+            _Score(score);
+        }else if (!Protection)
+        {
+            _Score(score);
+        }
+    }
+    public void _Score (float score)
+    {
+        if (Score + (score * Increase) > Level * 10) Level += 1;
+        Score += (score * Increase);
         GetComponent<Image>().fillAmount = Score * (1f / (Level * 10f));
         Display.text = Score.ToString();
     }
