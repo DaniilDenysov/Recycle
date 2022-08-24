@@ -15597,7 +15597,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
+  m_PresetInfoIsWorld: 1
 --- !u!223 &232563635
 Canvas:
   m_ObjectHideFlags: 0
@@ -20868,6 +20868,13 @@ MonoBehaviour:
   pauseManager: {fileID: 0}
   defeatManager: {fileID: 0}
   changer: {fileID: 281219243}
+  Buff:
+  - {fileID: 9195394142013281432, guid: 1adb6a5e02348ba4887f6b501944cd49, type: 3}
+  - {fileID: 9195394142013281432, guid: 1adb6a5e02348ba4887f6b501944cd49, type: 3}
+  - {fileID: 3538849454247462370, guid: 5ec2a1e83d6e65a4db8abfbe1c92d732, type: 3}
+  - {fileID: 3538849454247462370, guid: 5ec2a1e83d6e65a4db8abfbe1c92d732, type: 3}
+  - {fileID: 9063762785800445928, guid: cc815bd5221633d4fb97e7a6080f89ff, type: 3}
+  - {fileID: 9063762785800445928, guid: cc815bd5221633d4fb97e7a6080f89ff, type: 3}
 --- !u!4 &281219242
 Transform:
   m_ObjectHideFlags: 0
@@ -115831,6 +115838,7 @@ MonoBehaviour:
   CurrentLevelScore: 0
   Increase: 1
   Display: {fileID: 128124828}
+  Protection: 0
 --- !u!1 &1510879320
 GameObject:
   m_ObjectHideFlags: 0

@@ -15,12 +15,19 @@ public class SpawnGarbage : MonoBehaviour
     [SerializeField] private PauseManager pauseManager;
     [SerializeField] private DefeatManager defeatManager;
     [SerializeField] private BinChanger changer;
+    [SerializeField] private GameObject [] Buff;
 
     void Start()
     {
         pauseManager = FindObjectOfType<PauseManager>();
         defeatManager = FindObjectOfType<DefeatManager>();
         StartCoroutine(Spawn(5));
+        InstantiateBuff();
+        StartCoroutine(SpawnBuff(30));
+    }
+    public void InstantiateBuff ()
+    {
+        Instantiate(Buff[Random.Range(0,Buff.Length -  1)], new Vector3((float)Random.Range(-GetComponent<BoxCollider2D>().size.x, GetComponent<BoxCollider2D>().size.x), transform.position.y, 2), Quaternion.identity);
     }
     public void InstantiateGarbage (int amount)
     {
@@ -39,6 +46,12 @@ public class SpawnGarbage : MonoBehaviour
         yield return new WaitForSeconds(Time);
         InstantiateGarbage(1);
         StartCoroutine(Spawn(Time));
+    }
+    IEnumerator SpawnBuff(int Time)
+    {
+        yield return new WaitForSeconds(Time);
+        InstantiateBuff();
+        StartCoroutine(SpawnBuff(Time));
     }
 }
 
