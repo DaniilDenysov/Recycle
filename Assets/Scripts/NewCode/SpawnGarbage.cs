@@ -21,13 +21,13 @@ public class SpawnGarbage : MonoBehaviour
     {
         pauseManager = FindObjectOfType<PauseManager>();
         defeatManager = FindObjectOfType<DefeatManager>();
-        StartCoroutine(Spawn(5));
+        StartCoroutine(Spawn(2));
         InstantiateBuff();
         StartCoroutine(SpawnBuff(30));
     }
     public void InstantiateBuff ()
     {
-        Instantiate(Buff[Random.Range(0,Buff.Length -  1)], new Vector3((float)Random.Range(-GetComponent<BoxCollider2D>().size.x, GetComponent<BoxCollider2D>().size.x), transform.position.y, 2), Quaternion.identity);
+        Instantiate(Buff[Random.Range(0,Buff.Length -  1)], new Vector3((float)Random.Range(-GetComponent<BoxCollider2D>().size.x/2, GetComponent<BoxCollider2D>().size.x/2), transform.position.y, 2), Quaternion.identity);
     }
     public void InstantiateGarbage (int amount)
     {

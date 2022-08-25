@@ -87,11 +87,14 @@ public class Garbage : MonoBehaviour
     }
     public void OnMouseDown()
     {
-        isTaken = true;
-        GetComponent<AudioSource>().PlayOneShot(ObjectTaken);
-        GetComponent<CircleCollider2D>().isTrigger = true;
-        GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
-        GetComponent<Rigidbody2D>().Sleep();
+        if (!isTaken)
+        {
+            isTaken = true;
+            GetComponent<AudioSource>().PlayOneShot(ObjectTaken);
+            GetComponent<CircleCollider2D>().isTrigger = true;
+            GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
+            GetComponent<Rigidbody2D>().Sleep();
+        }
     }
 
     public void OnMouseUp()
