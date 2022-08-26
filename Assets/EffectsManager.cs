@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.Rendering.PostProcessing;
 
 public class EffectsManager : MonoBehaviour
 {
@@ -29,6 +30,7 @@ public class EffectsManager : MonoBehaviour
             if (Time.timeScale >= 1)
             {
                 timeStop = false;
+                Debug.Log("Time:" + Time.timeScale);
                 Time.timeScale = 1;
             }
             // Time.fixedDeltaTime = Mathf.Clamp(Time.fixedDeltaTime, 0f, 0.01f);
@@ -72,11 +74,14 @@ public class EffectsManager : MonoBehaviour
     public void TimeBack ()
     {
         mixer.SetFloat("Pitch",1f);
+        Camera.main.GetComponent<PostProcessVolume>().profile.GetSetting<ChromaticAberration>().intensity.value = 0;
+
         timeStop = true;
     }
 
     public void TimeStop ()
     {
+        Camera.main.GetComponent<PostProcessVolume>().profile.GetSetting<ChromaticAberration>().intensity.value = 0.5f;
         mixer.SetFloat("Pitch", 0.1f);
         FindObjectOfType<SpawnGarbage>().InstantiateGarbage(6);
         Time.timeScale = slowdownFactor;    
