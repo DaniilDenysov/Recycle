@@ -53,35 +53,24 @@
     <UnityVersion>2021.3.8f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\NewCode\ScoreManager.cs" />
-    <Compile Include="Assets\Scripts\PartSpawn.cs" />
+    <Compile Include="Assets\Scripts\ScoreManager.cs" />
     <Compile Include="Assets\Scripts\Pause.cs" />
-    <Compile Include="Assets\Scripts\TopOfBucketController.cs" />
-    <Compile Include="Assets\Scripts\Bucket.cs" />
-    <Compile Include="Assets\Scripts\Spawn.cs" />
-    <Compile Include="Assets\Scripts\NewCode\PauseManager.cs" />
-    <Compile Include="Assets\SettingsManager.cs" />
-    <Compile Include="Assets\Scripts\MainMenuController.cs" />
-    <Compile Include="Assets\Scripts\NewCode\SpawnGarbage.cs" />
-    <Compile Include="Assets\Scripts\PanelController.cs" />
-    <Compile Include="Assets\Scripts\TrashController.cs" />
-    <Compile Include="Assets\Scripts\NewCode\SceneManagment.cs" />
-    <Compile Include="Assets\Scripts\UniversalSceneController.cs" />
-    <Compile Include="Assets\ImageSlider.cs" />
-    <Compile Include="Assets\Scripts\NewCode\VerticalDropdown.cs" />
-    <Compile Include="Assets\Scripts\NewCode\MapManager.cs" />
-    <Compile Include="Assets\EffectsManager.cs" />
-    <Compile Include="Assets\Scripts\WeatherChanger.cs" />
-    <Compile Include="Assets\Scripts\Switcher.cs" />
-    <Compile Include="Assets\Scripts\OpenBin.cs" />
-    <Compile Include="Assets\Scripts\NewCode\DefeatManager.cs" />
-    <Compile Include="Assets\Scripts\NewCode\MainMenu.cs" />
-    <Compile Include="Assets\Scripts\NewCode\Garbage.cs" />
-    <Compile Include="Assets\Sprites\PartMover.cs" />
-    <Compile Include="Assets\Effect.cs" />
-    <Compile Include="Assets\Scripts\NewCode\Bin.cs" />
-    <Compile Include="Assets\Scripts\Cloud.cs" />
-    <Compile Include="Assets\Scripts\NewCode\BinChanger.cs" />
+    <Compile Include="Assets\Scripts\PauseManager.cs" />
+    <Compile Include="Assets\Scripts\SettingsManager.cs" />
+    <Compile Include="Assets\Scripts\SpawnGarbage.cs" />
+    <Compile Include="Assets\Scripts\SceneManagment.cs" />
+    <Compile Include="Assets\Scripts\ImageSlider.cs" />
+    <Compile Include="Assets\Scripts\VerticalDropdown.cs" />
+    <Compile Include="Assets\Scripts\MapManager.cs" />
+    <Compile Include="Assets\Scripts\EffectsManager.cs" />
+    <Compile Include="Assets\Scripts\DefeatManager.cs" />
+    <Compile Include="Assets\Scripts\MainMenu.cs" />
+    <Compile Include="Assets\Scripts\Garbage.cs" />
+    <Compile Include="Assets\Scripts\Effect.cs" />
+    <Compile Include="Assets\Scripts\Bin.cs" />
+    <Compile Include="Assets\Scripts\BinChanger.cs" />
+    <Compile Include="Assets\Scripts\FPS.cs" />
+    <Compile Include="Assets\Scripts\FPS_Limit.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -782,6 +771,9 @@
     <Reference Include="UnityEngine.Advertisements">
       <HintPath>Library\ScriptAssemblies\UnityEngine.Advertisements.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.VisualScripting.Flow">
+      <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEditor.UI">
       <HintPath>Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
     </Reference>
@@ -794,17 +786,14 @@
     <Reference Include="Analytics">
       <HintPath>Library\ScriptAssemblies\Analytics.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.VisualScripting.Flow">
-      <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll</HintPath>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.SpatialTracking">
       <HintPath>Library\ScriptAssemblies\UnityEngine.SpatialTracking.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Core">
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.UI">
-      <HintPath>Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Services.Core">
       <HintPath>Library\ScriptAssemblies\Unity.Services.Core.dll</HintPath>

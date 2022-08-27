@@ -15,104 +15,100 @@
 12-->C:\Users\Administrator\Documents\GitHub\Recycle\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:17:3-52
 12-->C:\Users\Administrator\Documents\GitHub\Recycle\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:17:17-49
 13
-14    <supports-gl-texture android:name="GL_OES_compressed_ETC1_RGB8_texture" />
-14-->C:\Users\Administrator\Documents\GitHub\Recycle\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:18:3-77
-14-->C:\Users\Administrator\Documents\GitHub\Recycle\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:18:24-74
-15
-16    <uses-permission android:name="android.permission.INTERNET" />
-16-->C:\Users\Administrator\Documents\GitHub\Recycle\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:19:3-65
-16-->C:\Users\Administrator\Documents\GitHub\Recycle\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:19:20-62
-17    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-17-->C:\Users\Administrator\Documents\GitHub\Recycle\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:20:3-77
-17-->C:\Users\Administrator\Documents\GitHub\Recycle\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:20:20-74
-18
-19    <uses-feature
-19-->C:\Users\Administrator\Documents\GitHub\Recycle\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:21:3-88
-20        android:name="android.hardware.touchscreen"
-20-->C:\Users\Administrator\Documents\GitHub\Recycle\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:21:17-60
-21        android:required="false" />
-21-->C:\Users\Administrator\Documents\GitHub\Recycle\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:21:61-85
-22    <uses-feature
-22-->C:\Users\Administrator\Documents\GitHub\Recycle\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:22:3-99
-23        android:name="android.hardware.touchscreen.multitouch"
-23-->C:\Users\Administrator\Documents\GitHub\Recycle\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:22:17-71
-24        android:required="false" />
-24-->C:\Users\Administrator\Documents\GitHub\Recycle\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:22:72-96
-25    <uses-feature
-25-->C:\Users\Administrator\Documents\GitHub\Recycle\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:23:3-108
-26        android:name="android.hardware.touchscreen.multitouch.distinct"
-26-->C:\Users\Administrator\Documents\GitHub\Recycle\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:23:17-80
-27        android:required="false" />
-27-->C:\Users\Administrator\Documents\GitHub\Recycle\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:23:81-105
-28
-29    <application
-29-->C:\Users\Administrator\Documents\GitHub\Recycle\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:3:3-16:17
-30        android:extractNativeLibs="true"
-30-->C:\Users\Administrator\Documents\GitHub\Recycle\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:3:16-48
-31        android:isGame="true" >
-31-->C:\Users\Administrator\Documents\GitHub\Recycle\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:3:49-70
-32        <activity
-32-->C:\Users\Administrator\Documents\GitHub\Recycle\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:4:5-11:16
-33            android:name="com.unity3d.player.UnityPlayerActivity"
-33-->C:\Users\Administrator\Documents\GitHub\Recycle\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:4:15-68
-34            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale|layoutDirection|density"
-34-->C:\Users\Administrator\Documents\GitHub\Recycle\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:4:181-362
-35            android:hardwareAccelerated="false"
-35-->C:\Users\Administrator\Documents\GitHub\Recycle\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:4:398-433
-36            android:launchMode="singleTask"
-36-->C:\Users\Administrator\Documents\GitHub\Recycle\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:4:149-180
-37            android:resizeableActivity="false"
-37-->C:\Users\Administrator\Documents\GitHub\Recycle\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:4:363-397
-38            android:screenOrientation="landscape"
-38-->C:\Users\Administrator\Documents\GitHub\Recycle\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:4:111-148
-39            android:theme="@style/UnityThemeSelector" >
-39-->C:\Users\Administrator\Documents\GitHub\Recycle\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:4:69-110
-40            <intent-filter>
-40-->C:\Users\Administrator\Documents\GitHub\Recycle\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:5:7-9:23
-41                <action android:name="android.intent.action.MAIN" />
-41-->C:\Users\Administrator\Documents\GitHub\Recycle\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:6:9-61
-41-->C:\Users\Administrator\Documents\GitHub\Recycle\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:6:17-58
-42
-43                <category android:name="android.intent.category.LAUNCHER" />
-43-->C:\Users\Administrator\Documents\GitHub\Recycle\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:7:9-69
-43-->C:\Users\Administrator\Documents\GitHub\Recycle\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:7:19-66
-44                <category android:name="android.intent.category.LEANBACK_LAUNCHER" />
-44-->C:\Users\Administrator\Documents\GitHub\Recycle\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:8:9-78
-44-->C:\Users\Administrator\Documents\GitHub\Recycle\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:8:19-75
-45            </intent-filter>
-46
-47            <meta-data
-47-->C:\Users\Administrator\Documents\GitHub\Recycle\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:10:7-82
-48                android:name="unityplayer.UnityActivity"
-48-->C:\Users\Administrator\Documents\GitHub\Recycle\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:10:18-58
-49                android:value="true" />
-49-->C:\Users\Administrator\Documents\GitHub\Recycle\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:10:59-79
-50        </activity>
-51
-52        <meta-data
-52-->C:\Users\Administrator\Documents\GitHub\Recycle\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:12:5-69
-53            android:name="unity.splash-mode"
-53-->C:\Users\Administrator\Documents\GitHub\Recycle\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:12:16-48
-54            android:value="0" />
-54-->C:\Users\Administrator\Documents\GitHub\Recycle\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:12:49-66
-55        <meta-data
-55-->C:\Users\Administrator\Documents\GitHub\Recycle\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:13:5-74
-56            android:name="unity.splash-enable"
-56-->C:\Users\Administrator\Documents\GitHub\Recycle\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:13:16-50
-57            android:value="True" />
-57-->C:\Users\Administrator\Documents\GitHub\Recycle\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:13:51-71
-58        <meta-data
-58-->C:\Users\Administrator\Documents\GitHub\Recycle\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:14:5-78
-59            android:name="unity.launch-fullscreen"
-59-->C:\Users\Administrator\Documents\GitHub\Recycle\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:14:16-54
-60            android:value="True" />
-60-->C:\Users\Administrator\Documents\GitHub\Recycle\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:14:55-75
-61        <meta-data
-61-->C:\Users\Administrator\Documents\GitHub\Recycle\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:15:5-84
-62            android:name="unity.allow-resizable-window"
-62-->C:\Users\Administrator\Documents\GitHub\Recycle\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:15:16-59
-63            android:value="False" />
-63-->C:\Users\Administrator\Documents\GitHub\Recycle\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:15:60-81
-64    </application>
-65
-66</manifest>
+14    <uses-permission android:name="android.permission.INTERNET" />
+14-->C:\Users\Administrator\Documents\GitHub\Recycle\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:18:3-65
+14-->C:\Users\Administrator\Documents\GitHub\Recycle\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:18:20-62
+15    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+15-->C:\Users\Administrator\Documents\GitHub\Recycle\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:19:3-77
+15-->C:\Users\Administrator\Documents\GitHub\Recycle\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:19:20-74
+16
+17    <uses-feature
+17-->C:\Users\Administrator\Documents\GitHub\Recycle\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:20:3-88
+18        android:name="android.hardware.touchscreen"
+18-->C:\Users\Administrator\Documents\GitHub\Recycle\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:20:17-60
+19        android:required="false" />
+19-->C:\Users\Administrator\Documents\GitHub\Recycle\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:20:61-85
+20    <uses-feature
+20-->C:\Users\Administrator\Documents\GitHub\Recycle\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:21:3-99
+21        android:name="android.hardware.touchscreen.multitouch"
+21-->C:\Users\Administrator\Documents\GitHub\Recycle\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:21:17-71
+22        android:required="false" />
+22-->C:\Users\Administrator\Documents\GitHub\Recycle\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:21:72-96
+23    <uses-feature
+23-->C:\Users\Administrator\Documents\GitHub\Recycle\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:22:3-108
+24        android:name="android.hardware.touchscreen.multitouch.distinct"
+24-->C:\Users\Administrator\Documents\GitHub\Recycle\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:22:17-80
+25        android:required="false" />
+25-->C:\Users\Administrator\Documents\GitHub\Recycle\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:22:81-105
+26
+27    <application
+27-->C:\Users\Administrator\Documents\GitHub\Recycle\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:3:3-16:17
+28        android:extractNativeLibs="true"
+28-->C:\Users\Administrator\Documents\GitHub\Recycle\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:3:16-48
+29        android:isGame="true" >
+29-->C:\Users\Administrator\Documents\GitHub\Recycle\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:3:49-70
+30        <activity
+30-->C:\Users\Administrator\Documents\GitHub\Recycle\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:4:5-11:16
+31            android:name="com.unity3d.player.UnityPlayerActivity"
+31-->C:\Users\Administrator\Documents\GitHub\Recycle\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:4:15-68
+32            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale|layoutDirection|density"
+32-->C:\Users\Administrator\Documents\GitHub\Recycle\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:4:181-362
+33            android:hardwareAccelerated="false"
+33-->C:\Users\Administrator\Documents\GitHub\Recycle\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:4:398-433
+34            android:launchMode="singleTask"
+34-->C:\Users\Administrator\Documents\GitHub\Recycle\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:4:149-180
+35            android:resizeableActivity="false"
+35-->C:\Users\Administrator\Documents\GitHub\Recycle\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:4:363-397
+36            android:screenOrientation="landscape"
+36-->C:\Users\Administrator\Documents\GitHub\Recycle\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:4:111-148
+37            android:theme="@style/UnityThemeSelector" >
+37-->C:\Users\Administrator\Documents\GitHub\Recycle\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:4:69-110
+38            <intent-filter>
+38-->C:\Users\Administrator\Documents\GitHub\Recycle\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:5:7-9:23
+39                <action android:name="android.intent.action.MAIN" />
+39-->C:\Users\Administrator\Documents\GitHub\Recycle\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:6:9-61
+39-->C:\Users\Administrator\Documents\GitHub\Recycle\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:6:17-58
+40
+41                <category android:name="android.intent.category.LAUNCHER" />
+41-->C:\Users\Administrator\Documents\GitHub\Recycle\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:7:9-69
+41-->C:\Users\Administrator\Documents\GitHub\Recycle\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:7:19-66
+42                <category android:name="android.intent.category.LEANBACK_LAUNCHER" />
+42-->C:\Users\Administrator\Documents\GitHub\Recycle\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:8:9-78
+42-->C:\Users\Administrator\Documents\GitHub\Recycle\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:8:19-75
+43            </intent-filter>
+44
+45            <meta-data
+45-->C:\Users\Administrator\Documents\GitHub\Recycle\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:10:7-82
+46                android:name="unityplayer.UnityActivity"
+46-->C:\Users\Administrator\Documents\GitHub\Recycle\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:10:18-58
+47                android:value="true" />
+47-->C:\Users\Administrator\Documents\GitHub\Recycle\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:10:59-79
+48        </activity>
+49
+50        <meta-data
+50-->C:\Users\Administrator\Documents\GitHub\Recycle\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:12:5-69
+51            android:name="unity.splash-mode"
+51-->C:\Users\Administrator\Documents\GitHub\Recycle\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:12:16-48
+52            android:value="0" />
+52-->C:\Users\Administrator\Documents\GitHub\Recycle\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:12:49-66
+53        <meta-data
+53-->C:\Users\Administrator\Documents\GitHub\Recycle\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:13:5-74
+54            android:name="unity.splash-enable"
+54-->C:\Users\Administrator\Documents\GitHub\Recycle\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:13:16-50
+55            android:value="True" />
+55-->C:\Users\Administrator\Documents\GitHub\Recycle\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:13:51-71
+56        <meta-data
+56-->C:\Users\Administrator\Documents\GitHub\Recycle\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:14:5-78
+57            android:name="unity.launch-fullscreen"
+57-->C:\Users\Administrator\Documents\GitHub\Recycle\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:14:16-54
+58            android:value="True" />
+58-->C:\Users\Administrator\Documents\GitHub\Recycle\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:14:55-75
+59        <meta-data
+59-->C:\Users\Administrator\Documents\GitHub\Recycle\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:15:5-84
+60            android:name="unity.allow-resizable-window"
+60-->C:\Users\Administrator\Documents\GitHub\Recycle\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:15:16-59
+61            android:value="False" />
+61-->C:\Users\Administrator\Documents\GitHub\Recycle\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:15:60-81
+62    </application>
+63
+64</manifest>
