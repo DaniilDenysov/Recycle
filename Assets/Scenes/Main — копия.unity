@@ -20937,7 +20937,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 12, y: 1}
+  m_Size: {x: 10, y: 1}
   m_EdgeRadius: 0
 --- !u!1 &284065283
 GameObject:
@@ -21248,7 +21248,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 307221734}
   m_LocalRotation: {x: -0.50000024, y: 0.4999998, z: -0.49999985, w: 0.50000024}
-  m_LocalPosition: {x: -17.83, y: 13.13, z: 8}
+  m_LocalPosition: {x: -13.83, y: 13.130002, z: 8}
   m_LocalScale: {x: 1, y: 1, z: 0.97971}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -21277,7 +21277,6 @@ ParticleSystemRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -31365,7 +31364,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 434224179}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 18.3, y: -6.662, z: -79.5}
+  m_LocalPosition: {x: 19.5, y: -6.662, z: -79.5}
   m_LocalScale: {x: 0.7217209, y: 3.2201579, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -36535,8 +36534,6 @@ GameObject:
   - component: {fileID: 519420029}
   - component: {fileID: 519420030}
   - component: {fileID: 519420035}
-  - component: {fileID: 519420037}
-  - component: {fileID: 519420038}
   m_Layer: 24
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -36656,83 +36653,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 17.95, y: 3.39}
   m_EdgeRadius: 0
---- !u!114 &519420037
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 519420028}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 948f4100a11a5c24981795d21301da5c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  volumeTrigger: {fileID: 519420032}
-  volumeLayer:
-    serializedVersion: 2
-    m_Bits: 16777216
-  stopNaNPropagation: 1
-  finalBlitToCameraTarget: 0
-  antialiasingMode: 0
-  temporalAntialiasing:
-    jitterSpread: 0.75
-    sharpness: 0.25
-    stationaryBlending: 0.95
-    motionBlending: 0.85
-  subpixelMorphologicalAntialiasing:
-    quality: 2
-  fastApproximateAntialiasing:
-    fastMode: 0
-    keepAlpha: 0
-  fog:
-    enabled: 1
-    excludeSkybox: 1
-  debugLayer:
-    lightMeter:
-      width: 512
-      height: 256
-      showCurves: 1
-    histogram:
-      width: 512
-      height: 256
-      channel: 3
-    waveform:
-      exposure: 0.12
-      height: 256
-    vectorscope:
-      size: 256
-      exposure: 0.12
-    overlaySettings:
-      linearDepth: 0
-      motionColorIntensity: 4
-      motionGridSize: 64
-      colorBlindnessType: 0
-      colorBlindnessStrength: 1
-  m_Resources: {fileID: 11400000, guid: d82512f9c8e5d4a4d938b575d47f88d4, type: 2}
-  m_ShowToolkit: 0
-  m_ShowCustomSorter: 0
-  breakBeforeColorGrading: 0
-  m_BeforeTransparentBundles: []
-  m_BeforeStackBundles: []
-  m_AfterStackBundles: []
---- !u!114 &519420038
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 519420028}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b9a305e18de0c04dbd257a21cd47087, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sharedProfile: {fileID: 11400000, guid: af0841d63c21a614190df87261b6ad7f, type: 2}
-  isGlobal: 1
-  blendDistance: 0
-  weight: 1
-  priority: 0
 --- !u!1 &537610187
 GameObject:
   m_ObjectHideFlags: 0
@@ -41680,7 +41600,6 @@ ParticleSystemRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -47119,7 +47038,6 @@ ParticleSystemRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -47179,7 +47097,7 @@ ParticleSystem:
   m_GameObject: {fileID: 651109449}
   serializedVersion: 8
   lengthInSec: 10
-  simulationSpeed: 0.03
+  simulationSpeed: 0.5
   stopAction: 3
   cullingMode: 0
   ringBufferMode: 1
@@ -47306,8 +47224,8 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 0.5
-      minScalar: 0.2
+      scalar: 1.5
+      minScalar: 1
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -47738,7 +47656,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     randomizeRotationDirection: 0
-    maxNumParticles: 1000
+    maxNumParticles: 200
     customEmitterVelocity: {x: 0, y: 0, z: 0}
     size3D: 0
     rotation3D: 0
@@ -52526,7 +52444,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 745502926}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8.086003, y: 8.472727, z: 1}
+  m_LocalPosition: {x: -8.086003, y: 8.472727, z: 2}
   m_LocalScale: {x: 0.5070955, y: 0.52344245, z: 0.52344245}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -52920,7 +52838,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 850416507}
   m_LocalRotation: {x: 0.5, y: 0.50000006, z: -0.50000024, w: -0.49999982}
-  m_LocalPosition: {x: 10.93, y: 12.15, z: 8}
+  m_LocalPosition: {x: 14.93, y: 12.150002, z: 8}
   m_LocalScale: {x: 1, y: 1, z: 0.97971}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -52949,7 +52867,6 @@ ParticleSystemRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -63809,7 +63726,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 988083540}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -18.3, y: -6.662, z: -39.17}
+  m_LocalPosition: {x: -19.5, y: -6.662, z: -39.17}
   m_LocalScale: {x: 0.7217209, y: 3.2201579, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -63897,7 +63814,6 @@ ParticleSystemRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -68964,7 +68880,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1028138831}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8.46, y: 10.747419, z: 134.145}
+  m_LocalPosition: {x: -8.46, y: 10.747419, z: 2}
   m_LocalScale: {x: 0.440325, y: 0.42307803, z: 0.43184}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -69100,7 +69016,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1028825252}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8.1, y: 6.8090787, z: 1}
+  m_LocalPosition: {x: -8.1, y: 6.8090787, z: 2}
   m_LocalScale: {x: 0.67165, y: 0.62830275, z: 0.43184355}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -69162,7 +69078,6 @@ ParticleSystemRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -83965,7 +83880,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1084213383}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.96, y: 8.81, z: 1}
+  m_LocalPosition: {x: -4.96, y: 8.81, z: 2}
   m_LocalScale: {x: 0.52810687, y: 0.4851813, z: 0.43184}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -85481,7 +85396,6 @@ ParticleSystemRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -105365,7 +105279,6 @@ ParticleSystemRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -122321,7 +122234,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1654783113}
   m_LocalRotation: {x: -0, y: -0, z: 0.06741376, w: 0.9977251}
-  m_LocalPosition: {x: 6.81, y: 6.94, z: 1}
+  m_LocalPosition: {x: 6.81, y: 6.94, z: 2}
   m_LocalScale: {x: 0.38948873, y: 0.3589311, z: 0.319}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -122753,7 +122666,7 @@ GameObject:
   - component: {fileID: 1679379265}
   - component: {fileID: 1679379264}
   m_Layer: 2
-  m_Name: Image
+  m_Name: EffectsDisplay
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -149937,7 +149850,6 @@ ParticleSystemRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -154764,7 +154676,6 @@ ParticleSystemRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -160026,7 +159937,6 @@ ParticleSystemRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

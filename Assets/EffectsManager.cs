@@ -74,14 +74,14 @@ public class EffectsManager : MonoBehaviour
     public void TimeBack ()
     {
         mixer.SetFloat("Pitch",1f);
-        Camera.main.GetComponent<PostProcessVolume>().profile.GetSetting<ChromaticAberration>().intensity.value = 0;
+        //Camera.main.GetComponent<PostProcessVolume>().profile.GetSetting<ChromaticAberration>().intensity.value = 0;
 
         timeStop = true;
     }
 
     public void TimeStop ()
     {
-        Camera.main.GetComponent<PostProcessVolume>().profile.GetSetting<ChromaticAberration>().intensity.value = 0.5f;
+     //   Camera.main.GetComponent<PostProcessVolume>().profile.GetSetting<ChromaticAberration>().intensity.value = 0.3f;
         mixer.SetFloat("Pitch", 0.1f);
         FindObjectOfType<SpawnGarbage>().InstantiateGarbage(6);
         Time.timeScale = slowdownFactor;    

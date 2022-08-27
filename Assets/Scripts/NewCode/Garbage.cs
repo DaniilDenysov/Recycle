@@ -97,6 +97,16 @@ public class Garbage : MonoBehaviour
         }
     }
 
+    public void OnMouseOver()
+    {
+       // GetComponent<Animator>().Play("Enter");
+    }
+
+    public void OnMouseExit()
+    {
+       // GetComponent<Animator>().Play("Exit");
+    }
+
     public void OnMouseUp()
     {
         isTaken = false;
