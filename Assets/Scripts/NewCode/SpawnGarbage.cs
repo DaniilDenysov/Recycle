@@ -37,7 +37,7 @@ public class SpawnGarbage : MonoBehaviour
             {
                 Debug.Log("Count:" + changer.Copacity);
                 int Rand = Random.Range(0, changer.Copacity);
-                Instantiate(List[Rand].trash[Random.Range(0, List[Rand].trash.Length - 1)], new Vector3((float)Random.Range(-GetComponent<BoxCollider2D>().size.x, GetComponent<BoxCollider2D>().size.x), transform.position.y,2), Quaternion.identity);               
+                Instantiate(List[Rand].trash[Random.Range(0, List[Rand].trash.Length - 1)], new Vector3((float)Random.Range(-GetComponent<BoxCollider2D>().size.x/2, GetComponent<BoxCollider2D>().size.x/2), transform.position.y,2), Quaternion.identity);               
             }
         }
     }
