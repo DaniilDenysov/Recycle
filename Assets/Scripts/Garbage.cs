@@ -26,6 +26,7 @@ public class Garbage : MonoBehaviour
             if (gameObject.layer == collision.gameObject.layer && collision.gameObject.GetComponent<Bin>())
             {
                 scoreManager.AddScore(1);
+                collision.gameObject.GetComponent<AudioSource>().Play();
                 collision.gameObject.GetComponent<Bin>().Particles();
                 Destroy();
             }
@@ -38,6 +39,7 @@ public class Garbage : MonoBehaviour
             else if (collision.gameObject.layer != gameObject.layer && collision.gameObject.GetComponent<Bin>())
             {
                 scoreManager.AddScore(-3);
+                collision.gameObject.GetComponent<AudioSource>().Play();
                 collision.gameObject.GetComponent<Bin>().Particles();
                 Destroy();
             }
@@ -56,10 +58,11 @@ public class Garbage : MonoBehaviour
     }
     void Destroy ()
     {
-        Destroy(GetComponent<Rigidbody2D>());
-        Destroy(GetComponent<CircleCollider2D>());
+       // Destroy(GetComponent<CircleCollider2D>());
+        Destroy(GetComponent<Rigidbody2D>());       
         GetComponent<Animator>().Play("Destroy");
         Destroy(gameObject, 1);
+        Destroy(this);
     }
     void FixedUpdate()
     {       
@@ -87,19 +90,19 @@ public class Garbage : MonoBehaviour
     }
     public void OnMouseDown()
     {
-        if (!isTaken)
-        {
+   
             isTaken = true;
             GetComponent<AudioSource>().PlayOneShot(ObjectTaken);
-            GetComponent<CircleCollider2D>().isTrigger = true;
+        //    GetComponent<CircleCollider2D>().isTrigger = true;
+        
             GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
             GetComponent<Rigidbody2D>().Sleep();
-        }
+        
     }
 
     public void OnMouseOver()
     {
-       // GetComponent<Animator>().Play("Enter");
+            // GetComponent<Animator>().Play("Enter");
     }
 
     public void OnMouseExit()
@@ -109,10 +112,13 @@ public class Garbage : MonoBehaviour
 
     public void OnMouseUp()
     {
-        isTaken = false;
-        GetComponent<AudioSource>().PlayOneShot(ObjectDropped);
-        GetComponent<CircleCollider2D>().isTrigger = false;
-        GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
-        GetComponent<Rigidbody2D>().WakeUp();
+      
+            isTaken = false;
+        //  GetComponent<AudioSource>().PlayOneShot(ObjectDropped);
+        //   GetComponent<CircleCollider2D>().isTrigger = false;
+
+            GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
+            GetComponent<Rigidbody2D>().WakeUp();
+        
     }
 }

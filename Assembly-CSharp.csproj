@@ -63,14 +63,14 @@
     <Compile Include="Assets\Scripts\VerticalDropdown.cs" />
     <Compile Include="Assets\Scripts\MapManager.cs" />
     <Compile Include="Assets\Scripts\EffectsManager.cs" />
+    <Compile Include="Assets\Scripts\FPS.cs" />
+    <Compile Include="Assets\Scripts\FPS_Limit.cs" />
     <Compile Include="Assets\Scripts\DefeatManager.cs" />
     <Compile Include="Assets\Scripts\MainMenu.cs" />
     <Compile Include="Assets\Scripts\Garbage.cs" />
     <Compile Include="Assets\Scripts\Effect.cs" />
     <Compile Include="Assets\Scripts\Bin.cs" />
     <Compile Include="Assets\Scripts\BinChanger.cs" />
-    <Compile Include="Assets\Scripts\FPS.cs" />
-    <Compile Include="Assets\Scripts\FPS_Limit.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

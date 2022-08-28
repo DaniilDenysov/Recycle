@@ -16,6 +16,8 @@ public class SpawnGarbage : MonoBehaviour
     [SerializeField] private DefeatManager defeatManager;
     [SerializeField] private BinChanger changer;
     [SerializeField] private GameObject [] Buff;
+    [SerializeField] private float range;
+
 
     void Start()
     {
@@ -27,7 +29,7 @@ public class SpawnGarbage : MonoBehaviour
     }
     public void InstantiateBuff ()
     {
-        Instantiate(Buff[Random.Range(0,Buff.Length -  1)], new Vector2((float)Random.Range(GetComponent<BoxCollider2D>().size.x/2, -GetComponent<BoxCollider2D>().size.x/2), transform.position.y), Quaternion.identity);
+        Instantiate(Buff[Random.Range(0,Buff.Length -  1)], new Vector2(Random.Range(range/2, -range / 2), transform.position.y), Quaternion.identity);
     }
     public void InstantiateGarbage (int amount)
     {
@@ -37,7 +39,7 @@ public class SpawnGarbage : MonoBehaviour
             {
                 Debug.Log("Count:" + changer.Copacity);
                 int Rand = Random.Range(0, changer.Copacity);
-                Instantiate(List[Rand].trash[Random.Range(0, List[Rand].trash.Length - 1)], new Vector3((float)Random.Range(-GetComponent<BoxCollider2D>().size.x/2, GetComponent<BoxCollider2D>().size.x/2), transform.position.y,2), Quaternion.identity);               
+                Instantiate(List[Rand].trash[Random.Range(0, List[Rand].trash.Length - 1)], new Vector3(Random.Range(range / 2, -range / 2), transform.position.y,2), Quaternion.identity);               
             }
         }
     }

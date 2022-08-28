@@ -291,9 +291,9 @@ MonoBehaviour:
     m_SelectedSprite: {fileID: 0}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
-    m_NormalTrigger: Normal
+    m_NormalTrigger: Idle
     m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: PressedBtn
+    m_PressedTrigger: PlayBtn_Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
@@ -1969,9 +1969,9 @@ MonoBehaviour:
     m_SelectedSprite: {fileID: 0}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
-    m_NormalTrigger: Normal
+    m_NormalTrigger: Idle
     m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: PressedBtn
+    m_PressedTrigger: PlayBtn_Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
@@ -4434,7 +4434,7 @@ MonoBehaviour:
     m_SelectedSprite: {fileID: 0}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
-    m_NormalTrigger: PlayBtn_Idle
+    m_NormalTrigger: Idle
     m_HighlightedTrigger: Highlighted
     m_PressedTrigger: PlayBtn_Pressed
     m_SelectedTrigger: Selected
@@ -4789,6 +4789,7 @@ GameObject:
   - component: {fileID: 528295759}
   - component: {fileID: 528295758}
   - component: {fileID: 528295757}
+  - component: {fileID: 528295760}
   m_Layer: 5
   m_Name: 'Back '
   m_TagString: Untagged
@@ -4852,7 +4853,7 @@ MonoBehaviour:
   m_AnimationTriggers:
     m_NormalTrigger: ST
     m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: PT
+    m_PressedTrigger: PlayBtn_Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
@@ -4892,7 +4893,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 8178680541984596217, guid: 497fd6363d1f0a5499ab78765e954362, type: 3}
+  m_Sprite: {fileID: 907864391, guid: fad3056676cea96458d8dd5f7d4aa91b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4910,6 +4911,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 528295755}
   m_CullTransparentMesh: 0
+--- !u!95 &528295760
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 528295755}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ace9743b0f55c9c4ea2bd22ede1f8cd7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &536202330
 GameObject:
   m_ObjectHideFlags: 0
@@ -5916,6 +5937,7 @@ GameObject:
   - component: {fileID: 671327220}
   - component: {fileID: 671327219}
   - component: {fileID: 671327218}
+  - component: {fileID: 671327221}
   m_Layer: 5
   m_Name: Back
   m_TagString: Untagged
@@ -5979,7 +6001,7 @@ MonoBehaviour:
   m_AnimationTriggers:
     m_NormalTrigger: ST
     m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: PT
+    m_PressedTrigger: PlayBtn_Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
@@ -6019,7 +6041,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -672212321980297580, guid: 497fd6363d1f0a5499ab78765e954362, type: 3}
+  m_Sprite: {fileID: -2070406518, guid: fad3056676cea96458d8dd5f7d4aa91b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6037,6 +6059,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 671327216}
   m_CullTransparentMesh: 0
+--- !u!95 &671327221
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 671327216}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ace9743b0f55c9c4ea2bd22ede1f8cd7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &671530101
 GameObject:
   m_ObjectHideFlags: 0
@@ -8871,9 +8913,9 @@ MonoBehaviour:
     m_SelectedSprite: {fileID: 0}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
-    m_NormalTrigger: Normal
+    m_NormalTrigger: Idle
     m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: PressedBtn
+    m_PressedTrigger: PlayBtn_Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
@@ -9307,9 +9349,9 @@ MonoBehaviour:
     m_SelectedSprite: {fileID: 0}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
-    m_NormalTrigger: Normal
+    m_NormalTrigger: Idle
     m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: PressedBtn
+    m_PressedTrigger: PlayBtn_Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
@@ -11370,7 +11412,7 @@ MonoBehaviour:
     m_SelectedSprite: {fileID: 0}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
-    m_NormalTrigger: PlayBtn_Idle
+    m_NormalTrigger: Idle
     m_HighlightedTrigger: Highlighted
     m_PressedTrigger: PlayBtn_Pressed
     m_SelectedTrigger: Selected
@@ -13183,9 +13225,9 @@ MonoBehaviour:
     m_SelectedSprite: {fileID: 0}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
-    m_NormalTrigger: Normal
+    m_NormalTrigger: Idle
     m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: PressedBtn
+    m_PressedTrigger: PlayBtn_Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
@@ -13669,7 +13711,7 @@ MonoBehaviour:
     m_SelectedSprite: {fileID: 0}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
-    m_NormalTrigger: PlayBtn_Idle
+    m_NormalTrigger: Idle
     m_HighlightedTrigger: Highlighted
     m_PressedTrigger: PlayBtn_Pressed
     m_SelectedTrigger: Selected
@@ -13823,9 +13865,9 @@ MonoBehaviour:
     m_SelectedSprite: {fileID: 0}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
-    m_NormalTrigger: Normal
+    m_NormalTrigger: Idle
     m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: PressedBtn
+    m_PressedTrigger: PlayBtn_Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
@@ -15180,9 +15222,9 @@ MonoBehaviour:
     m_SelectedSprite: {fileID: 0}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
-    m_NormalTrigger: Normal
+    m_NormalTrigger: Idle
     m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: PressedBtn
+    m_PressedTrigger: PlayBtn_Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
@@ -16933,7 +16975,7 @@ MonoBehaviour:
     m_SelectedSprite: {fileID: 0}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
-    m_NormalTrigger: PlayBtn_Idle
+    m_NormalTrigger: Idle
     m_HighlightedTrigger: Highlighted
     m_PressedTrigger: PlayBtn_Pressed
     m_SelectedTrigger: Selected
@@ -17927,6 +17969,7 @@ GameObject:
   - component: {fileID: 1869298302}
   - component: {fileID: 1869298301}
   - component: {fileID: 1869298300}
+  - component: {fileID: 1869298303}
   m_Layer: 5
   m_Name: Back
   m_TagString: Untagged
@@ -17990,7 +18033,7 @@ MonoBehaviour:
   m_AnimationTriggers:
     m_NormalTrigger: ST
     m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: PT
+    m_PressedTrigger: PlayBtn_Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
@@ -18030,7 +18073,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -8695974436317930494, guid: 497fd6363d1f0a5499ab78765e954362, type: 3}
+  m_Sprite: {fileID: -1562833737, guid: fad3056676cea96458d8dd5f7d4aa91b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -18048,6 +18091,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1869298298}
   m_CullTransparentMesh: 0
+--- !u!95 &1869298303
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1869298298}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ace9743b0f55c9c4ea2bd22ede1f8cd7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1876050871
 GameObject:
   m_ObjectHideFlags: 0
@@ -18503,9 +18566,9 @@ MonoBehaviour:
     m_SelectedSprite: {fileID: 0}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
-    m_NormalTrigger: Normal
+    m_NormalTrigger: Idle
     m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: PressedBtn
+    m_PressedTrigger: PlayBtn_Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
@@ -18689,6 +18752,7 @@ GameObject:
   - component: {fileID: 1980836769}
   - component: {fileID: 1980836768}
   - component: {fileID: 1980836767}
+  - component: {fileID: 1980836770}
   m_Layer: 5
   m_Name: Back
   m_TagString: Untagged
@@ -18752,7 +18816,7 @@ MonoBehaviour:
   m_AnimationTriggers:
     m_NormalTrigger: ST
     m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: PT
+    m_PressedTrigger: PlayBtn_Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
@@ -18810,6 +18874,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1980836765}
   m_CullTransparentMesh: 0
+--- !u!95 &1980836770
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1980836765}
+  m_Enabled: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ace9743b0f55c9c4ea2bd22ede1f8cd7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1980842286
 GameObject:
   m_ObjectHideFlags: 0

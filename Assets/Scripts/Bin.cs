@@ -54,8 +54,8 @@ public class Bin : MonoBehaviour
     {
         GetComponent<SpriteRenderer>().sprite = BinSprite[Acceptable];        
     }
-    public void PlaySound (AudioClip clip)
+    public void PlaySound ()
     {
-        GetComponent<AudioSource>().PlayOneShot(clip);
+        GetComponent<AudioSource>().Play();
     }
 }

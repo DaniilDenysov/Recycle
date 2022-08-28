@@ -41,10 +41,8 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -230,55 +228,55 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1696}
+      Script: {instanceID: 1698}
     - Class: 114
-      Script: {instanceID: 2200}
+      Script: {instanceID: 2202}
     - Class: 114
-      Script: {instanceID: 2998}
+      Script: {instanceID: 3000}
     - Class: 114
-      Script: {instanceID: 3246}
+      Script: {instanceID: 3248}
     - Class: 114
-      Script: {instanceID: 3254}
+      Script: {instanceID: 3256}
     - Class: 114
-      Script: {instanceID: 3620}
+      Script: {instanceID: 3622}
     - Class: 114
-      Script: {instanceID: 3886}
+      Script: {instanceID: 3888}
     - Class: 114
-      Script: {instanceID: 5208}
+      Script: {instanceID: 5210}
     - Class: 114
-      Script: {instanceID: 6070}
+      Script: {instanceID: 6072}
     - Class: 114
-      Script: {instanceID: 6428}
+      Script: {instanceID: 6430}
     - Class: 114
-      Script: {instanceID: 6672}
+      Script: {instanceID: 6674}
     - Class: 114
-      Script: {instanceID: 6840}
+      Script: {instanceID: 6842}
     - Class: 114
-      Script: {instanceID: 6922}
+      Script: {instanceID: 6924}
     - Class: 114
-      Script: {instanceID: 7028}
+      Script: {instanceID: 7030}
     - Class: 114
-      Script: {instanceID: 7448}
+      Script: {instanceID: 7158}
     - Class: 114
-      Script: {instanceID: 8282}
+      Script: {instanceID: 7258}
     - Class: 114
-      Script: {instanceID: 8562}
+      Script: {instanceID: 7454}
     - Class: 114
-      Script: {instanceID: 8918}
+      Script: {instanceID: 8288}
     - Class: 114
-      Script: {instanceID: 9058}
+      Script: {instanceID: 8568}
     - Class: 114
-      Script: {instanceID: 9774}
+      Script: {instanceID: 8924}
     - Class: 114
-      Script: {instanceID: 25970}
+      Script: {instanceID: 9064}
     - Class: 114
-      Script: {instanceID: 25996}
+      Script: {instanceID: 9780}
     - Class: 114
-      Script: {instanceID: 26054}
+      Script: {instanceID: 25988}
     - Class: 114
-      Script: {instanceID: 34056}
+      Script: {instanceID: 26014}
     - Class: 114
-      Script: {instanceID: 167374}
+      Script: {instanceID: 26072}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -339,53 +337,53 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1696}
+      Script: {instanceID: 1698}
     - Class: 114
-      Script: {instanceID: 2466}
+      Script: {instanceID: 2468}
     - Class: 114
-      Script: {instanceID: 2998}
+      Script: {instanceID: 3000}
     - Class: 114
-      Script: {instanceID: 3246}
+      Script: {instanceID: 3248}
     - Class: 114
-      Script: {instanceID: 3334}
+      Script: {instanceID: 3336}
     - Class: 114
-      Script: {instanceID: 3620}
+      Script: {instanceID: 3622}
     - Class: 114
-      Script: {instanceID: 4038}
+      Script: {instanceID: 4040}
     - Class: 114
-      Script: {instanceID: 4584}
+      Script: {instanceID: 4586}
     - Class: 114
-      Script: {instanceID: 4882}
+      Script: {instanceID: 4884}
     - Class: 114
-      Script: {instanceID: 5198}
+      Script: {instanceID: 5200}
     - Class: 114
-      Script: {instanceID: 5916}
+      Script: {instanceID: 5918}
     - Class: 114
-      Script: {instanceID: 5976}
+      Script: {instanceID: 5978}
     - Class: 114
-      Script: {instanceID: 6070}
+      Script: {instanceID: 6072}
     - Class: 114
-      Script: {instanceID: 6190}
+      Script: {instanceID: 6192}
     - Class: 114
-      Script: {instanceID: 6428}
+      Script: {instanceID: 6430}
     - Class: 114
-      Script: {instanceID: 6664}
+      Script: {instanceID: 6666}
     - Class: 114
-      Script: {instanceID: 6840}
+      Script: {instanceID: 6842}
     - Class: 114
-      Script: {instanceID: 7028}
+      Script: {instanceID: 7030}
     - Class: 114
-      Script: {instanceID: 7448}
+      Script: {instanceID: 7258}
     - Class: 114
-      Script: {instanceID: 7460}
+      Script: {instanceID: 7454}
     - Class: 114
-      Script: {instanceID: 8310}
+      Script: {instanceID: 7466}
     - Class: 114
-      Script: {instanceID: 8420}
+      Script: {instanceID: 8316}
     - Class: 114
-      Script: {instanceID: 8784}
+      Script: {instanceID: 8426}
     - Class: 114
-      Script: {instanceID: 167374}
+      Script: {instanceID: 8790}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1087,10 +1085,22 @@ ScriptsOnlyBuild:
     className: TextMeshProUGUI
   - hash:
       serializedVersion: 2
+      Hash: d53a678f1b8d8b1510d6d8b18b7eae59
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: FPS
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: UnityEngine.Purchasing.Stores.dll
     namespaceName: UnityEngine.Purchasing.Extension
     className: UnityUtil
+  - hash:
+      serializedVersion: 2
+      Hash: a5c810c4ecbf86644037f4b8cd6083c0
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: FPS_Limit
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -1397,18 +1407,6 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: BinChanger
-  - hash:
-      serializedVersion: 2
-      Hash: d53a678f1b8d8b1510d6d8b18b7eae59
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: FPS
-  - hash:
-      serializedVersion: 2
-      Hash: a5c810c4ecbf86644037f4b8cd6083c0
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: FPS_Limit
   platform: 13
   scenePathNames:
   - Assets/Scenes/Menu.unity

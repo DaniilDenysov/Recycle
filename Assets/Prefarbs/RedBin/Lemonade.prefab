@@ -288,7 +288,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   point: {fileID: 7890742714732054253}
   particles: {fileID: 1297868062850697475, guid: 156a47e9f630e1543877ca7446612e84, type: 3}
-  ObjectTaken: {fileID: 8300000, guid: d7f18b2982fd4534ba4710852ef0cbb3, type: 3}
+  ObjectTaken: {fileID: 8300000, guid: eec2e988bab127f429d295c4af96fce0, type: 3}
   ObjectDropped: {fileID: 8300000, guid: 2251cf170f24b2546bb3c819787584dd, type: 3}
   pauseManager: {fileID: 0}
   defeatManager: {fileID: 0}
@@ -377,7 +377,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 24300002, guid: ee84e827bb10cf342bf67369261cc3e1, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0
