@@ -5,7 +5,16 @@ using UnityEngine;
 public class Effect : MonoBehaviour
 {
     [SerializeField] private string ID;
-    [SerializeField] private GameObject particles; 
+    [SerializeField] private GameObject particles;
+    int ForceIndex = -1;
+
+    private void Start()
+    {
+       // ForceIndex = Random.Range(-2, 2);
+        GetComponent<Rigidbody2D>().AddForce(transform.right * 5 * ForceIndex,ForceMode2D.Impulse);
+        Debug.Log("Impulse: " + ForceIndex);
+    }
+
     private void OnMouseDown()
     {
         // manager.GetComponent<Animator>().GetAn.Stop();

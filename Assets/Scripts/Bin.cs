@@ -18,6 +18,7 @@ public class Bin : MonoBehaviour
         gameObject.layer = Acceptable;
         if (PlayerPrefs.HasKey("Help"))
         {
+            Debug.Log("Help: " + PlayerPrefs.GetInt("Help"));
             if (PlayerPrefs.GetInt("Help") == 0) Help = true;
             else Help = false;
         }
@@ -38,16 +39,11 @@ public class Bin : MonoBehaviour
     {
         if (Help)
         {
-            if (Garbage_ID == Acceptable)
-            {
-                //TickParticles(Green);
-                tick_anim.Play("Accepted");
-            }
-            else
-            {
-               // TickParticles(Red);
-                tick_anim.Play("NotAccepted");
-            }
+            if (Garbage_ID == Acceptable) tick_anim.Play("Accepted");
+            else tick_anim.Play("NotAccepted");
+            //TickParticles(Green);
+
+            // TickParticles(Red);
         }
     }
     public void ChangeColor ()

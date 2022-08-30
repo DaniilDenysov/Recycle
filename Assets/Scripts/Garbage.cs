@@ -70,6 +70,7 @@ public class Garbage : MonoBehaviour
         {
             if (!pauseManager.Paused && !defeatManager.Lost)
             {
+                Debug.Log("Ray");
                 transform.position = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 3));
                 RaycastHit2D hit = Physics2D.Raycast(new Vector3(point.transform.position.x, point.transform.position.y, -1), Vector2.down);
               //  Debug.DrawLine(transform.position, Vector2.down, Color.red);
@@ -78,6 +79,7 @@ public class Garbage : MonoBehaviour
                     Debug.Log("Hitted:" + hit.collider.name);
                     if (hit.collider.GetComponent<Bin>())
                     {
+                        Debug.Log("Ok");
                         hit.collider.GetComponent<Bin>().Check(gameObject.layer);
                     }
                 }

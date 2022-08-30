@@ -29,7 +29,7 @@ public class SpawnGarbage : MonoBehaviour
     }
     public void InstantiateBuff ()
     {
-        Instantiate(Buff[Random.Range(0,Buff.Length -  1)], new Vector2(Random.Range(range/2, -range / 2), transform.position.y), Quaternion.identity);
+        Instantiate(Buff[Random.Range(0,Buff.Length -  1)], new Vector2(14,8), Quaternion.identity);
     }
     public void InstantiateGarbage (int amount)
     {

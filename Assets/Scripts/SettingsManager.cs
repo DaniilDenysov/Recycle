@@ -38,11 +38,13 @@ public class SettingsManager : MonoBehaviour
         {
             PlayerPrefs.SetInt(Music_PlayerPrefsID, 0);
             mixer.SetFloat("Master",-10);
+            PlayerPrefs.Save();
         }
         else
         {
             PlayerPrefs.SetInt(Music_PlayerPrefsID, 1);
             mixer.SetFloat("Master", -80);
+            PlayerPrefs.Save();
         }
     }
 
