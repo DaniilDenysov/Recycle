@@ -13,6 +13,7 @@ public class Effect : MonoBehaviour
        ForceIndex = Random.Range(-1, -3);
         GetComponent<Rigidbody2D>().AddForce(transform.right * 5 * ForceIndex,ForceMode2D.Impulse);
         Debug.Log("Impulse: " + ForceIndex);
+        Destroy(this.gameObject,20);
     }
 
     private void OnMouseDown()

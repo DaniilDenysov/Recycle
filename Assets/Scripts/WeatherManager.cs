@@ -6,7 +6,7 @@ public class WeatherManager : MonoBehaviour
 {
 
     [SerializeField] private ParticleSystem[] fallouts;
-    float Min = 0.5f, Max;
+    [SerializeField] private float Min = 0.5f, Max;
     int _Season;
     bool isChanging;
     [SerializeField] private float time,interval; 
@@ -19,6 +19,10 @@ public class WeatherManager : MonoBehaviour
             Debug.Log("Season: " + _Season);
             ParticleSystem.MainModule main = fallouts[_Season].main;
             InvokeRepeating("ChangeWeather", interval, interval);
+        }
+        else
+        {
+            Destroy(this);
         }      
     }
 
@@ -39,7 +43,7 @@ public class WeatherManager : MonoBehaviour
     {
         var main = fallouts[_Season].main;
         Min = main.simulationSpeed;
-        Max = Random.Range(0.5f,2);
+        Max = Random.Range(0.1f,1.1f);
         isChanging = true;
     }
 
