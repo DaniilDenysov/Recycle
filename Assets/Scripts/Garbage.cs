@@ -95,6 +95,7 @@ public class Garbage : MonoBehaviour
    
             isTaken = true;
             GetComponent<AudioSource>().PlayOneShot(ObjectTaken);
+            GetComponent<Animator>().Play("Taken");
         //    GetComponent<CircleCollider2D>().isTrigger = true;
         
             GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
@@ -116,10 +117,11 @@ public class Garbage : MonoBehaviour
     {
       
             isTaken = false;
+        GetComponent<Animator>().Play("Dropped");
         //  GetComponent<AudioSource>().PlayOneShot(ObjectDropped);
         //   GetComponent<CircleCollider2D>().isTrigger = false;
 
-            GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
+        GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
             GetComponent<Rigidbody2D>().WakeUp();
         
     }

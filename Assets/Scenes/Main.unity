@@ -15243,6 +15243,7 @@ GameObject:
   - component: {fileID: 198184316}
   - component: {fileID: 198184318}
   - component: {fileID: 198184320}
+  - component: {fileID: 198184321}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -15325,6 +15326,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a12c7135ee98a8f4ab7a57feca3d609f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &198184321
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 198184315}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3330cfbdff42c5468b9d36bae7eb6be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fallouts:
+  - {fileID: 2085350961}
+  - {fileID: 1033505265}
+  - {fileID: 651109452}
+  - {fileID: 0}
+  time: 10
+  interval: 10
 --- !u!1 &199474404
 GameObject:
   m_ObjectHideFlags: 0
@@ -31064,7 +31084,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -42.94171, y: -80.2}
+  m_AnchoredPosition: {x: -42.94165, y: -80.20001}
   m_SizeDelta: {x: 80, y: 22.5396}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &379450277
@@ -116185,7 +116205,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -37.109314, y: -38.060333}
+  m_AnchoredPosition: {x: -37.109375, y: -38.060303}
   m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1502062084
@@ -116243,7 +116263,7 @@ MonoBehaviour:
   CurrentLevelScore: 0
   Increase: 1
   Display: {fileID: 549155630}
-  Protection: 0
+  Protection: 1
 --- !u!1 &1510879320
 GameObject:
   m_ObjectHideFlags: 0
@@ -155569,7 +155589,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     randomizeRotationDirection: 0
-    maxNumParticles: 85
+    maxNumParticles: 80
     customEmitterVelocity: {x: 0, y: 0, z: 0}
     size3D: 0
     rotation3D: 0

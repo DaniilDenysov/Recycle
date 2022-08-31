@@ -18,6 +18,7 @@ ScriptsOnlyBuild:
     - SettingsManager
     - SpawnGarbage
     - VerticalDropdown
+    - WeatherManager
     DOTween.dll:
     - DG.Tweening.Core.DOTweenSettings
     Unity.2D.Tilemap.Editor.dll:
@@ -41,8 +42,10 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -133,9 +136,6 @@ ScriptsOnlyBuild:
     fullTypeName: ImageSlider
     methodName: Button
   - assembly: Assembly-CSharp
-    fullTypeName: MainMenu
-    methodName: Help
-  - assembly: Assembly-CSharp
     fullTypeName: VerticalDropdown
     methodName: Swipe
   - assembly: Assembly-CSharp
@@ -168,12 +168,6 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: ImageSlider
     methodName: Button
-  - assembly: Assembly-CSharp
-    fullTypeName: MainMenu
-    methodName: Help
-  - assembly: Assembly-CSharp
-    fullTypeName: MainMenu
-    methodName: Help
   - assembly: Assembly-CSharp
     fullTypeName: MainMenu
     methodName: SetVolume
@@ -230,53 +224,55 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1698}
     - Class: 114
-      Script: {instanceID: 2202}
+      Script: {instanceID: 16812}
     - Class: 114
-      Script: {instanceID: 3000}
+      Script: {instanceID: 17610}
     - Class: 114
-      Script: {instanceID: 3248}
+      Script: {instanceID: 17858}
     - Class: 114
-      Script: {instanceID: 3256}
+      Script: {instanceID: 17866}
     - Class: 114
-      Script: {instanceID: 3622}
+      Script: {instanceID: 18232}
     - Class: 114
-      Script: {instanceID: 3888}
+      Script: {instanceID: 18498}
     - Class: 114
-      Script: {instanceID: 5210}
+      Script: {instanceID: 19818}
     - Class: 114
-      Script: {instanceID: 6072}
+      Script: {instanceID: 20680}
     - Class: 114
-      Script: {instanceID: 6430}
+      Script: {instanceID: 21038}
     - Class: 114
-      Script: {instanceID: 6674}
+      Script: {instanceID: 21282}
     - Class: 114
-      Script: {instanceID: 6842}
+      Script: {instanceID: 21448}
     - Class: 114
-      Script: {instanceID: 6924}
+      Script: {instanceID: 21530}
     - Class: 114
-      Script: {instanceID: 7030}
+      Script: {instanceID: 21636}
     - Class: 114
-      Script: {instanceID: 7158}
+      Script: {instanceID: 21764}
     - Class: 114
-      Script: {instanceID: 7258}
+      Script: {instanceID: 21864}
     - Class: 114
-      Script: {instanceID: 7454}
+      Script: {instanceID: 22060}
     - Class: 114
-      Script: {instanceID: 8288}
+      Script: {instanceID: 22894}
     - Class: 114
-      Script: {instanceID: 8568}
+      Script: {instanceID: 23174}
     - Class: 114
-      Script: {instanceID: 8924}
+      Script: {instanceID: 23530}
     - Class: 114
-      Script: {instanceID: 9064}
+      Script: {instanceID: 23670}
     - Class: 114
-      Script: {instanceID: 9780}
+      Script: {instanceID: 24386}
     - Class: 114
-      Script: {instanceID: 29780}
+      Script: {instanceID: 27534}
     - Class: 114
-      Script: {instanceID: 29800}
+      Script: {instanceID: 27538}
     - Class: 114
-      Script: {instanceID: 29844}
+      Script: {instanceID: 27562}
+    - Class: 114
+      Script: {instanceID: 40846}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -339,51 +335,51 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1698}
     - Class: 114
-      Script: {instanceID: 2468}
+      Script: {instanceID: 17078}
     - Class: 114
-      Script: {instanceID: 3000}
+      Script: {instanceID: 17610}
     - Class: 114
-      Script: {instanceID: 3248}
+      Script: {instanceID: 17858}
     - Class: 114
-      Script: {instanceID: 3336}
+      Script: {instanceID: 17946}
     - Class: 114
-      Script: {instanceID: 3622}
+      Script: {instanceID: 18232}
     - Class: 114
-      Script: {instanceID: 4040}
+      Script: {instanceID: 18648}
     - Class: 114
-      Script: {instanceID: 4586}
+      Script: {instanceID: 19194}
     - Class: 114
-      Script: {instanceID: 4884}
+      Script: {instanceID: 19492}
     - Class: 114
-      Script: {instanceID: 5200}
+      Script: {instanceID: 19808}
     - Class: 114
-      Script: {instanceID: 5918}
+      Script: {instanceID: 20526}
     - Class: 114
-      Script: {instanceID: 5978}
+      Script: {instanceID: 20586}
     - Class: 114
-      Script: {instanceID: 6072}
+      Script: {instanceID: 20680}
     - Class: 114
-      Script: {instanceID: 6192}
+      Script: {instanceID: 20800}
     - Class: 114
-      Script: {instanceID: 6430}
+      Script: {instanceID: 21038}
     - Class: 114
-      Script: {instanceID: 6666}
+      Script: {instanceID: 21274}
     - Class: 114
-      Script: {instanceID: 6842}
+      Script: {instanceID: 21448}
     - Class: 114
-      Script: {instanceID: 7030}
+      Script: {instanceID: 21636}
     - Class: 114
-      Script: {instanceID: 7258}
+      Script: {instanceID: 21864}
     - Class: 114
-      Script: {instanceID: 7454}
+      Script: {instanceID: 22060}
     - Class: 114
-      Script: {instanceID: 7466}
+      Script: {instanceID: 22072}
     - Class: 114
-      Script: {instanceID: 8316}
+      Script: {instanceID: 22922}
     - Class: 114
-      Script: {instanceID: 8426}
+      Script: {instanceID: 23032}
     - Class: 114
-      Script: {instanceID: 8790}
+      Script: {instanceID: 23396}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1407,8 +1403,14 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: BinChanger
+  - hash:
+      serializedVersion: 2
+      Hash: 2ab25b9d081e2305663c3081ae1225e2
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: WeatherManager
   platform: 13
   scenePathNames:
   - Assets/Scenes/Menu.unity
   - Assets/Scenes/Main.unity
-  playerPath: C:/Users/Administrator/Desktop/Recycling.apk
+  playerPath: C:/Users/Ebakryak/Documents/Recycling.apk
