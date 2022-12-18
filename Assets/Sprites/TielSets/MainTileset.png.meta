@@ -817,7 +817,7 @@ TextureImporter:
         width: 311
         height: 312
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -825,6 +825,27 @@ TextureImporter:
       bones: []
       spriteID: 38feecbfc3c39954eb1fecc96ddb4da2
       internalID: 1128033723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MainTileset_34
+      rect:
+        serializedVersion: 2
+        x: 2971
+        y: 3623
+        width: 504
+        height: 496
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d36ca51cde7bb445b7161616bbc9057
+      internalID: 152520291
       vertices: []
       indices: 
       edges: []
@@ -841,6 +862,7 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       MainTileset_19: -185574629
+      MainTileset_12: -32176468
       MainTileset_9: -865578059
       MainTileset_18: 1399099469
       MainTileset_27: -2021693815
@@ -853,6 +875,7 @@ TextureImporter:
       MainTileset_6: 1312204542
       MainTileset_33: 1128033723
       MainTileset_15: 1350123188
+      MainTileset_35: 386188094
       MainTileset_11: 371897645
       MainTileset_22: 517479675
       MainTileset_1: 1107458103
@@ -873,7 +896,7 @@ TextureImporter:
       MainTileset_24: -1802923251
       MainTileset_14: 946721065
       MainTileset_16: -1918828779
-      MainTileset_12: -32176468
+      MainTileset_34: 152520291
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

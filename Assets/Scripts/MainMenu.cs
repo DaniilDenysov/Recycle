@@ -95,6 +95,10 @@ public class MainMenu : MonoBehaviour
         PlayerPrefs.SetInt("Difficulty", difficulty);
         SceneManager.LoadScene(1);
     }
+    public void Arcade ()
+    {
+        SceneManager.LoadScene(2);
+    }
     public void random ()
     {
         PlayerPrefs.SetInt("Difficulty",Random.Range(2,4));
