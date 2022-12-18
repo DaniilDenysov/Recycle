@@ -5,8 +5,10 @@ using UnityEngine;
 public class Garbage : MonoBehaviour
 {
     [SerializeField] private Transform point;
+    [SerializeField] private GameObject texture;
     [SerializeField] private GameObject particles;
     [SerializeField] private AudioClip ObjectTaken, ObjectDropped;
+    private Animator animator;
     public PauseManager pauseManager;
     public DefeatManager defeatManager;
     public ScoreManager scoreManager;
@@ -17,6 +19,8 @@ public class Garbage : MonoBehaviour
         pauseManager = FindObjectOfType<PauseManager>();
         defeatManager = FindObjectOfType<DefeatManager>();
         scoreManager = FindObjectOfType<ScoreManager>();
+        if (texture != null) animator = texture.GetComponent<Animator>();
+        else animator = GetComponent<Animator>();
         Debug.Log(gameObject.name);
     }
     private void OnCollisionEnter2D(Collision2D collision)
@@ -58,11 +62,24 @@ public class Garbage : MonoBehaviour
     }
     void Destroy ()
     {
-       // Destroy(GetComponent<CircleCollider2D>());
-        Destroy(GetComponent<Rigidbody2D>());       
-        GetComponent<Animator>().Play("Destroy");
-        Destroy(gameObject, 1);
-        Destroy(this);
+        // Destroy(GetComponent<CircleCollider2D>());
+        animator.Play("Destroy");
+        if (texture != null)
+        {
+            Destroy(GetComponent<HingeJoint2D>());
+            Destroy(GetComponent<Rigidbody2D>());
+            Destroy(texture.GetComponent<Rigidbody2D>());
+           // texture.GetComponent<Animator>().Play("Destroy");
+            Destroy(gameObject.transform.parent.gameObject, 1);
+            Destroy(this);
+        }
+        else
+        {
+            Destroy(GetComponent<Rigidbody2D>());
+            //GetComponent<Animator>().Play("Destroy");
+            Destroy(gameObject, 1);
+            Destroy(this);
+        }     
     }
     void FixedUpdate()
     {       
@@ -95,7 +112,7 @@ public class Garbage : MonoBehaviour
    
             isTaken = true;
             GetComponent<AudioSource>().PlayOneShot(ObjectTaken);
-            GetComponent<Animator>().Play("Taken");
+            animator.Play("Taken");
         //    GetComponent<CircleCollider2D>().isTrigger = true;
         
             GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
@@ -117,7 +134,7 @@ public class Garbage : MonoBehaviour
     {
       
             isTaken = false;
-        GetComponent<Animator>().Play("Dropped");
+        animator.Play("Dropped");
         //  GetComponent<AudioSource>().PlayOneShot(ObjectDropped);
         //   GetComponent<CircleCollider2D>().isTrigger = false;
 

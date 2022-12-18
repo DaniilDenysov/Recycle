@@ -17,12 +17,13 @@ public class SpawnGarbage : MonoBehaviour
     [SerializeField] private BinChanger changer;
     [SerializeField] private GameObject [] Buff;
     [SerializeField] private float range;
-
+    private GarbageCollector garbageCollector;
 
     void Start()
     {
         pauseManager = FindObjectOfType<PauseManager>();
         defeatManager = FindObjectOfType<DefeatManager>();
+        garbageCollector = FindObjectOfType<GarbageCollector>();
         StartCoroutine(Spawn(2));
         InstantiateBuff();
         StartCoroutine(SpawnBuff(30));
@@ -39,7 +40,7 @@ public class SpawnGarbage : MonoBehaviour
             {
                 Debug.Log("Count:" + changer.Copacity);
                 int Rand = Random.Range(0, changer.Copacity);
-                Instantiate(List[Rand].trash[Random.Range(0, List[Rand].trash.Length - 1)], new Vector3(Random.Range(range / 2, -range / 2), transform.position.y,2), Quaternion.identity);               
+                garbageCollector.AddGarbage(Instantiate(List[Rand].trash[Random.Range(0, List[Rand].trash.Length - 1)], new Vector3(Random.Range(range / 2, -range / 2), transform.position.y,2), Quaternion.identity));               
             }
         }
     }

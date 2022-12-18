@@ -31,7 +31,7 @@ android {
 
     signingConfigs {
         release {
-            storeFile file('C:/Users/Ebakryak/Documents/user.keystore')
+            storeFile file('C:/Users/Administrator/Documents/user.keystore')
             storePassword '123098Den_tima'
             keyAlias 'mainkey'
             keyPassword '123098Den_tima'

@@ -328,13 +328,16 @@
 -r:"Library/Bee/artifacts/1300b0aPDevDbg.dag/UnityEngine.SpatialTracking.ref.dll"
 -r:"Library/Bee/artifacts/1300b0aPDevDbg.dag/UnityEngine.UI.ref.dll"
 -r:"Library/Bee/artifacts/1300b0aPDevDbg.dag/UnityEngine.XR.LegacyInputHelpers.ref.dll"
-"Assets/FPS.cs"
+"Assets/Scripts/Arcade/Scene/Spawner.cs"
 "Assets/Scripts/Bin.cs"
 "Assets/Scripts/BinChanger.cs"
 "Assets/Scripts/DefeatManager.cs"
 "Assets/Scripts/Effect.cs"
 "Assets/Scripts/EffectsManager.cs"
+"Assets/Scripts/FPS.cs"
+"Assets/Scripts/FPS_Limit.cs"
 "Assets/Scripts/Garbage.cs"
+"Assets/Scripts/GarbageCollector.cs"
 "Assets/Scripts/ImageSlider.cs"
 "Assets/Scripts/MainMenu.cs"
 "Assets/Scripts/MapManager.cs"
@@ -345,6 +348,7 @@
 "Assets/Scripts/SettingsManager.cs"
 "Assets/Scripts/SpawnGarbage.cs"
 "Assets/Scripts/VerticalDropdown.cs"
+"Assets/Scripts/WeatherManager.cs"
 -langversion:9.0
 
 /deterministic

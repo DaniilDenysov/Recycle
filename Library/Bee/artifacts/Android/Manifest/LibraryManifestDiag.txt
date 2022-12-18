@@ -1,4 +1,4 @@
-Using template 'C:/Program Files/Unity/Hub/Editor/2021.3.8f1/Editor/Data/PlaybackEngines/AndroidPlayer\Apk\UnityManifest.xml'
+Using template 'C:/Program Files/Unity/2021.3.8f1/Editor/Data/PlaybackEngines/AndroidPlayer\Apk\UnityManifest.xml'
 
 isGame application flag was added because:
 	Android TV Compatability was enabled
