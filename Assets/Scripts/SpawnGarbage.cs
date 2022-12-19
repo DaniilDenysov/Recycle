@@ -37,11 +37,12 @@ public class SpawnGarbage : MonoBehaviour
         if (!pauseManager.Paused && !defeatManager.Lost)
         {
             for (int i = 0; i < amount; i++)
-            {
+            {   
                 Debug.Log("Count:" + changer.Copacity);
                 int Rand = Random.Range(0, changer.Copacity);
-                garbageCollector.AddGarbage(Instantiate(List[Rand].trash[Random.Range(0, List[Rand].trash.Length - 1)], new Vector3(Random.Range(range / 2, -range / 2), transform.position.y,2), Quaternion.identity));               
-            }
+                Instantiate(List[Rand].trash[Random.Range(0, List[Rand].trash.Length - 1)], new Vector3(Random.Range(range / 2, -range / 2), transform.position.y, 2), Quaternion.identity);
+            //  garbageCollector.AddGarbage(Instantiate(List[Rand].trash[Random.Range(0, List[Rand].trash.Length - 1)], new Vector3(Random.Range(range / 2, -range / 2), transform.position.y,2), Quaternion.identity));               
+        }
         }
     }
     IEnumerator Spawn (int Time)

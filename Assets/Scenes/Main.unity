@@ -20844,18 +20844,18 @@ MonoBehaviour:
     - {fileID: 5945426331861298425, guid: ab84a2757aedba74287dbeade3ed2c4f, type: 3}
   - layer: 0
     trash:
-    - {fileID: 3626503422583121894, guid: 2768124292ba34348a81394646958a31, type: 3}
-    - {fileID: 3626503422583121894, guid: 2768124292ba34348a81394646958a31, type: 3}
+    - {fileID: 5539203843352990277, guid: 0b8d552345c72924d9bdc5cc34328c01, type: 3}
+    - {fileID: 5539203843352990277, guid: 0b8d552345c72924d9bdc5cc34328c01, type: 3}
     - {fileID: 4609270575335494041, guid: bfdbc35e6ac902d46bfebd494777d3ce, type: 3}
     - {fileID: 4609270575335494041, guid: bfdbc35e6ac902d46bfebd494777d3ce, type: 3}
-    - {fileID: 4881329556078996163, guid: 3bab54ce6b295d549babe5bf505a4876, type: 3}
-    - {fileID: 4881329556078996163, guid: 3bab54ce6b295d549babe5bf505a4876, type: 3}
-    - {fileID: 9006554221387291040, guid: c1a7676000ebfb84197f246c362c0b78, type: 3}
-    - {fileID: 9006554221387291040, guid: c1a7676000ebfb84197f246c362c0b78, type: 3}
+    - {fileID: 1624657337326563313, guid: b2b23e7d8b54d4240959834967f99019, type: 3}
+    - {fileID: 1624657337326563313, guid: b2b23e7d8b54d4240959834967f99019, type: 3}
+    - {fileID: 5226272922706992728, guid: 1b0a7fc996808154da3041b370079517, type: 3}
+    - {fileID: 5226272922706992728, guid: 1b0a7fc996808154da3041b370079517, type: 3}
     - {fileID: 3260351656934570843, guid: 2717738a18b5ac149bf356e421e511f1, type: 3}
     - {fileID: 3260351656934570843, guid: 2717738a18b5ac149bf356e421e511f1, type: 3}
-    - {fileID: 3194123739944597754, guid: 0273609b39f4ab54f8c8969244dfa734, type: 3}
-    - {fileID: 3194123739944597754, guid: 0273609b39f4ab54f8c8969244dfa734, type: 3}
+    - {fileID: 8399143522256255928, guid: 3fae310064a8a104293986a3a27eb656, type: 3}
+    - {fileID: 8399143522256255928, guid: 3fae310064a8a104293986a3a27eb656, type: 3}
   pauseManager: {fileID: 0}
   defeatManager: {fileID: 0}
   changer: {fileID: 281219243}
@@ -31604,7 +31604,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &482136553
 MonoBehaviour:
   m_ObjectHideFlags: 0
