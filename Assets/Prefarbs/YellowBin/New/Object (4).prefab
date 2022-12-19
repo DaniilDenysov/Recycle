@@ -183,7 +183,9 @@ GameObject:
   - component: {fileID: 4935150271362238436}
   - component: {fileID: 8444213086946922435}
   - component: {fileID: 2403412992960615783}
-  m_Layer: 0
+  - component: {fileID: 4879740748087240177}
+  - component: {fileID: 7359241017038383278}
+  m_Layer: 2
   m_Name: Texture&&additional components
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -299,6 +301,45 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!61 &4879740748087240177
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1742852789597855339}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.7266667, y: 1.56}
+    newSize: {x: 1.4266666, y: 1.4266666}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.7266667, y: 1.56}
+  m_EdgeRadius: 0
+--- !u!114 &7359241017038383278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1742852789597855339}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c873144a0e7ecc47ae03029de55c575, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  garbage: {fileID: 4623257763229602373}
 --- !u!1 &3951020962719864294
 GameObject:
   m_ObjectHideFlags: 0
@@ -348,7 +389,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: -0.52}
@@ -392,6 +433,9 @@ MonoBehaviour:
   particles: {fileID: 1297868062850697475, guid: 156a47e9f630e1543877ca7446612e84, type: 3}
   ObjectTaken: {fileID: 8300000, guid: eec2e988bab127f429d295c4af96fce0, type: 3}
   ObjectDropped: {fileID: 8300000, guid: 2251cf170f24b2546bb3c819787584dd, type: 3}
+  collisionIgnore:
+    serializedVersion: 2
+    m_Bits: 0
   pauseManager: {fileID: 0}
   defeatManager: {fileID: 0}
   scoreManager: {fileID: 0}

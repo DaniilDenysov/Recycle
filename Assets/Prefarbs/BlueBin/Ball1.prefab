@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 413114900733654339}
   - component: {fileID: 6727602599041239925}
   - component: {fileID: 5931070055797149197}
+  - component: {fileID: -6298034526219385445}
   m_Layer: 10
   m_Name: Ball1
   m_TagString: Untagged
@@ -89,9 +90,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   point: {fileID: 1497328375405537778}
+  texture: {fileID: 0}
   particles: {fileID: 1297868062850697475, guid: 156a47e9f630e1543877ca7446612e84, type: 3}
   ObjectTaken: {fileID: 8300000, guid: eec2e988bab127f429d295c4af96fce0, type: 3}
   ObjectDropped: {fileID: 8300000, guid: 2251cf170f24b2546bb3c819787584dd, type: 3}
+  collisionIgnore:
+    serializedVersion: 2
+    m_Bits: 0
   pauseManager: {fileID: 0}
   defeatManager: {fileID: 0}
   scoreManager: {fileID: 0}
@@ -263,6 +268,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &-6298034526219385445
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 413114900733654719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c873144a0e7ecc47ae03029de55c575, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  garbage: {fileID: 413114900733654338}
 --- !u!1 &5080199161033302926
 GameObject:
   m_ObjectHideFlags: 0
