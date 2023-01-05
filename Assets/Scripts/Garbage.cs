@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Garbage : MonoBehaviour
 {
@@ -152,7 +150,7 @@ public class Garbage : MonoBehaviour
     }
     void FixedUpdate()
     {       
-        if (isTaken)
+        /*if (isTaken)
         {
             if (!pauseManager.Paused && !defeatManager.Lost)
             {
@@ -174,7 +172,7 @@ public class Garbage : MonoBehaviour
             {
                 Destroy(gameObject);
             }
-        }
+        }*/
     }
     public void OnMouseDown()
     {
@@ -191,24 +189,45 @@ public class Garbage : MonoBehaviour
 
     public void OnMouseOver()
     {
-            // GetComponent<Animator>().Play("Enter");
+        if (isTaken)
+        {
+            if (!pauseManager.Paused && !defeatManager.Lost)
+            {
+                Debug.Log("Ray");
+                transform.position = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 3));
+                RaycastHit2D hit = Physics2D.Raycast(new Vector3(point.transform.position.x, point.transform.position.y, -1), Vector2.down);
+                //  Debug.DrawLine(transform.position, Vector2.down, Color.red);
+                if (hit.collider)
+                {
+                    Debug.Log("Hitted:" + hit.collider.name);
+                    if (hit.collider.GetComponent<Bin>())
+                    {
+                        Debug.Log("Ok");
+                        hit.collider.GetComponent<Bin>().Check(gameObject.layer);
+                    }
+                }
+            }
+            else
+            {
+                Destroy(gameObject);
+            }
+        }
+        // GetComponent<Animator>().Play("Enter");
     }
 
     public void OnMouseExit()
     {
-       // GetComponent<Animator>().Play("Exit");
+        isTaken = false;
+        animator.Play("Dropped");
+        GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
+        GetComponent<Rigidbody2D>().WakeUp();
     }
 
     public void OnMouseUp()
-    {
-      
-            isTaken = false;
+    {    
+        isTaken = false;
         animator.Play("Dropped");
-        //  GetComponent<AudioSource>().PlayOneShot(ObjectDropped);
-        //   GetComponent<CircleCollider2D>().isTrigger = false;
-
         GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
-            GetComponent<Rigidbody2D>().WakeUp();
-        
+        GetComponent<Rigidbody2D>().WakeUp();      
     }
 }

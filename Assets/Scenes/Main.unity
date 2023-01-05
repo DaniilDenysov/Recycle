@@ -20856,6 +20856,11 @@ MonoBehaviour:
     - {fileID: 1091071095603270247, guid: b749e9a2647399c42b21138ceb46b481, type: 3}
     - {fileID: 8399143522256255928, guid: 3fae310064a8a104293986a3a27eb656, type: 3}
     - {fileID: 8399143522256255928, guid: 3fae310064a8a104293986a3a27eb656, type: 3}
+  newList:
+  - Prefarbs/GreenBin/New/
+  - Prefarbs/BlueBin/New/
+  - Prefarbs/YellowBin/New/
+  - Prefarbs/RedBin/New/
   pauseManager: {fileID: 0}
   defeatManager: {fileID: 0}
   changer: {fileID: 281219243}
@@ -21224,7 +21229,7 @@ GameObject:
   - component: {fileID: 307221735}
   - component: {fileID: 307221737}
   - component: {fileID: 307221736}
-  m_Layer: 9
+  m_Layer: 2
   m_Name: Clouds
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31117,7 +31122,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &379450276
 RectTransform:
   m_ObjectHideFlags: 0
@@ -36696,7 +36701,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.3
-  far clip plane: 1000
+  far clip plane: 100
   field of view: 60
   orthographic: 1
   orthographic size: 5
@@ -36708,7 +36713,7 @@ Camera:
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
   m_TargetEye: 0
-  m_HDR: 1
+  m_HDR: 0
   m_AllowMSAA: 0
   m_AllowDynamicResolution: 0
   m_ForceIntoRT: 0
@@ -41672,7 +41677,7 @@ GameObject:
   - component: {fileID: 547271942}
   - component: {fileID: 547271944}
   - component: {fileID: 547271943}
-  m_Layer: 9
+  m_Layer: 2
   m_Name: Clouds
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47245,7 +47250,7 @@ GameObject:
   - component: {fileID: 651109450}
   - component: {fileID: 651109452}
   - component: {fileID: 651109451}
-  m_Layer: 9
+  m_Layer: 2
   m_Name: Blizzard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -53220,7 +53225,7 @@ GameObject:
   - component: {fileID: 850416508}
   - component: {fileID: 850416510}
   - component: {fileID: 850416509}
-  m_Layer: 9
+  m_Layer: 2
   m_Name: Clouds
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -64096,7 +64101,7 @@ GameObject:
   - component: {fileID: 992181365}
   - component: {fileID: 992181367}
   - component: {fileID: 992181366}
-  m_Layer: 9
+  m_Layer: 2
   m_Name: Clouds
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -85872,7 +85877,7 @@ GameObject:
   - component: {fileID: 1237564597}
   - component: {fileID: 1237564599}
   - component: {fileID: 1237564598}
-  m_Layer: 9
+  m_Layer: 2
   m_Name: 'Clouds '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -105756,7 +105761,7 @@ GameObject:
   - component: {fileID: 1331970179}
   - component: {fileID: 1331970181}
   - component: {fileID: 1331970180}
-  m_Layer: 9
+  m_Layer: 2
   m_Name: Clouds
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -150174,7 +150179,7 @@ GameObject:
   - component: {fileID: 2062314194}
   - component: {fileID: 2062314196}
   - component: {fileID: 2062314195}
-  m_Layer: 9
+  m_Layer: 2
   m_Name: Clouds
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -160299,7 +160304,7 @@ GameObject:
   - component: {fileID: 2117415364}
   - component: {fileID: 2117415366}
   - component: {fileID: 2117415365}
-  m_Layer: 9
+  m_Layer: 2
   m_Name: Clouds
   m_TagString: Untagged
   m_Icon: {fileID: 0}

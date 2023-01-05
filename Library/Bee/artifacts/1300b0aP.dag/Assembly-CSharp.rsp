@@ -326,6 +326,7 @@
 "Assets/Scripts/Arcade/Scene/Spawner.cs"
 "Assets/Scripts/Bin.cs"
 "Assets/Scripts/BinChanger.cs"
+"Assets/Scripts/ColiderTrigger.cs"
 "Assets/Scripts/DefeatManager.cs"
 "Assets/Scripts/Effect.cs"
 "Assets/Scripts/EffectsManager.cs"

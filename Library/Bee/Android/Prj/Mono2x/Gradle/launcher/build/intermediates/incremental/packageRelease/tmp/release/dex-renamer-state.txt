@@ -1,4 +1,4 @@
-#Sun Dec 18 15:54:15 EET 2022
+#Thu Jan 05 13:13:37 EET 2023
 base.0=C\:\\Users\\Ebakryak\\Documents\\GitHub\\Recycle\\Library\\Bee\\Android\\Prj\\Mono2x\\Gradle\\launcher\\build\\intermediates\\dex\\release\\mergeDexRelease\\classes.dex
 path.1=classes.dex
 renamed.1=classes2.dex
