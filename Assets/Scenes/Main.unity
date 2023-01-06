@@ -20857,10 +20857,10 @@ MonoBehaviour:
     - {fileID: 8399143522256255928, guid: 3fae310064a8a104293986a3a27eb656, type: 3}
     - {fileID: 8399143522256255928, guid: 3fae310064a8a104293986a3a27eb656, type: 3}
   newList:
-  - Prefarbs/GreenBin/New/
-  - Prefarbs/BlueBin/New/
-  - Prefarbs/YellowBin/New/
-  - Prefarbs/RedBin/New/
+  - Prefabs/GreenBin/New/
+  - Prefabs/BlueBin/New/
+  - Prefabs/YellowBin/New/
+  - Prefabs/RedBin/New/
   pauseManager: {fileID: 0}
   defeatManager: {fileID: 0}
   changer: {fileID: 281219243}
@@ -116005,7 +116005,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 5.0404763, y: 4.9700003}
+    oldSize: {x: 5.0399995, y: 4.9710484}
     newSize: {x: 5.0404763, y: 4.9700003}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -121616,7 +121616,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 5.0204744, y: 4.9700003}
+    oldSize: {x: 5.02, y: 4.9710484}
     newSize: {x: 5.0204744, y: 4.9700003}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -139391,7 +139391,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 5.0404763, y: 4.9700003}
+    oldSize: {x: 5.0399995, y: 4.9710484}
     newSize: {x: 5.0404763, y: 4.9700003}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -160169,7 +160169,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 5.050477, y: 4.94}
+    oldSize: {x: 5.0499997, y: 4.941042}
     newSize: {x: 5.050477, y: 4.94}
     adaptiveTilingThreshold: 0.5
     drawMode: 0

@@ -148,9 +148,9 @@ public class Garbage : MonoBehaviour
             Destroy(this);
         }     
     }
-    void FixedUpdate()
+    void LateUpdate()
     {       
-        /*if (isTaken)
+        if (isTaken)
         {
             if (!pauseManager.Paused && !defeatManager.Lost)
             {
@@ -172,7 +172,7 @@ public class Garbage : MonoBehaviour
             {
                 Destroy(gameObject);
             }
-        }*/
+        }
     }
     public void OnMouseDown()
     {
@@ -189,7 +189,7 @@ public class Garbage : MonoBehaviour
 
     public void OnMouseOver()
     {
-        if (isTaken)
+       /* if (isTaken)
         {
             if (!pauseManager.Paused && !defeatManager.Lost)
             {
@@ -211,7 +211,7 @@ public class Garbage : MonoBehaviour
             {
                 Destroy(gameObject);
             }
-        }
+        }*/
         // GetComponent<Animator>().Play("Enter");
     }
 

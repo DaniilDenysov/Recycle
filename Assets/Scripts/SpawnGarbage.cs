@@ -49,7 +49,7 @@ public class SpawnGarbage : MonoBehaviour
                   Instantiate(List[Rand].trash[Random.Range(0, List[Rand].trash.Length - 1)], new Vector3(Random.Range(range / 2, -range / 2), transform.position.y, 2), Quaternion.identity);*/
 
                 localRange = Random.Range(0, spawnRange);
-                Instantiate(Resources.Load<GameObject>(newList[localRange] + "Prefarb" + Random.Range(1, Resources.LoadAll<GameObject>(newList[localRange]).Length)), new Vector3(Random.Range(range / 2, -range / 2), transform.position.y, 2), Quaternion.identity);
+                Instantiate(Resources.Load<GameObject>(newList[localRange] + "Prefab" + Random.Range(1, Resources.LoadAll<GameObject>(newList[localRange]).Length)), new Vector3(Random.Range(range / 2, -range / 2), transform.position.y, 2), Quaternion.identity);
               
                 //  garbageCollector.AddGarbage(Instantiate(List[Rand].trash[Random.Range(0, List[Rand].trash.Length - 1)], new Vector3(Random.Range(range / 2, -range / 2), transform.position.y,2), Quaternion.identity));               
             }
