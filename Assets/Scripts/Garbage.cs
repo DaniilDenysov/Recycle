@@ -11,6 +11,11 @@ public class Garbage : MonoBehaviour
     public PauseManager pauseManager;
     public DefeatManager defeatManager;
     public ScoreManager scoreManager;
+    private AudioSource audioSource;
+    private Rigidbody2D rigidbody;
+    private HingeJoint2D hingeJoint2D;
+    private BoxCollider2D boxCollider2D;
+    private CircleCollider2D circleCollider2D;
     bool isTaken;
 
     private void Start()
@@ -18,10 +23,14 @@ public class Garbage : MonoBehaviour
         pauseManager = FindObjectOfType<PauseManager>();
         defeatManager = FindObjectOfType<DefeatManager>();
         scoreManager = FindObjectOfType<ScoreManager>();
+        audioSource = GetComponent<AudioSource>();
+        rigidbody = GetComponent<Rigidbody2D>();
+        hingeJoint2D = GetComponent<HingeJoint2D>();
+    /*   if (GetComponent<BoxCollider2D>()) boxCollider2D = GetComponent<BoxCollider2D>();
+       else circleCollider2D = GetComponent<CircleCollider2D>();*/
         if (texture != null) animator = texture.GetComponent<Animator>();
         else animator = GetComponent<Animator>();
-       //    GetComponent<CircleCollider2D>().isTrigger = true;
-        Debug.Log(gameObject.name);
+       
     }
 
 
@@ -127,69 +136,63 @@ public class Garbage : MonoBehaviour
         _particles.GetComponent<ParticleSystem>().startColor = mapManager.ground[mapManager.Map];
         Destroy(_particles,1);
     }
-    void Destroy ()
+
+    public void changeState()
     {
+        if (texture != null) transform.parent.gameObject.SetActive(false);
+        else gameObject.SetActive(false);
+    }
+
+    
+
+    public void Destroy ()
+    {
+       /*& if (texture != null) transform.parent.gameObject.SetActive(false);
+        else gameObject.SetActive(false);
         // Destroy(GetComponent<CircleCollider2D>());
+        if (hingeJoint2D) hingeJoint2D.enabled = false;
+        rigidbody.sleepMode = RigidbodySleepMode2D.StartAsleep;
+        if (texture != null) texture.GetComponent<Rigidbody2D>().sleepMode = RigidbodySleepMode2D.StartAsleep;
+        if (boxCollider2D) boxCollider2D.enabled = false;
+        else circleCollider2D.enabled = false;
         animator.Play("Destroy");
-        if (texture != null)
-        {
-            Destroy(GetComponent<HingeJoint2D>());
-            Destroy(GetComponent<Rigidbody2D>());
-            Destroy(texture.GetComponent<Rigidbody2D>());
-           // texture.GetComponent<Animator>().Play("Destroy");
-            Destroy(gameObject.transform.parent.gameObject, 1);
-            Destroy(this);
-        }
-        else
-        {
-            Destroy(GetComponent<Rigidbody2D>());
-            //GetComponent<Animator>().Play("Destroy");
-            Destroy(gameObject, 1);
-            Destroy(this);
-        }     
+        Invoke(nameof(changeState), 1);*/
+         if (texture != null)
+         {
+
+             Destroy(GetComponent<HingeJoint2D>());
+             Destroy(GetComponent<Rigidbody2D>());
+             Destroy(texture.GetComponent<Rigidbody2D>());
+             texture.GetComponent<Animator>().Play("Destroy");
+             Destroy(gameObject.transform.parent.gameObject, 1);
+             Destroy(this);
+         }
+         else
+         {
+             Destroy(GetComponent<Rigidbody2D>());
+             GetComponent<Animator>().Play("Destroy");
+             Destroy(gameObject, 1);
+             Destroy(this);
+         }     
     }
     void LateUpdate()
     {       
-        if (isTaken)
-        {
-            if (!pauseManager.Paused && !defeatManager.Lost)
-            {
-                Debug.Log("Ray");
-                transform.position = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 3));
-                RaycastHit2D hit = Physics2D.Raycast(new Vector3(point.transform.position.x, point.transform.position.y, -1), Vector2.down);
-              //  Debug.DrawLine(transform.position, Vector2.down, Color.red);
-                if (hit.collider)
-                {
-                    Debug.Log("Hitted:" + hit.collider.name);
-                    if (hit.collider.GetComponent<Bin>())
-                    {
-                        Debug.Log("Ok");
-                        hit.collider.GetComponent<Bin>().Check(gameObject.layer);
-                    }
-                }
-            }
-            else
-            {
-                Destroy(gameObject);
-            }
-        }
+        /**/
     }
     public void OnMouseDown()
     {
    
             isTaken = true;
-            GetComponent<AudioSource>().PlayOneShot(ObjectTaken);
+            audioSource.PlayOneShot(ObjectTaken);
             animator.Play("Taken");
-        //    GetComponent<CircleCollider2D>().isTrigger = true;
-        
-            GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
-            GetComponent<Rigidbody2D>().Sleep();
+            rigidbody.constraints = RigidbodyConstraints2D.FreezeAll;
+            rigidbody.Sleep();
         
     }
 
     public void OnMouseOver()
     {
-       /* if (isTaken)
+        if (isTaken)
         {
             if (!pauseManager.Paused && !defeatManager.Lost)
             {
@@ -211,7 +214,7 @@ public class Garbage : MonoBehaviour
             {
                 Destroy(gameObject);
             }
-        }*/
+        }
         // GetComponent<Animator>().Play("Enter");
     }
 
@@ -219,15 +222,15 @@ public class Garbage : MonoBehaviour
     {
         isTaken = false;
         animator.Play("Dropped");
-        GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
-        GetComponent<Rigidbody2D>().WakeUp();
+        rigidbody.constraints = RigidbodyConstraints2D.None;
+        rigidbody.WakeUp();
     }
 
     public void OnMouseUp()
     {    
         isTaken = false;
         animator.Play("Dropped");
-        GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
-        GetComponent<Rigidbody2D>().WakeUp();      
+        rigidbody.constraints = RigidbodyConstraints2D.None;
+        rigidbody.WakeUp();      
     }
 }

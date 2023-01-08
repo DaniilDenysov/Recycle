@@ -16,7 +16,7 @@ public class Bin : MonoBehaviour
         gameObject.layer = Acceptable;
         if (PlayerPrefs.HasKey("Help"))
         {
-            Debug.Log("Help: " + PlayerPrefs.GetInt("Help"));
+           // Debug.Log("Help: " + PlayerPrefs.GetInt("Help"));
             if (PlayerPrefs.GetInt("Help") == 0) Help = true;
             else Help = false;
         }

@@ -82,7 +82,8 @@ public class EffectsManager : MonoBehaviour
     {
      //   Camera.main.GetComponent<PostProcessVolume>().profile.GetSetting<ChromaticAberration>().intensity.value = 0.3f;
         mixer.SetFloat("Pitch", 0.1f);
-        FindObjectOfType<SpawnGarbage>().InstantiateGarbage(6);
+        SpawnGarbage spawn = FindObjectOfType<SpawnGarbage>();
+       for (int i = 6;i>0;i--) spawn.InstantiateGarbage();
         Time.timeScale = slowdownFactor;    
         Time.fixedDeltaTime = Time.timeScale * .02f;
      

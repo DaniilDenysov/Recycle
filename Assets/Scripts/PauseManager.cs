@@ -6,11 +6,12 @@ public class PauseManager : MonoBehaviour
 {
     public bool Paused;
     public GameObject[] PauseMenu;
-    MapManager mapManager;
+    [SerializeField] private MapManager mapManager;
+    private GameObject camera;
 
     void Start()
     {
-        mapManager = FindObjectOfType<MapManager>();
+        camera = Camera.main.gameObject;
     }
 
     private void OnMouseDown()
@@ -31,12 +32,12 @@ public class PauseManager : MonoBehaviour
         {
             if (!Paused)
             {
-                Camera.main.gameObject.GetComponent<Animator>().Play("DefeatAnim");
+                camera.gameObject.GetComponent<Animator>().Play("DefeatAnim");
                 Paused = true;
             }
             else
             {
-                Camera.main.gameObject.GetComponent<Animator>().Play("StartAnim");
+                camera.gameObject.GetComponent<Animator>().Play("StartAnim");
                 Paused = false;
             }
             PauseMenu[mapManager.Map].SetActive(Paused);

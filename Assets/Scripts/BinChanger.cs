@@ -25,7 +25,7 @@ public class BinChanger : MonoBehaviour
             {
                 m--;
                 int r = Random.Range(0, bin_position.Count-1);
-                Debug.Log("Bin position:" + r + " Bin:" + m);
+               // Debug.Log("Bin position:" + r + " Bin:" + m);
                 Bin[m].transform.position = bin_position[r].transform.position;
                 bin_position.Remove(bin_position[r]);
             }
