@@ -20790,6 +20790,7 @@ GameObject:
   - component: {fileID: 281219241}
   - component: {fileID: 281219243}
   - component: {fileID: 281219244}
+  - component: {fileID: 281219245}
   m_Layer: 0
   m_Name: Spawn
   m_TagString: Untagged
@@ -20914,6 +20915,24 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 10, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &281219245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 281219240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5c1f000a3d6a134996788e9a2aabfa6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnRange: {fileID: 281219244}
+  tropheys:
+  - prefab: {fileID: 0}
+    probability: 0
+  - prefab: {fileID: 0}
+    probability: 0
 --- !u!1 &284065283
 GameObject:
   m_ObjectHideFlags: 0

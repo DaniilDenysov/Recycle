@@ -3,15 +3,25 @@ using UnityEngine;
 public class ColiderTrigger : MonoBehaviour
 {
     [SerializeField] private Garbage garbage;
-    
+
+    private PauseManager pauseManager;
+    private DefeatManager defeatManager;
+    private ScoreManager scoreManager;
+
+    private void Start()
+    {
+        pauseManager = garbage.pauseManager;
+        defeatManager = garbage.defeatManager;
+        scoreManager = garbage.scoreManager;
+    }
 
     private void OnCollisionEnter2D (Collision2D collision)
     {
-        if (!garbage.pauseManager.Paused && !garbage.defeatManager.Lost)
+        if (!pauseManager.Paused && !defeatManager.Lost)
         {
             if (garbage.gameObject.layer == collision.gameObject.layer && collision.gameObject.GetComponent<Bin>())
             {
-                garbage.scoreManager.AddScore(1);
+                scoreManager.AddScore(1);
                 collision.gameObject.GetComponent<AudioSource>().Play();
                 collision.gameObject.GetComponent<Bin>().Particles();
                 garbage.Destroy();
@@ -19,12 +29,12 @@ public class ColiderTrigger : MonoBehaviour
             else if (collision.gameObject.layer == 15)
             {
                 garbage.SpawnParticles();
-                garbage.scoreManager.AddScore(-6);
+                scoreManager.AddScore(-6);
                 garbage.Destroy();
             }
             else if (collision.gameObject.layer != garbage.gameObject.layer && collision.gameObject.GetComponent<Bin>())
             {
-                garbage.scoreManager.AddScore(-3);
+                scoreManager.AddScore(-3);
                 collision.gameObject.GetComponent<AudioSource>().Play();
                 collision.gameObject.GetComponent<Bin>().Particles();
                 garbage.Destroy();
@@ -32,35 +42,7 @@ public class ColiderTrigger : MonoBehaviour
         }
         else
         {
-            Destroy(gameObject);
+            garbage.Destroy();
         }
-        /*if (!garbage.pauseManager.Paused && !garbage.defeatManager.Lost)
-        {
-            if (gameObject.layer == collision.gameObject.layer && collision.gameObject.GetComponent<Bin>())
-            {
-                garbage.scoreManager.AddScore(1);
-                collision.gameObject.GetComponent<AudioSource>().Play();
-                collision.gameObject.GetComponent<Bin>().Particles();
-                garbage.Destroy();
-            }
-            else if (collision.gameObject.layer == 15)
-            {
-                garbage.SpawnParticles();
-                garbage.scoreManager.AddScore(-6);
-                garbage.Destroy();
-            }
-            else if (collision.gameObject.layer != gameObject.layer && collision.gameObject.GetComponent<Bin>())
-            {
-                garbage.scoreManager.AddScore(-3);
-                collision.gameObject.GetComponent<AudioSource>().Play();
-                collision.gameObject.GetComponent<Bin>().Particles();
-                garbage.Destroy();
-            }
-        }
-        else
-        {
-            Destroy(gameObject);
-        }*/
-       // garbage.detectColider(collision);    
     }
 }

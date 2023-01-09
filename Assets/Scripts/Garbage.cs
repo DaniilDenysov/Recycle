@@ -13,6 +13,7 @@ public class Garbage : MonoBehaviour
     public ScoreManager scoreManager;
     private AudioSource audioSource;
     private Rigidbody2D rigidbody;
+    private Camera camera;
     private HingeJoint2D hingeJoint2D;
     private BoxCollider2D boxCollider2D;
     private CircleCollider2D circleCollider2D;
@@ -26,109 +27,14 @@ public class Garbage : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
         rigidbody = GetComponent<Rigidbody2D>();
         hingeJoint2D = GetComponent<HingeJoint2D>();
+        camera = Camera.main;
     /*   if (GetComponent<BoxCollider2D>()) boxCollider2D = GetComponent<BoxCollider2D>();
        else circleCollider2D = GetComponent<CircleCollider2D>();*/
         if (texture != null) animator = texture.GetComponent<Animator>();
         else animator = GetComponent<Animator>();
        
     }
-
-
-    /*private void OnTriggerEnter2D(Collider2D collision)
-      {
-          if (!pauseManager.Paused && !defeatManager.Lost)
-          {
-              if (gameObject.layer == collision.gameObject.layer && collision.gameObject.GetComponent<Bin>())
-              {
-                  scoreManager.AddScore(1);
-                  collision.gameObject.GetComponent<AudioSource>().Play();
-                  collision.gameObject.GetComponent<Bin>().Particles();
-                  Destroy();
-              }
-              else if (collision.gameObject.layer == 15)
-              {
-                  SpawnParticles();
-                  scoreManager.AddScore(-6);
-                  Destroy();
-              }
-              else if (collision.gameObject.layer != gameObject.layer && collision.gameObject.GetComponent<Bin>())
-              {
-                  scoreManager.AddScore(-3);
-                  collision.gameObject.GetComponent<AudioSource>().Play();
-                  collision.gameObject.GetComponent<Bin>().Particles();
-                  Destroy();
-              }
-          }
-          else
-          {
-              Destroy(gameObject);
-          }
-
-      }*/
-    public void detectColider(Collision2D collision)
-    {
-        if (collision != null)
-        {
-            if (!pauseManager.Paused && !defeatManager.Lost)
-            {
-                if (gameObject.layer == collision.gameObject.layer && collision.gameObject.GetComponent<Bin>())
-                {
-                    scoreManager.AddScore(1);
-                    collision.gameObject.GetComponent<AudioSource>().Play();
-                    collision.gameObject.GetComponent<Bin>().Particles();
-                    Destroy();
-                }
-                else if (collision.gameObject.layer == 15)
-                {
-                    SpawnParticles();
-                    scoreManager.AddScore(-6);
-                    Destroy();
-                }
-                else if (collision.gameObject.layer != gameObject.layer && collision.gameObject.GetComponent<Bin>())
-                {
-                    scoreManager.AddScore(-3);
-                    collision.gameObject.GetComponent<AudioSource>().Play();
-                    collision.gameObject.GetComponent<Bin>().Particles();
-                    Destroy();
-                }
-            }
-            else
-            {
-                Destroy(gameObject);
-            }
-        }
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (!pauseManager.Paused && !defeatManager.Lost)
-        {
-            if (gameObject.layer == collision.gameObject.layer && collision.gameObject.GetComponent<Bin>())
-            {
-                scoreManager.AddScore(1);
-                collision.gameObject.GetComponent<AudioSource>().Play();
-                collision.gameObject.GetComponent<Bin>().Particles();
-                Destroy();
-            }
-            else if (collision.gameObject.layer == 15)
-            {
-                SpawnParticles();
-                scoreManager.AddScore(-6);
-                Destroy();
-            }
-            else if (collision.gameObject.layer != gameObject.layer && collision.gameObject.GetComponent<Bin>())
-            {
-                scoreManager.AddScore(-3);
-                collision.gameObject.GetComponent<AudioSource>().Play();
-                collision.gameObject.GetComponent<Bin>().Particles();
-                Destroy();
-            }
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
-    }
+ 
     public void SpawnParticles ()
     {
         GameObject _particles = Instantiate(particles,transform.position,Quaternion.identity);
@@ -165,47 +71,29 @@ public class Garbage : MonoBehaviour
              Destroy(texture.GetComponent<Rigidbody2D>());
              texture.GetComponent<Animator>().Play("Destroy");
              Destroy(gameObject.transform.parent.gameObject, 1);
-             Destroy(this);
+            // Destroy(this);
          }
          else
          {
              Destroy(GetComponent<Rigidbody2D>());
              GetComponent<Animator>().Play("Destroy");
              Destroy(gameObject, 1);
-             Destroy(this);
+            // Destroy(this);
          }     
     }
     void LateUpdate()
-    {       
-        /**/
-    }
-    public void OnMouseDown()
-    {
-   
-            isTaken = true;
-            audioSource.PlayOneShot(ObjectTaken);
-            animator.Play("Taken");
-            rigidbody.constraints = RigidbodyConstraints2D.FreezeAll;
-            rigidbody.Sleep();
-        
-    }
-
-    public void OnMouseOver()
     {
         if (isTaken)
         {
             if (!pauseManager.Paused && !defeatManager.Lost)
             {
-                Debug.Log("Ray");
-                transform.position = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 3));
+            
+                transform.position = camera.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 3));
                 RaycastHit2D hit = Physics2D.Raycast(new Vector3(point.transform.position.x, point.transform.position.y, -1), Vector2.down);
-                //  Debug.DrawLine(transform.position, Vector2.down, Color.red);
                 if (hit.collider)
                 {
-                    Debug.Log("Hitted:" + hit.collider.name);
                     if (hit.collider.GetComponent<Bin>())
                     {
-                        Debug.Log("Ok");
                         hit.collider.GetComponent<Bin>().Check(gameObject.layer);
                     }
                 }
@@ -215,22 +103,43 @@ public class Garbage : MonoBehaviour
                 Destroy(gameObject);
             }
         }
-        // GetComponent<Animator>().Play("Enter");
+    }
+    public void OnMouseDown()
+    {
+        if (rigidbody)
+        {
+            isTaken = true;
+            audioSource.PlayOneShot(ObjectTaken);
+            animator.Play("Taken");
+            rigidbody.constraints = RigidbodyConstraints2D.FreezeAll;
+            rigidbody.Sleep();
+        }
+        
+    }
+
+    public void OnMouseOver()
+    {
     }
 
     public void OnMouseExit()
     {
-        isTaken = false;
-        animator.Play("Dropped");
-        rigidbody.constraints = RigidbodyConstraints2D.None;
-        rigidbody.WakeUp();
+        if (rigidbody)
+        {
+            isTaken = false;
+            animator.Play("Dropped");
+            rigidbody.constraints = RigidbodyConstraints2D.None;
+            rigidbody.WakeUp();
+        }
     }
 
     public void OnMouseUp()
-    {    
-        isTaken = false;
-        animator.Play("Dropped");
-        rigidbody.constraints = RigidbodyConstraints2D.None;
-        rigidbody.WakeUp();      
+    {
+        if (rigidbody)
+        {
+            isTaken = false;
+            animator.Play("Dropped");
+            rigidbody.constraints = RigidbodyConstraints2D.None;
+            rigidbody.WakeUp();
+        }
     }
 }
