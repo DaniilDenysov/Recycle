@@ -20929,10 +20929,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnRange: {fileID: 281219244}
   tropheys:
-  - prefab: {fileID: 0}
-    probability: 0
-  - prefab: {fileID: 0}
-    probability: 0
+  - prefab: {fileID: 5360795820255239955, guid: d033567b3850acd40a3443cbd250c2bf, type: 3}
+    probability: 20
+    weight: 0
+  - prefab: {fileID: 7727252889750244980, guid: cca674df614dc2c458ce4a8883352b59, type: 3}
+    probability: 5
+    weight: 0
+  - prefab: {fileID: 3173762524358505430, guid: 38605b4721ee30443ad7ea5c4ed055cb, type: 3}
+    probability: 0.05
+    weight: 0
 --- !u!1 &284065283
 GameObject:
   m_ObjectHideFlags: 0
