@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 8218200519263612481}
   - component: {fileID: 7529274649605665331}
   - component: {fileID: 9173380462068354083}
+  - component: {fileID: 549909235924065779}
+  - component: {fileID: 3164009828794904355}
   m_Layer: 0
   m_Name: Trophey
   m_TagString: Untagged
@@ -75,7 +77,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -8639410423236923101, guid: d3cc2c951afb9504ebf2f6ce6d5f612e, type: 3}
+  m_Sprite: {fileID: -60469110, guid: 3744016b589e67846b88fa8bb7782d2f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -124,7 +126,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.66, y: 0.66}
+    oldSize: {x: 0.5, y: 1.02}
     newSize: {x: 0.66, y: 0.66}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -133,3 +135,32 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.66, y: 0.66}
   m_EdgeRadius: 0
+--- !u!58 &549909235924065779
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5360795820255239955}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.5
+--- !u!114 &3164009828794904355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5360795820255239955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51fb42b01575d474aae433c19e0b442b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ID: 1

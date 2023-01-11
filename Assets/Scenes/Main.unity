@@ -15244,6 +15244,7 @@ GameObject:
   - component: {fileID: 198184318}
   - component: {fileID: 198184320}
   - component: {fileID: 198184321}
+  - component: {fileID: 198184322}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -15396,6 +15397,18 @@ MonoBehaviour:
     m_RotationOrder: 4
   time: 10
   interval: 10
+--- !u!114 &198184322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 198184315}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85919f3640d4e3c43ae0b6ba1a3ddbf5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &199474404
 GameObject:
   m_ObjectHideFlags: 0
@@ -20927,14 +20940,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5c1f000a3d6a134996788e9a2aabfa6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dataManager: {fileID: 198184322}
   spawnRange: {fileID: 281219244}
   spawnProbability: 10
   tropheys:
+  - prefab: {fileID: 0}
+    probability: 0
+    weight: 0
   - prefab: {fileID: 5360795820255239955, guid: d033567b3850acd40a3443cbd250c2bf, type: 3}
-    probability: 20
+    probability: 5
     weight: 0
   - prefab: {fileID: 7727252889750244980, guid: cca674df614dc2c458ce4a8883352b59, type: 3}
-    probability: 5
+    probability: 0.05
     weight: 0
   - prefab: {fileID: 3173762524358505430, guid: 38605b4721ee30443ad7ea5c4ed055cb, type: 3}
     probability: 0.05
@@ -116276,7 +116293,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 0.78431374}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -123089,7 +123106,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 0}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:

@@ -76,6 +76,8 @@
     <Compile Include="Assets\Scripts\Effect.cs" />
     <Compile Include="Assets\Scripts\Bin.cs" />
     <Compile Include="Assets\Scripts\BinChanger.cs" />
+    <Compile Include="Assets\Trophey.cs" />
+    <Compile Include="Assets\DataManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

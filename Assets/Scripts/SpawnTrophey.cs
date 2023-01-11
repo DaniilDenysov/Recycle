@@ -6,6 +6,8 @@ using UnityEngine;
 
 public class SpawnTrophey : MonoBehaviour
 {
+    [SerializeField] private DataManager dataManager;
+
     public BoxCollider2D spawnRange;
     private System.Random random = new System.Random();
 
@@ -40,7 +42,16 @@ public class SpawnTrophey : MonoBehaviour
     {
         float rand = Random.Range(0, 101);
         Debug.Log("Spawn: " + rand);
-        if (rand <= spawnProbability) Instantiate(tropheys[getIndex()].prefab,new Vector3(Random.Range(spawnRange.size.x / 2, -spawnRange.size.x / 2),transform.position.y, 2),Quaternion.identity);
+        if (rand <= spawnProbability)
+        {
+            int index = getIndex();
+            if (index != 0)
+            {
+                Debug.Log("Exists? " + dataManager.alreadyExists(index));
+                if (!dataManager.alreadyExists(index)) Instantiate(tropheys[getIndex()].prefab, new Vector3(Random.Range(spawnRange.size.x / 2, -spawnRange.size.x / 2), transform.position.y, 2), Quaternion.identity);
+                else Debug.Log("Already taken!");
+            }
+        }
     }
     public void calculateProbability()
     {

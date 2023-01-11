@@ -374,6 +374,7 @@
 -r:"Library/Bee/artifacts/1300b0aE.dag/UnityEngine.SpatialTracking.ref.dll"
 -r:"Library/Bee/artifacts/1300b0aE.dag/UnityEngine.UI.ref.dll"
 -r:"Library/Bee/artifacts/1300b0aE.dag/UnityEngine.XR.LegacyInputHelpers.ref.dll"
+"Assets/DataManager.cs"
 "Assets/Scripts/Arcade/Scene/Spawner.cs"
 "Assets/Scripts/Bin.cs"
 "Assets/Scripts/BinChanger.cs"
@@ -397,6 +398,7 @@
 "Assets/Scripts/SpawnTrophey.cs"
 "Assets/Scripts/VerticalDropdown.cs"
 "Assets/Scripts/WeatherManager.cs"
+"Assets/Trophey.cs"
 -langversion:9.0
 
 /deterministic
