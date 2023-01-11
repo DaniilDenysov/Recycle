@@ -20928,6 +20928,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnRange: {fileID: 281219244}
+  spawnProbability: 10
   tropheys:
   - prefab: {fileID: 5360795820255239955, guid: d033567b3850acd40a3443cbd250c2bf, type: 3}
     probability: 20
