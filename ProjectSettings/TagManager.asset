@@ -8,6 +8,7 @@ TagManager:
   - GB
   - Cloud
   - Graund
+  - Garbage
   layers:
   - Default
   - TransparentFX

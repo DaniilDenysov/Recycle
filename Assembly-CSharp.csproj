@@ -53,8 +53,10 @@
     <UnityVersion>2021.3.8f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Assets\DataManager.cs" />
     <Compile Include="Assets\Scripts\Arcade\Scene\Spawner.cs" />
     <Compile Include="Assets\Scripts\ScoreManager.cs" />
+    <Compile Include="Assets\Trophey.cs" />
     <Compile Include="Assets\Scripts\Pause.cs" />
     <Compile Include="Assets\Scripts\GarbageCollector.cs" />
     <Compile Include="Assets\Scripts\SpawnTrophey.cs" />
@@ -69,15 +71,16 @@
     <Compile Include="Assets\Scripts\EffectsManager.cs" />
     <Compile Include="Assets\Scripts\FPS.cs" />
     <Compile Include="Assets\Scripts\FPS_Limit.cs" />
+    <Compile Include="Assets\TropheyManager.cs" />
     <Compile Include="Assets\Scripts\DefeatManager.cs" />
     <Compile Include="Assets\Scripts\MainMenu.cs" />
     <Compile Include="Assets\Scripts\WeatherManager.cs" />
+    <Compile Include="Assets\TropheyListPart.cs" />
     <Compile Include="Assets\Scripts\Garbage.cs" />
     <Compile Include="Assets\Scripts\Effect.cs" />
     <Compile Include="Assets\Scripts\Bin.cs" />
     <Compile Include="Assets\Scripts\BinChanger.cs" />
-    <Compile Include="Assets\Trophey.cs" />
-    <Compile Include="Assets\DataManager.cs" />
+    <Compile Include="Assets\Case.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

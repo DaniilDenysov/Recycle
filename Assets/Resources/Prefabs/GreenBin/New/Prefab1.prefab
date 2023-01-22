@@ -240,7 +240,7 @@ GameObject:
   - component: {fileID: 2303147196576619507}
   m_Layer: 9
   m_Name: Controller
-  m_TagString: Untagged
+  m_TagString: Garbage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
