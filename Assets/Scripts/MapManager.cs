@@ -2,9 +2,16 @@
 
 public class MapManager : MonoBehaviour
 {
+    public static MapManager instance { get; set; }
+
     public Color [] background,ground;
     [SerializeField] private GameObject[] render;
     public int Map;
+
+    private void Awake()
+    {
+        instance = this;
+    }
 
     void Start()
     {

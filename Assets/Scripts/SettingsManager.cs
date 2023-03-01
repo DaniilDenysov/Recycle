@@ -4,6 +4,8 @@ using UnityEngine.Audio;
 
 public class SettingsManager : MonoBehaviour
 {
+  
+
     [SerializeField] private string Music_PlayerPrefsID, Help_PlayerPrefsID;
     [SerializeField] private Toggle Music, Help;
     [SerializeField] private AudioMixer mixer;

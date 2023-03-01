@@ -4,10 +4,17 @@ using UnityEngine;
 
 public class PauseManager : MonoBehaviour
 {
+    public static PauseManager instance { get; set; }
+
     public bool Paused;
     public GameObject[] PauseMenu;
     [SerializeField] private MapManager mapManager;
     private GameObject camera;
+
+    private void Awake()
+    {
+        instance = this;
+    }
 
     void Start()
     {

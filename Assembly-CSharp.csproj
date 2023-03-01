@@ -54,6 +54,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Assets\DataManager.cs" />
+    <Compile Include="Assets\Case.cs" />
     <Compile Include="Assets\Scripts\Arcade\Scene\Spawner.cs" />
     <Compile Include="Assets\Scripts\ScoreManager.cs" />
     <Compile Include="Assets\Trophey.cs" />
@@ -63,6 +64,8 @@
     <Compile Include="Assets\Scripts\PauseManager.cs" />
     <Compile Include="Assets\Scripts\SettingsManager.cs" />
     <Compile Include="Assets\Scripts\SpawnGarbage.cs" />
+    <Compile Include="Assets\MoneyManager.cs" />
+    <Compile Include="Assets\Save.cs" />
     <Compile Include="Assets\Scripts\SceneManagment.cs" />
     <Compile Include="Assets\Scripts\ImageSlider.cs" />
     <Compile Include="Assets\Scripts\VerticalDropdown.cs" />
@@ -77,10 +80,10 @@
     <Compile Include="Assets\Scripts\WeatherManager.cs" />
     <Compile Include="Assets\TropheyListPart.cs" />
     <Compile Include="Assets\Scripts\Garbage.cs" />
-    <Compile Include="Assets\Scripts\Effect.cs" />
     <Compile Include="Assets\Scripts\Bin.cs" />
     <Compile Include="Assets\Scripts\BinChanger.cs" />
-    <Compile Include="Assets\Case.cs" />
+    <Compile Include="Assets\Effect.cs" />
+    <Compile Include="Assets\Scripts\Effects\TicTac.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

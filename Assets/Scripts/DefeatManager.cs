@@ -4,11 +4,16 @@ using UnityEngine;
 
 public class DefeatManager : MonoBehaviour
 {
+    public static DefeatManager instance { get; set; }
+
     public bool Lost;
     [SerializeField] private GameObject[] DefeatMenu;
-    [SerializeField] private ScoreManager scoreManager;
-    [SerializeField] private MapManager mapManager;
 
+    private void Awake()
+    {
+        instance = this;
+    }
+        
     void Start()
     {
         StartCoroutine(ScoreCheck());
@@ -16,7 +21,7 @@ public class DefeatManager : MonoBehaviour
 
     IEnumerator ScoreCheck()
     {
-        yield return new WaitUntil(predicate: () => scoreManager.Score < 0);
+        yield return new WaitUntil(predicate: () => ScoreManager.instance.Score < 0);
         Defeat();
     }
 
@@ -24,8 +29,8 @@ public class DefeatManager : MonoBehaviour
     {
         Debug.Log("U lost!");
         Lost = true;
-        scoreManager.SetScore(0);
-        DefeatMenu[mapManager.Map].SetActive(true);
+        ScoreManager.instance.SetScore(0);
+        DefeatMenu[MapManager.instance.Map].SetActive(true);
         Camera.main.gameObject.GetComponent<Animator>().Play("DefeatAnim");
     }
 

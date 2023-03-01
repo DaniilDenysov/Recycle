@@ -4,9 +4,19 @@ using TMPro;
 
 public class ScoreManager : MonoBehaviour
 {
+    public static ScoreManager instance { get; set; }
+    
+
     public float Score, Level, CurrentLevelScore,Increase = 1;
     [SerializeField] private TextMeshProUGUI Display;
     public bool Protection;
+
+
+
+    private void Awake()
+    {
+        instance = this;
+    }
 
     public void AddScore(float score)
     {

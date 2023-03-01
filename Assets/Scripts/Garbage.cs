@@ -8,9 +8,6 @@ public class Garbage : MonoBehaviour
     [SerializeField] private AudioClip ObjectTaken, ObjectDropped;
     [SerializeField] private LayerMask collisionIgnore;
     private Animator animator;
-    public PauseManager pauseManager;
-    public DefeatManager defeatManager;
-    public ScoreManager scoreManager;
     private AudioSource audioSource;
     private Rigidbody2D rigidbody;
     private Camera camera;
@@ -21,9 +18,6 @@ public class Garbage : MonoBehaviour
 
     private void Start()
     {
-        pauseManager = FindObjectOfType<PauseManager>();
-        defeatManager = FindObjectOfType<DefeatManager>();
-        scoreManager = FindObjectOfType<ScoreManager>();
         audioSource = GetComponent<AudioSource>();
         rigidbody = GetComponent<Rigidbody2D>();
         hingeJoint2D = GetComponent<HingeJoint2D>();
@@ -38,8 +32,7 @@ public class Garbage : MonoBehaviour
     public void SpawnParticles ()
     {
         GameObject _particles = Instantiate(particles,transform.position,Quaternion.identity);
-        MapManager mapManager = FindObjectOfType<MapManager>();
-        _particles.GetComponent<ParticleSystem>().startColor = mapManager.ground[mapManager.Map];
+        _particles.GetComponent<ParticleSystem>().startColor = MapManager.instance.ground[MapManager.instance.Map];
         Destroy(_particles,1);
     }
 
@@ -85,7 +78,7 @@ public class Garbage : MonoBehaviour
     {
         if (isTaken)
         {
-            if (!pauseManager.Paused && !defeatManager.Lost)
+            if (!PauseManager.instance.Paused && !DefeatManager.instance.Lost)
             {
             
                 transform.position = camera.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 3));

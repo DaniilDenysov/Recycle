@@ -9,12 +9,7 @@ public class TropheyManager : MonoBehaviour
     [SerializeField] private GameObject iconPrefab;
     [SerializeField] private string jsonPath;
     [SerializeField] private Sprite [] icons;
-    private save loadedData = new save();
-
-    public class save
-    {
-        public List<int> trophey;
-    }
+    private Save loadedData = new Save();
 
     void Start()
     {
@@ -34,7 +29,7 @@ public class TropheyManager : MonoBehaviour
     public void LoadData()
     {
         loadedData.trophey = new List<int>();
-        loadedData = JsonUtility.FromJson<save>(File.ReadAllText(jsonPath));
+        loadedData = JsonUtility.FromJson<Save>(File.ReadAllText(jsonPath));
     }
 
     public void instantiateList ()

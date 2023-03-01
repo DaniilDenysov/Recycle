@@ -20,9 +20,7 @@ public class SpawnGarbage : MonoBehaviour
     public List <Garbage> list;
     public List<newGarbage> nlist; 
     public string [] newList;
-    [SerializeField] private PauseManager pauseManager;
-    [SerializeField] private DefeatManager defeatManager;
-    [SerializeField] private BinChanger changer;
+
     [SerializeField] private GameObject [] Buff;
     [SerializeField] private float range;
     private GarbageCollector garbageCollector;
@@ -42,7 +40,7 @@ public class SpawnGarbage : MonoBehaviour
        // StartCoroutine(SpawnBuff(30));
         
     }
-    public void spawnFromPool ()
+  /*  public void spawnFromPool ()
     {
         localRange = Random.Range(0, changer.Copacity);
         int toMove = Random.Range(0, list[localRange].trash.Length - 1);
@@ -52,7 +50,7 @@ public class SpawnGarbage : MonoBehaviour
         }
         Debug.Log("LR:" + localRange + "TM:" + toMove);
         takeFromPool(localRange, toMove, new Vector3(Random.Range(range / 2, -range / 2), transform.position.y, 2),Quaternion.identity);
-    }
+    }*/
 
     public void takeFromPool(int element, int i, Vector3 newPosition, Quaternion newQuaternion)
     {
@@ -85,7 +83,7 @@ public class SpawnGarbage : MonoBehaviour
     public void InstantiateGarbage ()
     {
      
-                localRange = Random.Range(0,changer.Copacity);
+                localRange = Random.Range(0,BinChanger.instance.GetCopacity());
               //  Debug.Log(spawnRange + "    Path: " + Resources.Load<GameObject>(newList[localRange] + "Prefab" + Random.Range(1, Resources.LoadAll <GameObject>(newList[localRange]).Length)));
           Instantiate(Resources.Load<GameObject>(newList[localRange] + "Prefab" + Random.Range(1, Resources.LoadAll<GameObject>(newList[localRange]).Length)), new Vector3(Random.Range(range / 2, -range / 2), transform.position.y, 2), Quaternion.identity);
        // Instantiate(_list[localRange][Random.Range(0,_list[localRange].Length)], new Vector3(Random.Range(range / 2, -range / 2), transform.position.y, 2), Quaternion.identity);
