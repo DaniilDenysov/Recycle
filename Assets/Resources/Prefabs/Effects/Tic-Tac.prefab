@@ -234,10 +234,11 @@ GameObject:
   m_Component:
   - component: {fileID: 9063762785800445933}
   - component: {fileID: 9063762785800445932}
-  - component: {fileID: 9063762785800445931}
   - component: {fileID: 9063762785800445930}
   - component: {fileID: 9063762785800445929}
   - component: {fileID: 7619533614951858687}
+  - component: {fileID: 7153458083530473810}
+  - component: {fileID: 4744729653182506498}
   m_Layer: 0
   m_Name: Tic-Tac
   m_TagString: Untagged
@@ -314,20 +315,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &9063762785800445931
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9063762785800445928}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 34547b8723c73ac4296d3c6fe8897695, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ID: Tic-Tac
-  particles: {fileID: 1931363554502984869, guid: b91a8271b0055c642b2d28afd5bde1ea, type: 3}
 --- !u!50 &9063762785800445930
 Rigidbody2D:
   serializedVersion: 4
@@ -385,3 +372,31 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &7153458083530473810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9063762785800445928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 226298db0f72a7e40b8292b37d7e1ab5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  effect: {fileID: 4744729653182506498}
+--- !u!114 &4744729653182506498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9063762785800445928}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5ef43e5facd1054393f850667fea733, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  effectTime: 60
+  slowdownLengh: 2
+  timeBeforeSlowingDown: 10

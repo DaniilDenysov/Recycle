@@ -37,7 +37,7 @@ public class SpawnGarbage : MonoBehaviour
         //InvokeRepeating(nameof(spawnFromPool),2,2);
         //cachePrefabs(3);
        // InstantiateBuff();
-       // StartCoroutine(SpawnBuff(30));
+        StartCoroutine(SpawnBuff(30));
         
     }
   /*  public void spawnFromPool ()

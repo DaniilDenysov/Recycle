@@ -1,0 +1,45 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.Rendering.PostProcessing;
+
+public class Protect : Effect
+{
+    private PostProcessVolume volume;
+    private Vignette vignette;
+
+    public override object GetEffect() => true;
+    private float fixedEffectTime;
+    public override Effect GetEffectType() => this;
+
+    public override void Start()
+    {
+        base.Start();
+        fixedEffectTime = effectTime;
+    }
+
+    public override string ToString()
+    {
+        return "Protect";
+    }
+
+    public override void Update()
+    {
+        base.Update();
+       vignette.intensity.value -= (0.2f / fixedEffectTime) * Time.unscaledDeltaTime;
+    }
+
+    public override void EffectStopped()
+    {
+        base.EffectStopped();
+    }
+
+    public override void EffectStart()
+    {
+        Debug.Log("Protect");
+        volume = FindObjectOfType<PostProcessVolume>();
+        volume.profile.TryGetSettings(out vignette);
+        vignette.intensity.value = 0.2f;
+        base.EffectStart();
+    }
+}

@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System;
 
 public class ScoreManager : MonoBehaviour
 {
@@ -18,12 +19,47 @@ public class ScoreManager : MonoBehaviour
         instance = this;
     }
 
+    private void Start()
+    {
+        Effect.onEffectStarted += Effect_onEffectStarted;
+        Effect.onEffectStopped += Effect_onEffectStopped;
+    }
+
+    private void Effect_onEffectStopped(object sender, GameObject e)
+    {
+        if (e.TryGetComponent<Protect>(out Protect protect))
+        {
+            Protection = false;
+            return;
+        }
+        if (e.TryGetComponent<DoubleScore>(out DoubleScore doubleScore))
+        {
+            Increase = 1;
+            return;
+        }
+    }
+
+    private void Effect_onEffectStarted(object sender, GameObject e)
+    {
+        if (e.TryGetComponent<Protect>(out Protect protect))
+        {
+            Protection = (bool)protect.GetEffect();
+            return;
+        }
+        if (e.TryGetComponent<DoubleScore>(out DoubleScore doubleScore))
+        {
+            Increase = (int)doubleScore.GetEffect();
+            return;
+        }
+    }
+
+
     public void AddScore(float score)
     {
         if (score > 0)
         {
             _Score(score);
-        }else if (!Protection)
+        } else if (!Protection)
         {
             _Score(score);
         }
