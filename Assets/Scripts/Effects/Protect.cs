@@ -26,7 +26,8 @@ public class Protect : Effect
     public override void Update()
     {
         base.Update();
-       vignette.intensity.value -= (0.2f / fixedEffectTime) * Time.unscaledDeltaTime;
+        vignette.intensity.value = effect_func.Evaluate(effectTime/100);
+        //vignette.intensity.value -= (0.2f / fixedEffectTime) * Time.unscaledDeltaTime;
     }
 
     public override void EffectStopped()
@@ -39,7 +40,6 @@ public class Protect : Effect
         Debug.Log("Protect");
         volume = FindObjectOfType<PostProcessVolume>();
         volume.profile.TryGetSettings(out vignette);
-        vignette.intensity.value = 0.2f;
         base.EffectStart();
     }
 }

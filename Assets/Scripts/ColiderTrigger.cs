@@ -4,6 +4,8 @@ public class ColiderTrigger : MonoBehaviour
 {
     [SerializeField] private Garbage garbage;
 
+
+
     private void OnCollisionEnter2D (Collision2D collision)
     {
         if (!PauseManager.instance.Paused && !DefeatManager.instance.Lost)
@@ -11,8 +13,9 @@ public class ColiderTrigger : MonoBehaviour
             if (garbage.gameObject.layer == collision.gameObject.layer && collision.gameObject.GetComponent<Bin>())
             {
                 ScoreManager.instance.AddScore(1);
-                collision.gameObject.GetComponent<AudioSource>().Play();
-                collision.gameObject.GetComponent<Bin>().Particles();
+                Bin bin = collision.gameObject.GetComponent<Bin>();
+                bin.PlaySound();
+                bin.Particles();
                 garbage.Destroy();
             }
             else if (collision.gameObject.layer == 15)
@@ -24,8 +27,9 @@ public class ColiderTrigger : MonoBehaviour
             else if (collision.gameObject.layer != garbage.gameObject.layer && collision.gameObject.GetComponent<Bin>())
             {
                 ScoreManager.instance.AddScore(-3);
-                collision.gameObject.GetComponent<AudioSource>().Play();
-                collision.gameObject.GetComponent<Bin>().Particles();
+                Bin bin = collision.gameObject.GetComponent<Bin>();
+                bin.PlaySound();
+                bin.Particles();
                 garbage.Destroy();
             }
         }

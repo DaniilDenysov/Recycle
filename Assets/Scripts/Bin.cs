@@ -9,6 +9,7 @@ public class Bin : MonoBehaviour
     [SerializeField] private Sprite[] BinSprite;
     [SerializeField] private ParticleSystem [] particle;
     [SerializeField] private ParticleSystem Tick_Particle;
+    [SerializeField] private AudioClip audioClip;
     bool Help;
 
     void Start()
@@ -50,6 +51,6 @@ public class Bin : MonoBehaviour
     }
     public void PlaySound ()
     {
-        GetComponent<AudioSource>().Play();
+        SoundManager.instance.PlaySound(audioClip);
     }
 }

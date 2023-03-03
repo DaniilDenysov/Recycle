@@ -30,12 +30,12 @@ public class DoubleScore : Effect
     public override void Update()
     {
         base.Update();
-        lensDistortion.intensity.value -= (-50f / fixedEffectTime) * Time.unscaledDeltaTime;
+        lensDistortion.intensity.value = effect_func.Evaluate(effectTime / 100);
     }
 
     public override void EffectStopped()
     {
-        lensDistortion.intensity.value = 0f;
+        lensDistortion.intensity.value = effect_func.Evaluate(effectTime / 100);
         base.EffectStopped();
     }
 
@@ -44,7 +44,6 @@ public class DoubleScore : Effect
         Debug.Log("Double");
         volume = FindObjectOfType<PostProcessVolume>();
         volume.profile.TryGetSettings(out lensDistortion);
-        lensDistortion.intensity.value = -50f;
         base.EffectStart();
     }
 }

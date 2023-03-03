@@ -8,17 +8,15 @@ public class Garbage : MonoBehaviour
     [SerializeField] private AudioClip ObjectTaken, ObjectDropped;
     [SerializeField] private LayerMask collisionIgnore;
     private Animator animator;
-    private AudioSource audioSource;
     private Rigidbody2D rigidbody;
     private Camera camera;
     private HingeJoint2D hingeJoint2D;
     private BoxCollider2D boxCollider2D;
     private CircleCollider2D circleCollider2D;
-    bool isTaken;
+    private bool isTaken;
 
     private void Start()
     {
-        audioSource = GetComponent<AudioSource>();
         rigidbody = GetComponent<Rigidbody2D>();
         hingeJoint2D = GetComponent<HingeJoint2D>();
         camera = Camera.main;
@@ -42,7 +40,6 @@ public class Garbage : MonoBehaviour
         else gameObject.SetActive(false);
     }
 
-    
 
     public void Destroy ()
     {
@@ -61,8 +58,8 @@ public class Garbage : MonoBehaviour
 
              Destroy(GetComponent<HingeJoint2D>());
              Destroy(GetComponent<Rigidbody2D>());
-             Destroy(texture.GetComponent<Rigidbody2D>());
              texture.GetComponent<Animator>().Play("Destroy");
+             Destroy(texture.GetComponent<ColiderTrigger>());
              Destroy(gameObject.transform.parent.gameObject, 1);
             // Destroy(this);
          }
@@ -70,7 +67,7 @@ public class Garbage : MonoBehaviour
          {
              Destroy(GetComponent<Rigidbody2D>());
              GetComponent<Animator>().Play("Destroy");
-             Destroy(gameObject, 1);
+            Destroy(gameObject, 1);
             // Destroy(this);
          }     
     }
@@ -102,7 +99,7 @@ public class Garbage : MonoBehaviour
         if (rigidbody)
         {
             isTaken = true;
-            audioSource.PlayOneShot(ObjectTaken);
+            SoundManager.instance.PlaySound(ObjectTaken);
             animator.Play("Taken");
             rigidbody.constraints = RigidbodyConstraints2D.FreezeAll;
             rigidbody.Sleep();

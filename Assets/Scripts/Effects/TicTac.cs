@@ -34,10 +34,10 @@ public class TicTac : Effect
 
     public override void Update()
     {
-        float updatedTime = Time.timeScale += increase ? (1f / fixedEffectTime) * Time.unscaledDeltaTime * 2f : (-1f / fixedEffectTime) * Time.unscaledDeltaTime * 2f;
-        
-        aberration.intensity.value = func.Evaluate(Time.timeScale);
-        mixer.SetFloat("Pitch",func.Evaluate(Time.timeScale));
+
+        Time.timeScale = time_func.Evaluate(effectTime / 100);
+        aberration.intensity.value = effect_func.Evaluate(Time.timeScale);
+        mixer.SetFloat("Pitch", Time.timeScale);
         /*  if (increase == false)
           {
               Time.timeScale += (1f / fixedEffectTime) * Time.unscaledDeltaTime * 2f;
