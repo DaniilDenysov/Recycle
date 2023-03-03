@@ -95659,8 +95659,8 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7153458083530473810, guid: cc815bd5221633d4fb97e7a6080f89ff, type: 3}
       propertyPath: effect
-      value: 
-      objectReference: {fileID: 1258005588}
+      value: DoubleScore
+      objectReference: {fileID: 0}
     - target: {fileID: 9063762785800445928, guid: cc815bd5221633d4fb97e7a6080f89ff, type: 3}
       propertyPath: m_Name
       value: Tic-Tac (1)
@@ -95716,24 +95716,6 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 4744729653182506498, guid: cc815bd5221633d4fb97e7a6080f89ff, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: cc815bd5221633d4fb97e7a6080f89ff, type: 3}
---- !u!1 &1258005587 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 9063762785800445928, guid: cc815bd5221633d4fb97e7a6080f89ff, type: 3}
-  m_PrefabInstance: {fileID: 1258005586}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1258005588
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1258005587}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7587509e5c0a0454a91d0d6fe236d88d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  effectTime: 60
 --- !u!1 &1265080952
 GameObject:
   m_ObjectHideFlags: 0
@@ -122950,6 +122932,78 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7153458083530473810, guid: cc815bd5221633d4fb97e7a6080f89ff, type: 3}
+      propertyPath: effect
+      value: TicTac
+      objectReference: {fileID: 0}
+    - target: {fileID: 7153458083530473810, guid: cc815bd5221633d4fb97e7a6080f89ff, type: 3}
+      propertyPath: func.m_Curve.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7153458083530473810, guid: cc815bd5221633d4fb97e7a6080f89ff, type: 3}
+      propertyPath: func.m_Curve.Array.data[1].time
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7153458083530473810, guid: cc815bd5221633d4fb97e7a6080f89ff, type: 3}
+      propertyPath: func.m_Curve.Array.data[2].time
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7153458083530473810, guid: cc815bd5221633d4fb97e7a6080f89ff, type: 3}
+      propertyPath: func.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7153458083530473810, guid: cc815bd5221633d4fb97e7a6080f89ff, type: 3}
+      propertyPath: func.m_Curve.Array.data[1].value
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 7153458083530473810, guid: cc815bd5221633d4fb97e7a6080f89ff, type: 3}
+      propertyPath: func.m_Curve.Array.data[2].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7153458083530473810, guid: cc815bd5221633d4fb97e7a6080f89ff, type: 3}
+      propertyPath: func.m_Curve.Array.data[0].inSlope
+      value: -1.98
+      objectReference: {fileID: 0}
+    - target: {fileID: 7153458083530473810, guid: cc815bd5221633d4fb97e7a6080f89ff, type: 3}
+      propertyPath: func.m_Curve.Array.data[2].inSlope
+      value: 1.98
+      objectReference: {fileID: 0}
+    - target: {fileID: 7153458083530473810, guid: cc815bd5221633d4fb97e7a6080f89ff, type: 3}
+      propertyPath: func.m_Curve.Array.data[0].outSlope
+      value: -1.98
+      objectReference: {fileID: 0}
+    - target: {fileID: 7153458083530473810, guid: cc815bd5221633d4fb97e7a6080f89ff, type: 3}
+      propertyPath: func.m_Curve.Array.data[1].inWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 7153458083530473810, guid: cc815bd5221633d4fb97e7a6080f89ff, type: 3}
+      propertyPath: func.m_Curve.Array.data[2].inWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 7153458083530473810, guid: cc815bd5221633d4fb97e7a6080f89ff, type: 3}
+      propertyPath: func.m_Curve.Array.data[2].outSlope
+      value: 1.98
+      objectReference: {fileID: 0}
+    - target: {fileID: 7153458083530473810, guid: cc815bd5221633d4fb97e7a6080f89ff, type: 3}
+      propertyPath: func.m_Curve.Array.data[0].outWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 7153458083530473810, guid: cc815bd5221633d4fb97e7a6080f89ff, type: 3}
+      propertyPath: func.m_Curve.Array.data[1].outWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 7153458083530473810, guid: cc815bd5221633d4fb97e7a6080f89ff, type: 3}
+      propertyPath: func.m_Curve.Array.data[0].tangentMode
+      value: 34
+      objectReference: {fileID: 0}
+    - target: {fileID: 7153458083530473810, guid: cc815bd5221633d4fb97e7a6080f89ff, type: 3}
+      propertyPath: func.m_Curve.Array.data[1].tangentMode
+      value: 34
+      objectReference: {fileID: 0}
+    - target: {fileID: 7153458083530473810, guid: cc815bd5221633d4fb97e7a6080f89ff, type: 3}
+      propertyPath: func.m_Curve.Array.data[2].tangentMode
+      value: 34
+      objectReference: {fileID: 0}
     - target: {fileID: 9063762785800445928, guid: cc815bd5221633d4fb97e7a6080f89ff, type: 3}
       propertyPath: m_Name
       value: Tic-Tac
@@ -123002,7 +123056,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4744729653182506498, guid: cc815bd5221633d4fb97e7a6080f89ff, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: cc815bd5221633d4fb97e7a6080f89ff, type: 3}
 --- !u!1 &1661948998
 GameObject:
@@ -155160,8 +155215,8 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7153458083530473810, guid: cc815bd5221633d4fb97e7a6080f89ff, type: 3}
       propertyPath: effect
-      value: 
-      objectReference: {fileID: 2064408762}
+      value: Protect
+      objectReference: {fileID: 0}
     - target: {fileID: 9063762785800445928, guid: cc815bd5221633d4fb97e7a6080f89ff, type: 3}
       propertyPath: m_Name
       value: Tic-Tac (2)
@@ -155217,25 +155272,6 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 4744729653182506498, guid: cc815bd5221633d4fb97e7a6080f89ff, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: cc815bd5221633d4fb97e7a6080f89ff, type: 3}
---- !u!1 &2064408761 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 9063762785800445928, guid: cc815bd5221633d4fb97e7a6080f89ff, type: 3}
-  m_PrefabInstance: {fileID: 2064408760}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2064408762
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2064408761}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 716114bf6ace9cb469681a650ac13c15, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  effectTime: 60
-  Amount: 2
 --- !u!1 &2085350958
 GameObject:
   m_ObjectHideFlags: 0

@@ -8,11 +8,13 @@ public class Effect : MonoBehaviour
     [Range(0, 600)]
     [SerializeField] protected float effectTime = 60f;
     public static event EventHandler <GameObject> onEffectStarted, onEffectStopped;
-
+    [SerializeField] protected AnimationCurve func;
     public virtual void Start()
     {
         EffectStart();
     }
+
+    public virtual void SetFunc(AnimationCurve newFunc) => func = newFunc;
 
     public virtual Effect GetEffectType() => this;
 

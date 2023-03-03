@@ -14,6 +14,7 @@ public class TicTac : Effect
     private PostProcessVolume volume;
     private ChromaticAberration aberration;
     private float fixedEffectTime;
+    private bool increase = true;
 
     public override void Start()
     {
@@ -21,6 +22,8 @@ public class TicTac : Effect
         fixedEffectTime = effectTime;
         mixer = EffectsManager.instance.GetMixer();
     }
+    //сделать две разные ф-и под время и переменные
+  
 
     public override Effect GetEffectType() => this;
 
@@ -31,9 +34,26 @@ public class TicTac : Effect
 
     public override void Update()
     {
-        Time.timeScale += (1f / fixedEffectTime) * Time.unscaledDeltaTime;
-        mixer.SetFloat("Pitch", Time.timeScale);    
-        aberration.intensity.value -= (1f / fixedEffectTime) * Time.unscaledDeltaTime;
+        float updatedTime = Time.timeScale += increase ? (1f / fixedEffectTime) * Time.unscaledDeltaTime * 2f : (-1f / fixedEffectTime) * Time.unscaledDeltaTime * 2f;
+        
+        aberration.intensity.value = func.Evaluate(Time.timeScale);
+        mixer.SetFloat("Pitch",func.Evaluate(Time.timeScale));
+        /*  if (increase == false)
+          {
+              Time.timeScale += (1f / fixedEffectTime) * Time.unscaledDeltaTime * 2f;
+              mixer.SetFloat("Pitch", Time.timeScale);
+              aberration.intensity.value -= (1f / fixedEffectTime) * Time.unscaledDeltaTime * 2f;
+          }else
+          {
+              if (Time.timeScale <= 0.01f)
+              {
+                  increase = false;
+                  return;
+              }
+              Time.timeScale -= (1f / fixedEffectTime) * Time.unscaledDeltaTime * 2f;
+              mixer.SetFloat("Pitch", Time.timeScale);
+              aberration.intensity.value += (1f / fixedEffectTime) * Time.unscaledDeltaTime * 2f;
+          }*/
         base.Update();
     }   
 
@@ -46,10 +66,10 @@ public class TicTac : Effect
 
     public override void EffectStart()
     {
-        Time.timeScale = 0.01f;
+       // Time.timeScale = 0.01f;
         volume = FindObjectOfType<PostProcessVolume>();
         volume.profile.TryGetSettings(out aberration);
-        aberration.intensity.value = 1f;
+      //  aberration.intensity.value = 1f;
         base.EffectStart();
     }
 }

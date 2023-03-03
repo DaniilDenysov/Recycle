@@ -6,22 +6,14 @@ using System;
 
 public class InitializeEffect : MonoBehaviour
 {
-    [SerializeField] private Effect effect;
+    [SerializeField] private string effect = "TicTac";
+    [SerializeField] private AnimationCurve func;
 
-    private void Awake()
-    {
-        effect = GetEffectType();
-        if (effect == null) DestroyObject();
-    }
-
-    public Effect GetEffectType() {
-       if (TryGetComponent<Effect>(out Effect getEffect)) return getEffect;
-       return null;
-    }
     private void OnMouseDown()
     {
         var vari = effect;
-        EffectsManager.instance.gameObject.AddComponent(System.Type.GetType(vari.ToString()));
+        EffectsManager.instance.gameObject.AddComponent(System.Type.GetType(effect));
+        EffectsManager.instance.gameObject.GetComponent<Effect>().SetFunc(func);
         DestroyObject();
     }
 
