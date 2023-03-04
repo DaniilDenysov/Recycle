@@ -9,6 +9,7 @@ public class PauseManager : MonoBehaviour
     public bool Paused;
     public GameObject[] PauseMenu;
     [SerializeField] private MapManager mapManager;
+    [SerializeField] private GameObject pauseBtn;
     private GameObject camera;
 
     private void Awake()
@@ -40,11 +41,13 @@ public class PauseManager : MonoBehaviour
             if (!Paused)
             {
                 camera.gameObject.GetComponent<Animator>().Play("DefeatAnim");
+                pauseBtn.SetActive(false);
                 Paused = true;
             }
             else
             {
                 camera.gameObject.GetComponent<Animator>().Play("StartAnim");
+                pauseBtn.SetActive(true);
                 Paused = false;
             }
             PauseMenu[mapManager.Map].SetActive(Paused);

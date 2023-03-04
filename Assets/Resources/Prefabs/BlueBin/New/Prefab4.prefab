@@ -95,9 +95,6 @@ MonoBehaviour:
   collisionIgnore:
     serializedVersion: 2
     m_Bits: 2048
-  pauseManager: {fileID: 0}
-  defeatManager: {fileID: 0}
-  scoreManager: {fileID: 0}
 --- !u!212 &2546325385350989659
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -439,6 +436,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   garbage: {fileID: 762595984801252963}
+  Echo: {fileID: 1163993459834185346, guid: b965406b40da5574fbef75f88230ac0b, type: 3}
 --- !u!1 &1656432047210728850
 GameObject:
   m_ObjectHideFlags: 0

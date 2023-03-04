@@ -83,9 +83,10 @@ public class SpawnGarbage : MonoBehaviour
     public void InstantiateGarbage ()
     {
      
-                localRange = Random.Range(0,BinChanger.instance.GetCopacity());
+        localRange = Random.Range(0,BinChanger.instance.GetCopacity());
+        float number = Random.Range(1, Resources.LoadAll<GameObject>(newList[localRange]).Length);
               //  Debug.Log(spawnRange + "    Path: " + Resources.Load<GameObject>(newList[localRange] + "Prefab" + Random.Range(1, Resources.LoadAll <GameObject>(newList[localRange]).Length)));
-          Instantiate(Resources.Load<GameObject>(newList[localRange] + "Prefab" + Random.Range(1, Resources.LoadAll<GameObject>(newList[localRange]).Length)), new Vector3(Random.Range(range / 2, -range / 2), transform.position.y, 2), Quaternion.identity);
+          Instantiate(Resources.Load<GameObject>(newList[localRange] + "Prefab" + number), new Vector3(Random.Range(range / 2, -range / 2), transform.position.y, 2), Quaternion.identity);
        // Instantiate(_list[localRange][Random.Range(0,_list[localRange].Length)], new Vector3(Random.Range(range / 2, -range / 2), transform.position.y, 2), Quaternion.identity);
     }
     IEnumerator Spawn (int Time)

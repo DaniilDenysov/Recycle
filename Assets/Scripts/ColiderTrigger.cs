@@ -3,8 +3,20 @@ using UnityEngine;
 public class ColiderTrigger : MonoBehaviour
 {
     [SerializeField] private Garbage garbage;
+    [SerializeField] private GameObject Echo;
 
+    private float time = 0.2f, timeBetweenSpawn = 0, timePassed;
 
+    private void Update()
+    {
+        if (Time.timeScale > 0.7f) return;
+        timeBetweenSpawn -= Time.deltaTime;
+        if (timeBetweenSpawn <= 0)
+        {
+            Destroy(Instantiate(Echo, transform.position, transform.rotation), 0.5f);
+            timeBetweenSpawn = time;
+        }
+    }
 
     private void OnCollisionEnter2D (Collision2D collision)
     {
