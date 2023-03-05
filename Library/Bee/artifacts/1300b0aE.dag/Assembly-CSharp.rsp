@@ -376,6 +376,7 @@
 -r:"Library/Bee/artifacts/1300b0aE.dag/UnityEngine.SpatialTracking.ref.dll"
 -r:"Library/Bee/artifacts/1300b0aE.dag/UnityEngine.UI.ref.dll"
 -r:"Library/Bee/artifacts/1300b0aE.dag/UnityEngine.XR.LegacyInputHelpers.ref.dll"
+"Assets/Bomb.cs"
 "Assets/Case.cs"
 "Assets/DataManager.cs"
 "Assets/EchoEffect.cs"
@@ -397,6 +398,7 @@
 "Assets/Scripts/Garbage.cs"
 "Assets/Scripts/GarbageCollector.cs"
 "Assets/Scripts/ImageSlider.cs"
+"Assets/Scripts/Interfaces/IDamagable.cs"
 "Assets/Scripts/MainMenu.cs"
 "Assets/Scripts/MapManager.cs"
 "Assets/Scripts/Pause.cs"
@@ -412,6 +414,7 @@
 "Assets/Trophey.cs"
 "Assets/TropheyListPart.cs"
 "Assets/TropheyManager.cs"
+"Assets/TropheyShowup.cs"
 "Assets/WindManager.cs"
 -langversion:9.0
 

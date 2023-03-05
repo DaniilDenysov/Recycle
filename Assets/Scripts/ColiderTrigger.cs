@@ -4,7 +4,6 @@ public class ColiderTrigger : MonoBehaviour
 {
     [SerializeField] private Garbage garbage;
     [SerializeField] private GameObject Echo;
-
     private float time = 0.2f, timeBetweenSpawn = 0, timePassed;
 
     private void Update()

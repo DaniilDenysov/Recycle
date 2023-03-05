@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Case : MonoBehaviour
 {
-    [SerializeField] private ParticleSystem confety,pieces;
+    [SerializeField] private ParticleSystem confety,pieces,trophey;
     [SerializeField] private Animator trophey_animator,case_animator;
 
     private enum State
@@ -13,7 +13,8 @@ public class Case : MonoBehaviour
         Open_2,
         Open_3,
         Open_finish,
-        Take
+        Take,
+        Restart
     }
 
     private State state;
@@ -43,12 +44,18 @@ public class Case : MonoBehaviour
                 break;
             case State.Open_finish:
                 state = State.Take;
+                PlayTrophey("Open");
                 case_animator.SetTrigger("Next");
                 break;
             case State.Take:
                 state = State.Open_1;
                 takeTrophey();
+                case_animator.SetTrigger("Take");
                 case_animator.SetBool("Open", false);
+                break;
+            case State.Restart:
+                state = State.Open_1;
+    
                 break;
         }
     }
@@ -56,11 +63,10 @@ public class Case : MonoBehaviour
     public void takeTrophey ()
     {
         trophey_animator.SetTrigger("Take");
-        case_animator.SetTrigger("Take");
     }
 
     public void PlayTrophey (string name)
     {
-        trophey_animator.Play(name);
+        trophey_animator.SetTrigger(name);
     }
 }

@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
 
-public class Bin : MonoBehaviour
+public class Bin : MonoBehaviour,IDamagable
 {
     public int Acceptable;
     [SerializeField] private Color Green, Red;
@@ -10,6 +10,7 @@ public class Bin : MonoBehaviour
     [SerializeField] private ParticleSystem [] particle;
     [SerializeField] private ParticleSystem Tick_Particle;
     [SerializeField] private AudioClip audioClip;
+    private float _health = 100f;
     bool Help;
 
     void Start()
@@ -44,6 +45,12 @@ public class Bin : MonoBehaviour
 
             // TickParticles(Red);
         }
+    }
+    public void Damage(float damage)
+    {
+        _health -= damage;
+        Debug.Log("HP: " + _health);
+        if (_health <= 0) DefeatManager.instance.Defeat();
     }
     public void ChangeColor ()
     {
