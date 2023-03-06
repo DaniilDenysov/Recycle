@@ -73,7 +73,7 @@ public class Garbage : MonoBehaviour
     }
     void LateUpdate()
     {
-        if (isTaken)
+       /* if (isTaken)
         {
             if (!PauseManager.instance.Paused && !DefeatManager.instance.Lost)
             {
@@ -92,7 +92,7 @@ public class Garbage : MonoBehaviour
             {
                 Destroy(gameObject);
             }
-        }
+        }*/
     }
     public void OnMouseDown()
     {
@@ -109,6 +109,26 @@ public class Garbage : MonoBehaviour
 
     public void OnMouseOver()
     {
+        if (isTaken)
+        {
+            if (!PauseManager.instance.Paused && !DefeatManager.instance.Lost)
+            {
+
+                transform.position = camera.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 3));
+                RaycastHit2D hit = Physics2D.Raycast(new Vector3(point.transform.position.x, point.transform.position.y, -1), Vector2.down);
+                if (hit.collider)
+                {
+                    if (hit.collider.GetComponent<Bin>())
+                    {
+                        hit.collider.GetComponent<Bin>().Check(gameObject.layer);
+                    }
+                }
+            }
+            else
+            {
+                Destroy(gameObject);
+            }
+        }
     }
 
     public void OnMouseExit()
