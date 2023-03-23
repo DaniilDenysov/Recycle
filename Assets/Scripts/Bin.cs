@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-
+using UnityEngine.UI;
 
 public class Bin : MonoBehaviour,IDamagable
 {
@@ -10,6 +10,8 @@ public class Bin : MonoBehaviour,IDamagable
     [SerializeField] private ParticleSystem [] particle;
     [SerializeField] private ParticleSystem Tick_Particle;
     [SerializeField] private AudioClip audioClip;
+    [SerializeField] private Image hp_bar_UI;
+    [SerializeField] private Animator hp_bar;
     private float _health = 100f;
     bool Help;
 
@@ -50,6 +52,9 @@ public class Bin : MonoBehaviour,IDamagable
     {
         _health -= damage;
         Debug.Log("HP: " + _health);
+        hp_bar.SetTrigger("Activate");
+        hp_bar_UI.fillAmount = 1 / _health;
+
         if (_health <= 0) DefeatManager.instance.Defeat();
     }
     public void ChangeColor ()

@@ -48,7 +48,7 @@ public class Case : MonoBehaviour
                 case_animator.SetTrigger("Next");
                 break;
             case State.Take:
-                state = State.Open_1;
+                state = State.Restart;
                 takeTrophey();
                 case_animator.SetTrigger("Take");
                 case_animator.SetBool("Open", false);

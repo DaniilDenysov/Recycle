@@ -93,6 +93,7 @@
     <Compile Include="Assets\Scripts\Garbage.cs" />
     <Compile Include="Assets\Scripts\Bin.cs" />
     <Compile Include="Assets\Scripts\BinChanger.cs" />
+    <Compile Include="Assets\Scripts\IWarning.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

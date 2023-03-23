@@ -4,11 +4,23 @@ using UnityEngine;
 using UnityEngine.Events;
 using System;
 
-public class InitializeEffect : MonoBehaviour
+public class InitializeEffect : MonoBehaviour,IWarning
 {
     [SerializeField] private string effect = "TicTac";
     [SerializeField] private AnimationCurve time_func,effect_func;
     [SerializeField] private AudioClip soundEffect;
+    [SerializeField] private GameObject warningPref;
+    private GameObject warning;
+
+    private void Start()
+    {
+        warning = Instantiate(warningPref, transform.position, Quaternion.identity);
+    }
+
+    private void Update()
+    {
+        Follow();
+    }
 
     private void OnMouseDown()
     {
@@ -23,6 +35,14 @@ public class InitializeEffect : MonoBehaviour
     private void DestroyObject ()
     {
         Destroy(this.gameObject);
+    }
+    private void OnDestroy()
+    {
+        Destroy(warning);
+    }
+    public void Follow()
+    {
+        warning.transform.position = transform.position;
     }
 }
 

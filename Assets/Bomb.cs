@@ -1,38 +1,54 @@
+using System.Collections.Generic;
 using UnityEngine;
 
-public class Bomb : MonoBehaviour
+
+public class Bomb : MonoBehaviour,IWarning
 {
     [Range(1,100f)]
-    [SerializeField] private float explosionForce,explosionRadius;
+    [SerializeField] private float explosionForce,explosionRadius,Damage;
     [Range(1,60f)]
     [SerializeField] private float bombTimer = 10f;
     [SerializeField] private ParticleSystem _particleSystem;
     private Rigidbody2D _rigidbody;
     private bool _exploded = false,_isTaken = false;
     private Camera _camera;
-
+    [SerializeField] private GameObject warningPref;
+    private GameObject warning;
 
     private void Start()
     {
+        warning = Instantiate(warningPref, transform.position, Quaternion.identity);
         _rigidbody = GetComponent<Rigidbody2D>();       
         _camera = Camera.main;
+        Invoke(nameof(Explode),bombTimer);
     }
     void Update()
     {
-        bombTimer -= Time.deltaTime;
-        if (bombTimer <= 0) Explode();
+        Follow();
+      //  bombTimer -= Time.deltaTime;
+       // if (bombTimer <= 0) Explode();
+    }
+    private void OnDestroy()
+    {
+        Destroy(warning);
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-       Explode();        
+    //   Explode();        
     }
     private void Explode ()
     {
         if (_exploded) return;
-        ExplodeDamage(Physics2D.OverlapCircleAll(transform.position, explosionRadius));
+        List<Collider2D> list = new List<Collider2D>();
+        list.AddRange(Physics2D.OverlapCircleAll(transform.position, explosionRadius));
+        ExplodeDamage(list);
         ExplosionPhysics(Physics2D.OverlapCircleAll(transform.position, explosionRadius));
         VisualizeExplosion();
         _exploded = true;
+        Destroy(gameObject);
+    }
+    public void Deffuse ()
+    {
         Destroy(gameObject);
     }
     private void VisualizeExplosion ()
@@ -40,13 +56,14 @@ public class Bomb : MonoBehaviour
         _particleSystem.Play();
         _particleSystem.gameObject.transform.parent.SetParent(null);
     }
-    private void ExplodeDamage (Collider2D [] objects)
+    private void ExplodeDamage (List<Collider2D> objects)
     {
         foreach (Collider2D obj in objects)
         {
             if (obj.TryGetComponent<IDamagable>(out IDamagable damagable))
             {
-                damagable.Damage(101);
+                Debug.Log(obj.gameObject.name);
+                damagable.Damage(Damage);
             }
         }
     }
@@ -93,4 +110,8 @@ public class Bomb : MonoBehaviour
         }
     }
 
+    public void Follow()
+    {
+        warning.transform.position = transform.position;
+    }
 }

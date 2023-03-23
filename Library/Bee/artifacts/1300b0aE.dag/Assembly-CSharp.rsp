@@ -399,6 +399,7 @@
 "Assets/Scripts/GarbageCollector.cs"
 "Assets/Scripts/ImageSlider.cs"
 "Assets/Scripts/Interfaces/IDamagable.cs"
+"Assets/Scripts/IWarning.cs"
 "Assets/Scripts/MainMenu.cs"
 "Assets/Scripts/MapManager.cs"
 "Assets/Scripts/Pause.cs"

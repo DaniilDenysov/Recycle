@@ -182,8 +182,8 @@ TextureImporter:
       name: MainTileset_20
       rect:
         serializedVersion: 2
-        x: 2321
-        y: 2388
+        x: 2322
+        y: 2390
         width: 582
         height: 146
       alignment: 0
@@ -850,6 +850,132 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: MainTileset_35
+      rect:
+        serializedVersion: 2
+        x: 1132
+        y: 1076
+        width: 502
+        height: 573
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f20a159cf5a71f64393c8fcbdb1b9ca3
+      internalID: 386188094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MainTileset_36
+      rect:
+        serializedVersion: 2
+        x: 1359
+        y: 1827
+        width: 48
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61b59902642d5064f88d5afd702e8648
+      internalID: -1047619572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MainTileset_37
+      rect:
+        serializedVersion: 2
+        x: 1467
+        y: 1745
+        width: 245
+        height: 219
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab42cc4522e898945a3a39541909af56
+      internalID: 1368183072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1pixel
+      rect:
+        serializedVersion: 2
+        x: 2361
+        y: 2420
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56ce2d40cf81903468e457c33d391920
+      internalID: -2084667936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MainTileset_38
+      rect:
+        serializedVersion: 2
+        x: 1121
+        y: 327
+        width: 523
+        height: 643
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ecced116ac571646a5e8c66bfddc16a
+      internalID: 1591357358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MainTileset_39
+      rect:
+        serializedVersion: 2
+        x: 1760
+        y: 380
+        width: 100
+        height: 419
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a494e75b6917bd49b04b14ecc6c8849
+      internalID: 50673049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -865,7 +991,10 @@ TextureImporter:
       MainTileset_12: -32176468
       MainTileset_9: -865578059
       MainTileset_18: 1399099469
+      MainTileset_36: -1047619572
       MainTileset_27: -2021693815
+      1pixel: -2084667936
+      MainTileset_37: 1368183072
       MainTileset_2: 1725391303
       MainTileset_25: 597355782
       MainTileset_7: 783281820
@@ -891,9 +1020,11 @@ TextureImporter:
       MainTileset_30: -1965685956
       MainTileset_8: -1690883822
       MainTileset_13: -369547019
+      MainTileset_38: 1591357358
       MainTileset_3: 643844921
       MainTileset_23: 4451514
       MainTileset_24: -1802923251
+      MainTileset_39: 50673049
       MainTileset_14: 946721065
       MainTileset_16: -1918828779
       MainTileset_34: 152520291
