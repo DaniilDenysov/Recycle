@@ -15,6 +15,7 @@ public class InitializeEffect : MonoBehaviour,IWarning
     private void Start()
     {
         warning = Instantiate(warningPref, transform.position, Quaternion.identity);
+        Destroy(gameObject,10);
     }
 
     private void Update()
@@ -25,9 +26,13 @@ public class InitializeEffect : MonoBehaviour,IWarning
     private void OnMouseDown()
     {
         var vari = effect;
-        EffectsManager.instance.gameObject.AddComponent(System.Type.GetType(effect));
-        EffectsManager.instance.gameObject.GetComponent<Effect>().SetTimeFunc(time_func);
-        EffectsManager.instance.gameObject.GetComponent<Effect>().SetEffectFunc(effect_func);
+        ParticleSystem vfx = GetComponentInChildren<ParticleSystem>();
+        vfx.Play();
+        vfx.transform.SetParent(null);
+        object temp = EffectsManager.instance.gameObject.AddComponent(System.Type.GetType(effect));
+        Effect newEffect = (Effect)temp;
+        newEffect.SetTimeFunc(time_func);
+        newEffect.SetEffectFunc(effect_func);
         SoundManager.instance.PlaySound(soundEffect);
         DestroyObject();
     }

@@ -976,6 +976,90 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: MainTileset_40
+      rect:
+        serializedVersion: 2
+        x: 2028
+        y: 265
+        width: 344
+        height: 648
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b04820ef57c0424c98e6b3deced40b7
+      internalID: 1882287731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MainTileset_41
+      rect:
+        serializedVersion: 2
+        x: 3758
+        y: 425
+        width: 420
+        height: 419
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa26576ea05898545acc756910682fff
+      internalID: 1820962760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MainTileset_42
+      rect:
+        serializedVersion: 2
+        x: 3363
+        y: 464
+        width: 316
+        height: 314
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 699441858c10e9a4a8cd124efe9c34a4
+      internalID: 1941100587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MainTileset_43
+      rect:
+        serializedVersion: 2
+        x: 2732
+        y: 325
+        width: 460
+        height: 678
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68d285ab2e93b1d4da4bba49d8b0bbda
+      internalID: -1357649328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -988,46 +1072,50 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       MainTileset_19: -185574629
-      MainTileset_12: -32176468
-      MainTileset_9: -865578059
       MainTileset_18: 1399099469
       MainTileset_36: -1047619572
-      MainTileset_27: -2021693815
       1pixel: -2084667936
       MainTileset_37: 1368183072
       MainTileset_2: 1725391303
-      MainTileset_25: 597355782
       MainTileset_7: 783281820
-      MainTileset_26: -708459009
-      MainTileset_28: 1771060981
-      MainTileset_29: 1583551074
-      MainTileset_6: 1312204542
       MainTileset_33: 1128033723
       MainTileset_15: 1350123188
       MainTileset_35: 386188094
       MainTileset_11: 371897645
       MainTileset_22: 517479675
-      MainTileset_1: 1107458103
-      MainTileset_4: -1034647438
       MainTileset_17: -1353314434
-      MainTileset_0: -383900103
-      MainTileset_5: 589680257
-      MainTileset_21: 1345055156
       MainTileset_20: 863280896
-      MainTileset_32: 1857997809
-      MainTileset_10: 397915506
+      MainTileset_21: 1345055156
       MainTileset_31: -770945072
       MainTileset_30: -1965685956
+      MainTileset_24: -1802923251
+      MainTileset_41: 1820962760
+      MainTileset_39: 50673049
+      MainTileset_42: 1941100587
+      MainTileset_12: -32176468
+      MainTileset_34: 152520291
+      MainTileset_9: -865578059
+      MainTileset_27: -2021693815
+      MainTileset_40: 1882287731
+      MainTileset_25: 597355782
+      MainTileset_26: -708459009
+      MainTileset_28: 1771060981
+      MainTileset_29: 1583551074
+      MainTileset_6: 1312204542
+      MainTileset_1: 1107458103
+      MainTileset_43: -1357649328
+      MainTileset_4: -1034647438
+      MainTileset_0: -383900103
+      MainTileset_5: 589680257
+      MainTileset_32: 1857997809
+      MainTileset_10: 397915506
       MainTileset_8: -1690883822
       MainTileset_13: -369547019
       MainTileset_38: 1591357358
       MainTileset_3: 643844921
       MainTileset_23: 4451514
-      MainTileset_24: -1802923251
-      MainTileset_39: 50673049
       MainTileset_14: 946721065
       MainTileset_16: -1918828779
-      MainTileset_34: 152520291
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

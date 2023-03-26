@@ -109,7 +109,11 @@ public class Bomb : MonoBehaviour,IWarning
             _rigidbody.WakeUp();
         }
     }
-
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.green;
+        Gizmos.DrawWireSphere(transform.position,explosionRadius);
+    }
     public void Follow()
     {
         warning.transform.position = transform.position;

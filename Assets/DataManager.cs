@@ -5,12 +5,21 @@ using System.IO;
 
 public class DataManager : MonoBehaviour
 {
-    [SerializeField] private static string jsonPath;
-    private save loadedData = new save();
 
+    public static DataManager instance;
+
+    [SerializeField] private static string jsonPath;
+    [SerializeField] private save loadedData = new save();
+
+    [System.Serializable]
     public class save
     {
         public List<int> trophey;
+    }
+
+    private void Awake()
+    {
+        instance = this;
     }
 
     void Start()
@@ -28,14 +37,19 @@ public class DataManager : MonoBehaviour
     }
 
     public void LoadData ()
-    {
-        loadedData.trophey = new List<int>();
+    {      
         loadedData = JsonUtility.FromJson<save>(File.ReadAllText(jsonPath));
+        if (loadedData == null)
+        {
+            loadedData = new save();
+            loadedData.trophey = new List<int>();
+        }
     }   
 
     public bool alreadyExists (int ID)
     {
-        return loadedData.trophey.Contains(ID);
+        if (loadedData.trophey != null) return loadedData.trophey.Contains(ID);
+        return false;
     }
 
     public void saveData (int ID)

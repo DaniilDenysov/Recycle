@@ -4,6 +4,8 @@ public class Trophey : MonoBehaviour
 {
     [SerializeField] private int ID;
     [SerializeField] private AudioClip Trophey_Taken;
+    [Range(0,100)]
+    [SerializeField] private float probability = 50;
     private Animator animator;
     private Rigidbody2D rigidbody;
     private AudioSource audioSource;
@@ -14,6 +16,10 @@ public class Trophey : MonoBehaviour
         rigidbody = GetComponent<Rigidbody2D>();
         audioSource = GetComponent<AudioSource>();
     }
+
+    public float GetProbability() => probability;
+
+    public int GetID() => ID;
 
     private void OnMouseDown()
     {

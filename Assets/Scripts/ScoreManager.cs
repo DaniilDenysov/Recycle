@@ -21,8 +21,14 @@ public class ScoreManager : MonoBehaviour
 
     private void Start()
     {
+       // Garbage.OnScore += Garbage_OnScore;
         Effect.onEffectStarted += Effect_onEffectStarted;
         Effect.onEffectStopped += Effect_onEffectStopped;
+    }
+
+    private void Garbage_OnScore(object sender, int score)
+    {
+        
     }
 
     private void Effect_onEffectStopped(object sender, GameObject e)

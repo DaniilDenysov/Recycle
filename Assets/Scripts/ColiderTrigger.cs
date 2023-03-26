@@ -24,9 +24,8 @@ public class ColiderTrigger : MonoBehaviour
             if (garbage.gameObject.layer == collision.gameObject.layer && collision.gameObject.GetComponent<Bin>())
             {
                 ScoreManager.instance.AddScore(1);
-                Bin bin = collision.gameObject.GetComponent<Bin>();
-                bin.PlaySound();
-                bin.Particles();
+                collision.gameObject.GetComponent<Bin>().PlaySound();
+                collision.gameObject.GetComponent<BinVFX>().Particles();
                 garbage.Destroy();
             }
             else if (collision.gameObject.layer == 15)
@@ -39,8 +38,8 @@ public class ColiderTrigger : MonoBehaviour
             {
                 ScoreManager.instance.AddScore(-3);
                 Bin bin = collision.gameObject.GetComponent<Bin>();
-                bin.PlaySound();
-                bin.Particles();
+                collision.gameObject.GetComponent<Bin>().PlaySound();
+                collision.gameObject.GetComponent<BinVFX>().Particles();
                 garbage.Destroy();
             }
         }

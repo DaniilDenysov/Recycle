@@ -165,8 +165,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51fb42b01575d474aae433c19e0b442b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ID: 3
+  ID: 2
   Trophey_Taken: {fileID: 8300000, guid: 8c6cdaebeae1e8640abb3aa3179d0078, type: 3}
+  probability: 50
 --- !u!95 &-1961448783290694541
 Animator:
   serializedVersion: 4

@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public class Garbage : MonoBehaviour
 {
@@ -117,12 +118,8 @@ public class Garbage : MonoBehaviour
                 transform.position = camera.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 3));
                 RaycastHit2D hit = Physics2D.Raycast(new Vector3(point.transform.position.x, point.transform.position.y, -1), Vector2.down);
                 if (hit.collider)
-                {
-                    if (hit.collider.GetComponent<Bin>())
-                    {
-                        hit.collider.GetComponent<Bin>().Check(gameObject.layer);
-                    }
-                }
+                    if (hit.collider.TryGetComponent<Help>(out Help help))
+                       help.Check(gameObject.layer);
             }
             else
             {
