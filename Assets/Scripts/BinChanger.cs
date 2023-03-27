@@ -36,13 +36,17 @@ public class BinChanger : MonoBehaviour
 
     private void OnDrawGizmos()
     {
+        Bin[] bin = FindObjectsOfType<Bin>();
+        foreach (Bin b in bin) _sortingList.Add(b.gameObject);
         Gizmos.color = _rangeGizmosColor;
         for (int i = 0; i < 4; i++)
         {
             Gizmos.DrawCube(new Vector3((-_range / 2) + (i * (_gapBetween * 2)), -3.75f, 1), new Vector3(0.3f,0.3f,0.3f));
+            _sortingList[i].transform.position = new Vector3((-_range / 2) + (i * (_gapBetween * 2)), -3.75f, 1);
         }
         Gizmos.DrawCube(new Vector3(transform.position.x, -3.75f, transform.position.z),
          new Vector3(_range, 0.1f, 0));
+        _sortingList.Clear();
     }
 
     public int GetCopacity() => Copacity;

@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
-
+using Cinemachine;
 
 public class Bomb : MonoBehaviour,IWarning
 {
@@ -14,12 +14,14 @@ public class Bomb : MonoBehaviour,IWarning
     private Camera _camera;
     [SerializeField] private GameObject warningPref;
     private GameObject warning;
+    private CinemachineImpulseSource _cinemachineImpulseSource;
 
     private void Start()
     {
         warning = Instantiate(warningPref, transform.position, Quaternion.identity);
         _rigidbody = GetComponent<Rigidbody2D>();       
         _camera = Camera.main;
+        _cinemachineImpulseSource = FindObjectOfType<CinemachineImpulseSource>(); 
         Invoke(nameof(Explode),bombTimer);
     }
     void Update()
@@ -40,6 +42,7 @@ public class Bomb : MonoBehaviour,IWarning
     {
         if (_exploded) return;
         List<Collider2D> list = new List<Collider2D>();
+        _cinemachineImpulseSource.GenerateImpulse(100f);
         list.AddRange(Physics2D.OverlapCircleAll(transform.position, explosionRadius));
         ExplodeDamage(list);
         ExplosionPhysics(Physics2D.OverlapCircleAll(transform.position, explosionRadius));

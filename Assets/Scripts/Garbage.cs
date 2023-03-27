@@ -31,7 +31,7 @@ public class Garbage : MonoBehaviour
     public void SpawnParticles ()
     {
         GameObject _particles = Instantiate(particles,transform.position,Quaternion.identity);
-        _particles.GetComponent<ParticleSystem>().startColor = MapManager.instance.ground[MapManager.instance.Map];
+       // _particles.GetComponent<ParticleSystem>().startColor = MapManager.instance.ground[MapManager.instance.Map];
         Destroy(_particles,1);
     }
 

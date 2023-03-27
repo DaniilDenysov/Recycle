@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using UnityEngine.SceneManagement;
 using UnityEngine;
+using Cinemachine;
 
 public class DefeatManager : MonoBehaviour
 {
@@ -30,8 +31,8 @@ public class DefeatManager : MonoBehaviour
         Debug.Log("U lost!");
         Lost = true;
         ScoreManager.instance.SetScore(0);
-        DefeatMenu[MapManager.instance.Map].SetActive(true);
-        Camera.main.gameObject.GetComponent<Animator>().Play("DefeatAnim");
+        DefeatMenu[MapManager.instance.MapID].SetActive(true);
+        FindObjectOfType<CinemachineVirtualCamera>().gameObject.GetComponent<Animator>().Play("DefeatAnim");
     }
 
 }

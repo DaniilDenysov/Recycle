@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Cinemachine;
 
 public class PauseManager : MonoBehaviour
 {
@@ -36,21 +37,21 @@ public class PauseManager : MonoBehaviour
     }
     public void Pause ()
     {
-        if (!isPlaying(Camera.main.gameObject.GetComponent<Animator>(), "DefeatAnim") && !isPlaying(Camera.main.gameObject.GetComponent<Animator>(), "StartAnim"))
+        if (!isPlaying(FindObjectOfType<CinemachineVirtualCamera>().gameObject.GetComponent<Animator>(), "DefeatAnim") && !isPlaying(FindObjectOfType<CinemachineVirtualCamera>().gameObject.GetComponent<Animator>(), "StartAnim"))
         {
             if (!Paused)
             {
-                camera.gameObject.GetComponent<Animator>().Play("DefeatAnim");
+                FindObjectOfType<CinemachineVirtualCamera>().gameObject.GetComponent<Animator>().Play("DefeatAnim");
                 pauseBtn.SetActive(false);
                 Paused = true;
             }
             else
             {
-                camera.gameObject.GetComponent<Animator>().Play("StartAnim");
+                FindObjectOfType<CinemachineVirtualCamera>().gameObject.GetComponent<Animator>().Play("StartAnim");
                 pauseBtn.SetActive(true);
                 Paused = false;
             }
-            PauseMenu[mapManager.Map].SetActive(Paused);
+            PauseMenu[mapManager.MapID].SetActive(Paused);
         }
     }
 
