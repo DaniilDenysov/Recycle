@@ -18,7 +18,7 @@ public class WeatherManager : MonoBehaviour
     {
         if (fallouts[_Season] != null)
         {
-            _Season = FindObjectOfType<MapManager>().MapID;
+            _Season = FindObjectOfType<MapManager>().GetMapID();
             Debug.Log("Season: " + _Season);
             ParticleSystem.MainModule main = fallouts[_Season].main;
             InvokeRepeating("ChangeWeather", interval, interval);

@@ -31,7 +31,7 @@ public class DefeatManager : MonoBehaviour
         Debug.Log("U lost!");
         Lost = true;
         ScoreManager.instance.SetScore(0);
-        DefeatMenu[MapManager.instance.MapID].SetActive(true);
+        DefeatMenu[MapManager.instance.GetMapID()].SetActive(true);
         FindObjectOfType<CinemachineVirtualCamera>().gameObject.GetComponent<Animator>().Play("DefeatAnim");
     }
 

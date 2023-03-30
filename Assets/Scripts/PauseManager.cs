@@ -51,7 +51,7 @@ public class PauseManager : MonoBehaviour
                 pauseBtn.SetActive(true);
                 Paused = false;
             }
-            PauseMenu[mapManager.MapID].SetActive(Paused);
+            PauseMenu[mapManager.GetMapID()].SetActive(Paused);
         }
     }
 

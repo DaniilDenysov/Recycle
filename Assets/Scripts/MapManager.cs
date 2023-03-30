@@ -4,15 +4,9 @@ using UnityEditor;
 
 public class MapManager : MonoBehaviour
 {
-    public static MapManager instance { get; set; }
-
-   
-    [SerializeField] private List<Map> t;
-
-    public Color [] background;
-    [SerializeField] private GameObject[] render;
-    private GameObject currentEnvironment;
-    public int MapID;
+    public static MapManager instance { get; set; }   
+   [SerializeField] private List<Map> _map;
+    private int _mapID;
 
     private void Awake()
     {
@@ -20,31 +14,31 @@ public class MapManager : MonoBehaviour
     }
 
 
-    [EditorCools.Button(name: "Second Button")]
-    private void NameDoesnotMatter() => Debug.Log("Second Button Clicked!");
 
     void Start()
     {
-        if (!PlayerPrefs.HasKey("Season") || PlayerPrefs.GetInt("Season") == 4) MapID = Random.Range(0, background.Length);
-        else MapID = PlayerPrefs.GetInt("Season");
-        Camera.main.backgroundColor = background[MapID];
-        render[MapID].SetActive(true);
+        if (!PlayerPrefs.HasKey("Season") || PlayerPrefs.GetInt("Season") == 4) _mapID = Random.Range(0, _map.Count);
+        else _mapID = PlayerPrefs.GetInt("Season");
+        SwitchEnvironment();
     }
 
-    public void SwitchBackground (Color color)
+    public int GetMapID() => _mapID;
+
+    public void SwitchEnvironment()
     {
-        Camera.main.backgroundColor = color;
+        Debug.Log("Map:" + _mapID);
+        _map[_mapID].GetEnvironment().SetActive(true);
+        Camera.main.backgroundColor = _map[_mapID].GetBackgroundColor();
     }
-    
-    public void SwitchEnvironment(GameObject environment)
+
+    [System.Serializable]
+    class Map
     {
-        currentEnvironment?.SetActive(false);
-        currentEnvironment = environment;
-        currentEnvironment.SetActive(true);
-    }
-    public void SwitchMapID (int ID)
-    {
-        MapID = ID;
+        [SerializeField] private GameObject _environment;
+        [SerializeField] private Color _backgroundColor;
+
+        public GameObject GetEnvironment() => _environment;
+        public Color GetBackgroundColor() => _backgroundColor;
     }
 }
 

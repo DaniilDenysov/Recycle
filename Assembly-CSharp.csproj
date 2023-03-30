@@ -63,7 +63,6 @@
     <Compile Include="Assets\Scripts\ScoreManager.cs" />
     <Compile Include="Assets\Trophey.cs" />
     <Compile Include="Assets\Scripts\Pause.cs" />
-    <Compile Include="Assets\Scripts\Map.cs" />
     <Compile Include="Assets\Scripts\GarbageCollector.cs" />
     <Compile Include="Assets\Scripts\SpawnTrophey.cs" />
     <Compile Include="Assets\Scripts\PauseManager.cs" />
@@ -79,13 +78,10 @@
     <Compile Include="Assets\Save.cs" />
     <Compile Include="Assets\SpawnBuff.cs" />
     <Compile Include="Assets\Scripts\IScorable.cs" />
-    <Compile Include="Assets\EditorCools\Vector2MinMax\MinMaxSliderAttribute.cs" />
-    <Compile Include="Assets\EditorCools\InspectorButton\ButtonAttribute.cs" />
     <Compile Include="Assets\Effect.cs" />
     <Compile Include="Assets\Scripts\Effects\DoubleScore.cs" />
     <Compile Include="Assets\EchoEffect.cs" />
     <Compile Include="Assets\Scripts\SceneManagment.cs" />
-    <Compile Include="Assets\EditorCools\DropdownStringAttribute\DropdownAttribute.cs" />
     <Compile Include="Assets\customInspector.cs" />
     <Compile Include="Assets\BinVFX.cs" />
     <Compile Include="Assets\Scripts\ImageSlider.cs" />
@@ -93,7 +89,6 @@
     <Compile Include="Assets\Scripts\MapManager.cs" />
     <Compile Include="Assets\Scripts\ColiderTrigger.cs" />
     <Compile Include="Assets\Scripts\EffectsManager.cs" />
-    <Compile Include="Assets\EditorCools\Samples\Test.cs" />
     <Compile Include="Assets\Scripts\FPS.cs" />
     <Compile Include="Assets\Scripts\Spawn.cs" />
     <Compile Include="Assets\Scripts\FPS_Limit.cs" />

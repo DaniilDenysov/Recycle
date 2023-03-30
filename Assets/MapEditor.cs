@@ -7,7 +7,7 @@ public class MapEditor : MonoBehaviour
     public static MapEditor instance { get; set; }
 
 
-    public List<Map> t;
+    //public List<Map> t;
 
     private GameObject currentEnvironment;
     public int MapID;
@@ -18,7 +18,7 @@ public class MapEditor : MonoBehaviour
     }
 
 
-    [EditorCools.Button(name: "Second Button")]
+
     public void NameDoesnotMatter() => Debug.Log("Second Button Clicked!");
 
     void Start()
