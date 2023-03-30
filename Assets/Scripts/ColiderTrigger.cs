@@ -5,6 +5,7 @@ public class ColiderTrigger : MonoBehaviour
     [SerializeField] private Garbage garbage;
     [SerializeField] private GameObject Echo;
     private float time = 0.2f, timeBetweenSpawn = 0, timePassed;
+    private const string _dropEffect = "Prefabs\\Effects\\VFX\\DropEffect";
 
     private void Update()
     {
@@ -19,8 +20,13 @@ public class ColiderTrigger : MonoBehaviour
 
     private void OnCollisionEnter2D (Collision2D collision)
     {
+
         if (!PauseManager.instance.Paused && !DefeatManager.instance.Lost)
         {
+            ScreenShakeManager.instance.VelocityShake(GetComponent<Rigidbody2D>().velocity.normalized * Time.deltaTime * 1.5f);
+            RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down);
+            if (hit) Instantiate(Resources.Load<GameObject>(_dropEffect), new Vector3(hit.point.x, hit.point.y, 1), Quaternion.identity);
+            Debug.Log("Normalized:" + GetComponent<Rigidbody2D>().velocity.normalized);
             if (garbage.gameObject.layer == collision.gameObject.layer && collision.gameObject.GetComponent<Bin>())
             {
                 ScoreManager.instance.AddScore(1);

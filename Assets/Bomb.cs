@@ -5,60 +5,77 @@ using Cinemachine;
 public class Bomb : MonoBehaviour,IWarning
 {
     [Range(1,100f)]
-    [SerializeField] private float explosionForce,explosionRadius,Damage;
+    [SerializeField] private float _explosionForce,_explosionRadius,_damage;
     [Range(1,60f)]
-    [SerializeField] private float bombTimer = 10f;
+    [SerializeField] private float _bombTimer = 10f;
     [SerializeField] private ParticleSystem _particleSystem;
-    private Rigidbody2D _rigidbody;
-    private bool _exploded = false,_isTaken = false;
+    private bool _exploded = false;
+    private const string _dropEffect = "Prefabs\\Effects\\VFX\\DropEffect";
     private Camera _camera;
     [SerializeField] private GameObject warningPref;
     private GameObject warning;
-    private CinemachineImpulseSource _cinemachineImpulseSource;
+  //  private CinemachineImpulseSource _cinemachineImpulseSource;
 
     private void Start()
     {
-        warning = Instantiate(warningPref, transform.position, Quaternion.identity);
-        _rigidbody = GetComponent<Rigidbody2D>();       
+        warning = Instantiate(warningPref, transform.position, Quaternion.identity);  
         _camera = Camera.main;
-        _cinemachineImpulseSource = FindObjectOfType<CinemachineImpulseSource>(); 
-        Invoke(nameof(Explode),bombTimer);
+     //   _cinemachineImpulseSource = FindObjectOfType<CinemachineImpulseSource>(); 
+        Invoke(nameof(Explode),_bombTimer);
     }
+
     void Update()
     {
         Follow();
       //  bombTimer -= Time.deltaTime;
        // if (bombTimer <= 0) Explode();
     }
+
     private void OnDestroy()
     {
         Destroy(warning);
     }
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-    //   Explode();        
-    }
+
     private void Explode ()
     {
         if (_exploded) return;
         List<Collider2D> list = new List<Collider2D>();
-        _cinemachineImpulseSource.GenerateImpulse(100f);
-        list.AddRange(Physics2D.OverlapCircleAll(transform.position, explosionRadius));
+        ScreenShakeManager.instance.Shake(50f);
+        list.AddRange(Physics2D.OverlapCircleAll(transform.position, _explosionRadius));
         ExplodeDamage(list);
-        ExplosionPhysics(Physics2D.OverlapCircleAll(transform.position, explosionRadius));
+        ExplosionPhysics(Physics2D.OverlapCircleAll(transform.position, _explosionRadius));
         VisualizeExplosion();
         _exploded = true;
-        Destroy(gameObject);
+        DestroyBomb();
     }
-    public void Deffuse ()
+
+    public void DestroyBomb ()
     {
         Destroy(gameObject);
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (TryGetComponent<Rigidbody2D>(out Rigidbody2D rigidbody)) ScreenShakeManager.instance.VelocityShake(rigidbody.velocity.normalized / 1.5f);
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down);
+        if (hit) Instantiate(Resources.Load<GameObject>(_dropEffect),new Vector3(hit.point.x, hit.point.y, 1), Quaternion.identity);
+    }
+
+    public void Deffuse ()
+    {
+        GetComponent<AudioSource>().Play();
+        Destroy(GetComponent<Rigidbody2D>());
+        _exploded = true;
+        Destroy(warning);
+        GetComponent<Animator>().Play("Deffuse");
+    }
+
     private void VisualizeExplosion ()
     {      
         _particleSystem.Play();
         _particleSystem.gameObject.transform.parent.SetParent(null);
     }
+
     private void ExplodeDamage (List<Collider2D> objects)
     {
         foreach (Collider2D obj in objects)
@@ -66,59 +83,29 @@ public class Bomb : MonoBehaviour,IWarning
             if (obj.TryGetComponent<IDamagable>(out IDamagable damagable))
             {
                 Debug.Log(obj.gameObject.name);
-                damagable.Damage(Damage);
+                damagable.Damage(_damage);
             }
         }
     }
+
     private void ExplosionPhysics (Collider2D [] objects)
     {
         foreach (Collider2D obj in objects)
         {
             if (obj.TryGetComponent<Rigidbody2D>(out Rigidbody2D rigidbody))
             {
-                rigidbody.AddForce(rigidbody.gameObject.transform.position - transform.position * explosionForce * Time.deltaTime   ,ForceMode2D.Impulse);
+                rigidbody.AddForce(rigidbody.gameObject.transform.position - transform.position * _explosionForce * Time.deltaTime,ForceMode2D.Impulse);
             }
         }
     }
-    public void OnMouseOver()
-    {
-       if (_isTaken == true) transform.position = _camera.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 3));
-    }
-    public void OnMouseDown()
-    {
-        if (_rigidbody)
-        {
-            _isTaken = true;
-            _rigidbody.constraints = RigidbodyConstraints2D.FreezeAll;
-            _rigidbody.Sleep();
-        }
 
-    }
-    public void OnMouseExit()
-    {
-        if (_rigidbody)
-        {
-            _isTaken = false;            
-            _rigidbody.constraints = RigidbodyConstraints2D.None;
-            _rigidbody.WakeUp();
-        }
-    }
-    public void OnMouseUp()
-    {
-        if (_rigidbody)
-        {
-            _isTaken = false;
-            _rigidbody.constraints = RigidbodyConstraints2D.None;
-            _rigidbody.WakeUp();
-        }
-    }
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.green;
-        Gizmos.DrawWireSphere(transform.position,explosionRadius);
+        Gizmos.DrawWireSphere(transform.position,_explosionRadius);
     }
     public void Follow()
     {
-        warning.transform.position = transform.position;
+       if (warning != null) warning.transform.position = transform.position;
     }
 }

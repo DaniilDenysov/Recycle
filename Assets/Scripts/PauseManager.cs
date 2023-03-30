@@ -23,10 +23,6 @@ public class PauseManager : MonoBehaviour
         camera = Camera.main.gameObject;
     }
 
-    private void OnMouseDown()
-    {
-        Pause();
-    }
     bool isPlaying(Animator anim, string stateName)
     {
         if (anim.GetCurrentAnimatorStateInfo(0).IsName(stateName) &&
@@ -35,24 +31,21 @@ public class PauseManager : MonoBehaviour
         else
             return false;
     }
+
+    public void DisableOrEnablePauseButton ()
+    {
+        Paused = Paused ? false : true;
+        pauseBtn.SetActive(pauseBtn.active ? false : true);
+    }
+
+    public void DisableOrEnablePauseMenu()
+    {
+        PauseMenu[mapManager.GetMapID()].SetActive(PauseMenu[mapManager.GetMapID()].active ? false : true);
+    }
+
     public void Pause ()
     {
-        if (!isPlaying(FindObjectOfType<CinemachineVirtualCamera>().gameObject.GetComponent<Animator>(), "DefeatAnim") && !isPlaying(FindObjectOfType<CinemachineVirtualCamera>().gameObject.GetComponent<Animator>(), "StartAnim"))
-        {
-            if (!Paused)
-            {
-                FindObjectOfType<CinemachineVirtualCamera>().gameObject.GetComponent<Animator>().Play("DefeatAnim");
-                pauseBtn.SetActive(false);
-                Paused = true;
-            }
-            else
-            {
-                FindObjectOfType<CinemachineVirtualCamera>().gameObject.GetComponent<Animator>().Play("StartAnim");
-                pauseBtn.SetActive(true);
-                Paused = false;
-            }
-            PauseMenu[mapManager.GetMapID()].SetActive(Paused);
-        }
+        FindObjectOfType<CinemachineVirtualCamera>().gameObject.GetComponent<Animator>().SetBool("Pause",Paused ? false : true);
     }
 
 

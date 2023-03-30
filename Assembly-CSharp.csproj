@@ -56,6 +56,7 @@
     <Compile Include="Assets\DataManager.cs" />
     <Compile Include="Assets\Case.cs" />
     <Compile Include="Assets\MapEditor.cs" />
+    <Compile Include="Assets\ScreenShakeManager.cs" />
     <Compile Include="Assets\Bomb.cs" />
     <Compile Include="Assets\WindManager.cs" />
     <Compile Include="Assets\Scripts\Arcade\Scene\Spawner.cs" />
@@ -63,6 +64,7 @@
     <Compile Include="Assets\Scripts\ScoreManager.cs" />
     <Compile Include="Assets\Trophey.cs" />
     <Compile Include="Assets\Scripts\Pause.cs" />
+    <Compile Include="Assets\Scripts\Dragable.cs" />
     <Compile Include="Assets\Scripts\GarbageCollector.cs" />
     <Compile Include="Assets\Scripts\SpawnTrophey.cs" />
     <Compile Include="Assets\Scripts\PauseManager.cs" />
@@ -93,6 +95,7 @@
     <Compile Include="Assets\Scripts\Spawn.cs" />
     <Compile Include="Assets\Scripts\FPS_Limit.cs" />
     <Compile Include="Assets\TropheyManager.cs" />
+    <Compile Include="Assets\DisableOrEnable.cs" />
     <Compile Include="Assets\EchoFade.cs" />
     <Compile Include="Assets\InitializeEffect.cs" />
     <Compile Include="Assets\Scripts\DefeatManager.cs" />

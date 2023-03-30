@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-public class Garbage : MonoBehaviour
+public class Garbage : Dragable
 {
     [SerializeField] private Transform point;
     [SerializeField] private GameObject texture;
@@ -9,16 +9,14 @@ public class Garbage : MonoBehaviour
     [SerializeField] private AudioClip ObjectTaken, ObjectDropped;
     [SerializeField] private LayerMask collisionIgnore;
     private Animator animator;
-    private Rigidbody2D rigidbody;
     private Camera camera;
     private HingeJoint2D hingeJoint2D;
     private BoxCollider2D boxCollider2D;
     private CircleCollider2D circleCollider2D;
-    private bool isTaken;
 
-    private void Start()
+    protected override void Start()
     {
-        rigidbody = GetComponent<Rigidbody2D>();
+        base.Start();
         hingeJoint2D = GetComponent<HingeJoint2D>();
         camera = Camera.main;
     /*   if (GetComponent<BoxCollider2D>()) boxCollider2D = GetComponent<BoxCollider2D>();
@@ -44,16 +42,6 @@ public class Garbage : MonoBehaviour
 
     public void Destroy ()
     {
-       /*& if (texture != null) transform.parent.gameObject.SetActive(false);
-        else gameObject.SetActive(false);
-        // Destroy(GetComponent<CircleCollider2D>());
-        if (hingeJoint2D) hingeJoint2D.enabled = false;
-        rigidbody.sleepMode = RigidbodySleepMode2D.StartAsleep;
-        if (texture != null) texture.GetComponent<Rigidbody2D>().sleepMode = RigidbodySleepMode2D.StartAsleep;
-        if (boxCollider2D) boxCollider2D.enabled = false;
-        else circleCollider2D.enabled = false;
-        animator.Play("Destroy");
-        Invoke(nameof(changeState), 1);*/
          if (texture != null)
          {
 
@@ -72,45 +60,17 @@ public class Garbage : MonoBehaviour
             // Destroy(this);
          }     
     }
-    void LateUpdate()
+
+    protected override void OnMouseDown()
     {
-       /* if (isTaken)
-        {
-            if (!PauseManager.instance.Paused && !DefeatManager.instance.Lost)
-            {
-            
-                transform.position = camera.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 3));
-                RaycastHit2D hit = Physics2D.Raycast(new Vector3(point.transform.position.x, point.transform.position.y, -1), Vector2.down);
-                if (hit.collider)
-                {
-                    if (hit.collider.GetComponent<Bin>())
-                    {
-                        hit.collider.GetComponent<Bin>().Check(gameObject.layer);
-                    }
-                }
-            }
-            else
-            {
-                Destroy(gameObject);
-            }
-        }*/
-    }
-    public void OnMouseDown()
-    {
-        if (rigidbody)
-        {
-            isTaken = true;
-            SoundManager.instance.PlaySound(ObjectTaken);
-            animator.Play("Taken");
-            rigidbody.constraints = RigidbodyConstraints2D.FreezeAll;
-            rigidbody.Sleep();
-        }
-        
+        SoundManager.instance.PlaySound(ObjectTaken);
+        animator.Play("Taken");
+        base.OnMouseDown();
     }
 
     public void OnMouseOver()
     {
-        if (isTaken)
+        if (_isTaken)
         {
             if (!PauseManager.instance.Paused && !DefeatManager.instance.Lost)
             {
@@ -128,25 +88,15 @@ public class Garbage : MonoBehaviour
         }
     }
 
-    public void OnMouseExit()
+    protected override void OnMouseExit()
     {
-        if (rigidbody)
-        {
-            isTaken = false;
-            animator.Play("Dropped");
-            rigidbody.constraints = RigidbodyConstraints2D.None;
-            rigidbody.WakeUp();
-        }
+        animator.Play("Dropped");
+        base.OnMouseExit();
     }
 
-    public void OnMouseUp()
+    protected override void OnMouseUp()
     {
-        if (rigidbody)
-        {
-            isTaken = false;
-            animator.Play("Dropped");
-            rigidbody.constraints = RigidbodyConstraints2D.None;
-            rigidbody.WakeUp();
-        }
+        animator.Play("Dropped");
+        base.OnMouseUp();
     }
 }
