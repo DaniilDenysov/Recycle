@@ -12,7 +12,7 @@ public class ScoreManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI Display;
     public bool Protection;
 
-
+    public static event EventHandler OnDefeat;
 
     private void Awake()
     {
@@ -72,6 +72,11 @@ public class ScoreManager : MonoBehaviour
     }
     public void _Score (float score)
     {
+        if (Score + (score * Increase) < 0)
+        {
+            OnDefeat?.Invoke(this,EventArgs.Empty);
+            return;
+        }
         if (Score + (score * Increase) > Level * 10) Level += 1;
         Score += (score * Increase);
         GetComponent<Image>().fillAmount = Score * (1f / (Level * 10f));

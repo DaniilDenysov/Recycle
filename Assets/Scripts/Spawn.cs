@@ -12,11 +12,13 @@ public class Spawn : MonoBehaviour
     [SerializeField] protected Color _spawnRangeGizmosColor;
     private float _timeToNextSpawn;
     protected List<GameObject> _cashedList;
+    private bool _gameStopped = false;
 
     public virtual void Start()
     {
         // InvokeRepeating(nameof(SpawnObject),_timeRange,_timeRange);
         _cashedList = new List<GameObject>();
+        GameBrakeManager.OnBrake += GameBrakeManager_OnBrake;
         for (int i = 0; i < _resourcesLink.Count; i++)
         {
             _cashedList.AddRange(Resources.LoadAll<GameObject>(_resourcesLink[i]));
@@ -25,6 +27,11 @@ public class Spawn : MonoBehaviour
         _timeToNextSpawn = _timeRange;
         SubscribeToTimeChanges();
       //  StartCoroutine(Spawning());
+    }
+
+    private void GameBrakeManager_OnBrake(object sender, bool e)
+    {
+        _gameStopped = e;
     }
 
     IEnumerator Spawning ()
@@ -54,6 +61,7 @@ public class Spawn : MonoBehaviour
 
     public virtual void FixedUpdate ()
     {
+        if (_gameStopped) return;
         _timeToNextSpawn -= Time.fixedDeltaTime;
         if (_timeToNextSpawn > 0) return;
         _timeToNextSpawn = _timeRange;

@@ -1,17 +1,20 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 using Cinemachine;
 
 public class PauseManager : MonoBehaviour
 {
     public static PauseManager instance { get; set; }
 
-    public bool Paused;
+    [SerializeField] private bool _paused;
     public GameObject[] PauseMenu;
     [SerializeField] private MapManager mapManager;
     [SerializeField] private GameObject pauseBtn;
     private GameObject camera;
+
+    public static event EventHandler<bool> OnPaused;
 
     private void Awake()
     {
@@ -34,7 +37,6 @@ public class PauseManager : MonoBehaviour
 
     public void DisableOrEnablePauseButton ()
     {
-        Paused = Paused ? false : true;
         pauseBtn.SetActive(pauseBtn.active ? false : true);
     }
 
@@ -45,7 +47,9 @@ public class PauseManager : MonoBehaviour
 
     public void Pause ()
     {
-        FindObjectOfType<CinemachineVirtualCamera>().gameObject.GetComponent<Animator>().SetBool("Pause",Paused ? false : true);
+        _paused = _paused ? false : true;
+        OnPaused?.Invoke(this, _paused);
+        FindObjectOfType<CinemachineVirtualCamera>().gameObject.GetComponent<Animator>().SetBool("Pause",_paused);
     }
 
 

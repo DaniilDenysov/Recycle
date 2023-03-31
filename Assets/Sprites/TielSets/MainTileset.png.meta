@@ -1006,7 +1006,7 @@ TextureImporter:
         width: 420
         height: 419
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1027,7 +1027,7 @@ TextureImporter:
         width: 316
         height: 314
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1048,7 +1048,7 @@ TextureImporter:
         width: 460
         height: 678
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1056,6 +1056,27 @@ TextureImporter:
       bones: []
       spriteID: 68d285ab2e93b1d4da4bba49d8b0bbda
       internalID: -1357649328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MainTileset_44
+      rect:
+        serializedVersion: 2
+        x: 4061
+        y: 1504
+        width: 470
+        height: 470
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a1db0789c09e044581a6636a67bd3c5
+      internalID: 953214714
       vertices: []
       indices: 
       edges: []
@@ -1092,8 +1113,8 @@ TextureImporter:
       MainTileset_41: 1820962760
       MainTileset_39: 50673049
       MainTileset_42: 1941100587
-      MainTileset_12: -32176468
       MainTileset_34: 152520291
+      MainTileset_12: -32176468
       MainTileset_9: -865578059
       MainTileset_27: -2021693815
       MainTileset_40: 1882287731
@@ -1108,6 +1129,7 @@ TextureImporter:
       MainTileset_0: -383900103
       MainTileset_5: 589680257
       MainTileset_32: 1857997809
+      MainTileset_44: 953214714
       MainTileset_10: 397915506
       MainTileset_8: -1690883822
       MainTileset_13: -369547019

@@ -1,13 +1,15 @@
 ﻿using System.Collections;
 using UnityEngine.SceneManagement;
 using UnityEngine;
+using System;
 using Cinemachine;
 
 public class DefeatManager : MonoBehaviour
 {
     public static DefeatManager instance { get; set; }
 
-    public bool Lost;
+    public static event EventHandler<bool> OnDefeat;
+
     [SerializeField] private GameObject[] DefeatMenu;
 
     private void Awake()
@@ -17,19 +19,13 @@ public class DefeatManager : MonoBehaviour
         
     void Start()
     {
-        StartCoroutine(ScoreCheck());
+        
     }
 
-    IEnumerator ScoreCheck()
-    {
-        yield return new WaitUntil(predicate: () => ScoreManager.instance.Score < 0);
-        Defeat();
-    }
 
     public void Defeat ()
     {
-        Debug.Log("U lost!");
-        Lost = true;
+        OnDefeat?.Invoke(this,true);
         ScoreManager.instance.SetScore(0);
         DefeatMenu[MapManager.instance.GetMapID()].SetActive(true);
         FindObjectOfType<CinemachineVirtualCamera>().gameObject.GetComponent<Animator>().Play("DefeatAnim");

@@ -14,9 +14,12 @@ public class Garbage : Dragable
     private BoxCollider2D boxCollider2D;
     private CircleCollider2D circleCollider2D;
 
+    private bool _gameStopped = false;
+
     protected override void Start()
     {
         base.Start();
+        GameBrakeManager.OnBrake += GameBrakeManager_OnBrake;
         hingeJoint2D = GetComponent<HingeJoint2D>();
         camera = Camera.main;
     /*   if (GetComponent<BoxCollider2D>()) boxCollider2D = GetComponent<BoxCollider2D>();
@@ -25,7 +28,12 @@ public class Garbage : Dragable
         else animator = GetComponent<Animator>();
        
     }
- 
+
+    private void GameBrakeManager_OnBrake(object sender, bool e)
+    {
+        _gameStopped = e;
+    }
+
     public void SpawnParticles ()
     {
         GameObject _particles = Instantiate(particles,transform.position,Quaternion.identity);
@@ -70,22 +78,13 @@ public class Garbage : Dragable
 
     public void OnMouseOver()
     {
-        if (_isTaken)
-        {
-            if (!PauseManager.instance.Paused && !DefeatManager.instance.Lost)
-            {
-
-                transform.position = camera.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 3));
-                RaycastHit2D hit = Physics2D.Raycast(new Vector3(point.transform.position.x, point.transform.position.y, -1), Vector2.down);
-                if (hit.collider)
-                    if (hit.collider.TryGetComponent<Help>(out Help help))
-                       help.Check(gameObject.layer);
-            }
-            else
-            {
-                Destroy(gameObject);
-            }
-        }
+        if (_gameStopped) return;
+        if (!_isTaken) return;
+        transform.position = camera.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 3));
+        RaycastHit2D hit = Physics2D.Raycast(new Vector3(point.transform.position.x, point.transform.position.y, -1), Vector2.down);
+        if (hit.collider)
+           if (hit.collider.TryGetComponent<Help>(out Help help))
+                  help.Check(gameObject.layer);
     }
 
     protected override void OnMouseExit()

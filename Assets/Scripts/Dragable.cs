@@ -14,18 +14,21 @@ public class Dragable : MonoBehaviour
 
     protected virtual void OnMouseDown()
     {
+     if (_rigidbody == null) return;
      _isTaken = true;
      _rigidbody.constraints = RigidbodyConstraints2D.FreezeAll;
      _rigidbody.Sleep();
     }
     protected virtual void OnMouseExit()
     {
+      if (_rigidbody == null) return;
      _isTaken = false;
      _rigidbody.constraints = RigidbodyConstraints2D.None;
      _rigidbody.WakeUp();
     }
     protected virtual void OnMouseUp()
     {
+     if (_rigidbody == null) return;
      _isTaken = false;
      _rigidbody.constraints = RigidbodyConstraints2D.None;
      _rigidbody.WakeUp();

@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class ColiderTrigger : MonoBehaviour
@@ -7,6 +8,18 @@ public class ColiderTrigger : MonoBehaviour
     [SerializeField] private static LayerMask _dropEffectLayerMask;
     private float time = 0.2f, timeBetweenSpawn = 0, timePassed;
     private const string _dropEffect = "Prefabs\\Effects\\VFX\\DropEffect";
+
+    private bool _gameStopped = false;
+
+    private void Start()
+    {
+        GameBrakeManager.OnBrake += GameBrakeManager_OnBrake;
+    }
+
+    private void GameBrakeManager_OnBrake(object sender, bool e)
+    {
+        _gameStopped = e;
+    }
 
     private void Update()
     {
@@ -22,7 +35,7 @@ public class ColiderTrigger : MonoBehaviour
     private void OnCollisionEnter2D (Collision2D collision)
     {
 
-        if (!PauseManager.instance.Paused && !DefeatManager.instance.Lost)
+        if (!_gameStopped)
         {
             ScreenShakeManager.instance.VelocityShake(GetComponent<Rigidbody2D>().velocity.normalized * Time.deltaTime * 1.5f);
             RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down,_dropEffectLayerMask);
