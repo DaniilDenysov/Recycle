@@ -4,6 +4,7 @@ public class ColiderTrigger : MonoBehaviour
 {
     [SerializeField] private Garbage garbage;
     [SerializeField] private GameObject Echo;
+    [SerializeField] private static LayerMask _dropEffectLayerMask;
     private float time = 0.2f, timeBetweenSpawn = 0, timePassed;
     private const string _dropEffect = "Prefabs\\Effects\\VFX\\DropEffect";
 
@@ -24,7 +25,7 @@ public class ColiderTrigger : MonoBehaviour
         if (!PauseManager.instance.Paused && !DefeatManager.instance.Lost)
         {
             ScreenShakeManager.instance.VelocityShake(GetComponent<Rigidbody2D>().velocity.normalized * Time.deltaTime * 1.5f);
-            RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down);
+            RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down,_dropEffectLayerMask);
             if (hit) Instantiate(Resources.Load<GameObject>(_dropEffect), new Vector3(hit.point.x, hit.point.y, 1), Quaternion.identity);
             Debug.Log("Normalized:" + GetComponent<Rigidbody2D>().velocity.normalized);
             if (garbage.gameObject.layer == collision.gameObject.layer && collision.gameObject.GetComponent<Bin>())

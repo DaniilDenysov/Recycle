@@ -9,6 +9,7 @@ TagManager:
   - Cloud
   - Graund
   - Garbage
+  - Bomb
   layers:
   - Default
   - TransparentFX

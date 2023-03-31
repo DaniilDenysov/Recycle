@@ -11,7 +11,7 @@ public class Spawn : MonoBehaviour
     [SerializeField] protected float _timeRange = 2f,_spawnRange = 10f;
     [SerializeField] protected Color _spawnRangeGizmosColor;
     private float _timeToNextSpawn;
-    private List<GameObject> _cashedList;
+    protected List<GameObject> _cashedList;
 
     public virtual void Start()
     {
