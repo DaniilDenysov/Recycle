@@ -29,7 +29,20 @@ public class ScreenShakeManager : MonoBehaviour
         GameBrakeManager.OnBrake += GameBrakeManager_OnBrake;
     }
 
+    public void Impulse (Vector3 _posiotion, Vector3 _velocity)
+    {
+        if (_gameStopped) return;
+        _cinemachineImpulseSource.GenerateImpulseAt(_posiotion,_velocity);
+    }
+
     public void VelocityShake(Vector3 _velocity)
+    {
+        if (_gameStopped) return;
+        _cinemachineImpulseSource.GenerateImpulseWithVelocity(_velocity);
+    }
+
+
+    public void VelocityShake(Vector3 _velocity,bool des)
     {
         if (_gameStopped) return;
         _cinemachineImpulseSource.GenerateImpulseWithVelocity(_velocity);

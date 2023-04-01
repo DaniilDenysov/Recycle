@@ -56,7 +56,7 @@ public class Bomb : MonoBehaviour,IWarning
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (TryGetComponent<Rigidbody2D>(out Rigidbody2D rigidbody)) ScreenShakeManager.instance.VelocityShake(rigidbody.velocity.normalized / 1.5f);
+        if (TryGetComponent<Rigidbody2D>(out Rigidbody2D rigidbody)) ScreenShakeManager.instance.VelocityShake(rigidbody.velocity);
         RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down);
         if (hit) Instantiate(Resources.Load<GameObject>(_dropEffect),new Vector3(hit.point.x, hit.point.y, 1), Quaternion.identity);
     }
