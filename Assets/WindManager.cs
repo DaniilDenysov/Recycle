@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 
 public class WindManager : MonoBehaviour
@@ -14,24 +15,22 @@ public class WindManager : MonoBehaviour
 
     void Start()
     {
-        StartCoroutine(changeDirection());
+     
         wind =  GetComponentInChildren<PointEffector2D>();
         particles = GetComponentInChildren<ParticleSystem>();
         main = particles.main;
+        Thread newThread = new Thread(new ThreadStart(Update));
     }
 
   
     void Update()
     {
         chance = Random.Range(0,100);
-    }
-
-    IEnumerator changeDirection ()
-    {
-        yield return new WaitUntil(() => chance == 50);
-        wind.forceMagnitude = wind.forceMagnitude * -1f;
-        Debug.Log("Changed");
-        main.simulationSpeed = 0;
-        StartCoroutine(changeDirection());
+        if (chance == 50)
+        {
+            wind.forceMagnitude = wind.forceMagnitude * -1f;
+            Debug.Log("Changed");
+            main.simulationSpeed = 0;
+        }
     }
 }

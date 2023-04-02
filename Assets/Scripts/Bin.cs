@@ -12,7 +12,6 @@ public class Bin : MonoBehaviour,IDamagable
     public void Damage(float damage)
     {
         _health -= damage;
-        Debug.Log("HP: " + _health);
         if (_health <= 0) DefeatManager.instance.Defeat();
     }
     public void PlaySound ()

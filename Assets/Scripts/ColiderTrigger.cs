@@ -37,10 +37,9 @@ public class ColiderTrigger : MonoBehaviour
 
         if (!_gameStopped)
         {
-            ScreenShakeManager.instance.VelocityShake(GetComponent<Rigidbody2D>().velocity);
+            if (TryGetComponent<Rigidbody2D>(out Rigidbody2D rigidbody)) ScreenShakeManager.instance.VelocityShake(rigidbody.velocity);
             RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down,_dropEffectLayerMask);
             if (hit) Instantiate(Resources.Load<GameObject>(_dropEffect), new Vector3(hit.point.x, hit.point.y, 1), Quaternion.identity);
-            Debug.Log("Normalized:" + GetComponent<Rigidbody2D>().velocity.normalized);
             if (garbage.gameObject.layer == collision.gameObject.layer && collision.gameObject.GetComponent<Bin>())
             {
                 ScoreManager.instance.AddScore(1);

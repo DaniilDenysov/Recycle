@@ -83,8 +83,7 @@
     <Compile Include="Assets\Effect.cs" />
     <Compile Include="Assets\Scripts\Effects\DoubleScore.cs" />
     <Compile Include="Assets\EchoEffect.cs" />
-    <Compile Include="Assets\Scripts\SceneManagment.cs" />
-    <Compile Include="Assets\customInspector.cs" />
+    <Compile Include="Assets\Scripts\SceneManage.cs" />
     <Compile Include="Assets\BinVFX.cs" />
     <Compile Include="Assets\Scripts\ImageSlider.cs" />
     <Compile Include="Assets\Scripts\VerticalDropdown.cs" />

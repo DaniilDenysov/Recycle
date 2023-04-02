@@ -144,7 +144,7 @@ MonoBehaviour:
     overrideState: 0
     value: 0
   color:
-    overrideState: 1
+    overrideState: 0
     value: {r: 0, g: 0, b: 0, a: 1}
   center:
     overrideState: 0
@@ -153,13 +153,13 @@ MonoBehaviour:
     overrideState: 1
     value: 0
   smoothness:
-    overrideState: 1
+    overrideState: 0
     value: 1
   roundness:
-    overrideState: 1
+    overrideState: 0
     value: 1
   rounded:
-    overrideState: 1
+    overrideState: 0
     value: 1
   mask:
     overrideState: 0

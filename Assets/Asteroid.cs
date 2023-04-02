@@ -82,11 +82,13 @@ public class Asteroid : MonoBehaviour
     {
         if (stop) return;
         stop = true;
-        ScreenShakeManager.instance.VelocityShake(_rigidbody.velocity.normalized);
+        ScreenShakeManager.instance.Shake(200);
       //  _animator.Play("Asteroid_Destroy");
         Destroy(gameObject);
         //Destroy(GetComponentInChildren<ParticleSystem>().gameObject);
     }
+
+    public void SetAngle(float _newAngle) => _angleRange = _newAngle;
 
     public void Launch (Vector2 _dir,ForceMode2D forceMode2D)
     {

@@ -82,7 +82,7 @@ public class Bomb : MonoBehaviour,IWarning
         {
             if (obj.TryGetComponent<IDamagable>(out IDamagable damagable))
             {
-                Debug.Log(obj.gameObject.name);
+             
                 damagable.Damage(_damage);
             }
         }

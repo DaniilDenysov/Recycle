@@ -22,12 +22,15 @@ public class DefeatManager : MonoBehaviour
         
     }
 
+    public void ActivateDefeatMenu ()
+    {
+        DefeatMenu[MapManager.instance.GetMapID()].SetActive(true);
+    }
 
     public void Defeat ()
     {
         OnDefeat?.Invoke(this,true);
-        ScoreManager.instance.SetScore(0);
-        DefeatMenu[MapManager.instance.GetMapID()].SetActive(true);
+       // ScoreManager.instance.SetScore(0);
         FindObjectOfType<CinemachineVirtualCamera>().gameObject.GetComponent<Animator>().Play("DefeatAnim");
     }
 

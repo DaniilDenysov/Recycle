@@ -27,7 +27,7 @@ SpriteAtlas:
       blockOffset: 1
       allowAlphaSplitting: 0
       enableRotation: 0
-      enableTightPacking: 0
+      enableTightPacking: 1
       enableAlphaDilation: 0
     secondaryTextureSettings: {}
     variantMultiplier: 1
@@ -38,6 +38,10 @@ SpriteAtlas:
     - {fileID: 589680257, guid: e63804b12bc49e840ba0cc568bf23795, type: 3}
     - {fileID: -32176468, guid: e63804b12bc49e840ba0cc568bf23795, type: 3}
     - {fileID: -369547019, guid: e63804b12bc49e840ba0cc568bf23795, type: 3}
+    - {fileID: -1847976345, guid: a1372ca685e373b40a16c9f9a1311e7d, type: 3}
+    - {fileID: -1989256710, guid: a1372ca685e373b40a16c9f9a1311e7d, type: 3}
+    - {fileID: -811733101, guid: a1372ca685e373b40a16c9f9a1311e7d, type: 3}
+    - {fileID: -1753340142, guid: a1372ca685e373b40a16c9f9a1311e7d, type: 3}
     bindAsDefault: 1
     isAtlasV2: 0
     cachedData: {fileID: 0}
@@ -49,6 +53,10 @@ SpriteAtlas:
   - {fileID: -1353314434, guid: e63804b12bc49e840ba0cc568bf23795, type: 3}
   - {fileID: 1399099469, guid: e63804b12bc49e840ba0cc568bf23795, type: 3}
   - {fileID: 589680257, guid: e63804b12bc49e840ba0cc568bf23795, type: 3}
+  - {fileID: -1847976345, guid: a1372ca685e373b40a16c9f9a1311e7d, type: 3}
+  - {fileID: -1989256710, guid: a1372ca685e373b40a16c9f9a1311e7d, type: 3}
+  - {fileID: -811733101, guid: a1372ca685e373b40a16c9f9a1311e7d, type: 3}
+  - {fileID: -1753340142, guid: a1372ca685e373b40a16c9f9a1311e7d, type: 3}
   m_PackedSpriteNamesToIndex:
   - MainTileset_12
   - MainTileset_13
@@ -56,6 +64,10 @@ SpriteAtlas:
   - MainTileset_17
   - MainTileset_18
   - MainTileset_5
+  - VFX_0
+  - VFX_1
+  - VFX_2
+  - VFX_3
   m_RenderDataMap: {}
   m_Tag: Particles
   m_IsVariant: 0

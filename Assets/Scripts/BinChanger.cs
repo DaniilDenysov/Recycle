@@ -32,6 +32,7 @@ public class BinChanger : MonoBehaviour
         foreach (Bin b in bin) _sortingList.Add(b.gameObject);
         if (PlayerPrefs.HasKey("Difficulty") && PlayerPrefs.GetInt("Difficulty") > 0) ChoseRandomly(PlayerPrefs.GetInt("Difficulty"));
         else ChoseRandomly(2);
+        Destroy(this);
     }
 
     private void OnDrawGizmos()
