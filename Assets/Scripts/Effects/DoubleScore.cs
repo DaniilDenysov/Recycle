@@ -10,8 +10,8 @@ public class DoubleScore : Effect
     [SerializeField] private int Amount = 2;
 
     private PostProcessVolume volume;
-    private LensDistortion lensDistortion;
-    private float fixedEffectTime;
+    private ChromaticAberration lensDistortion;
+  //  private float fixedEffectTime;
     public override object GetEffect() => Amount;
 
     public override Effect GetEffectType() => this;
@@ -19,7 +19,7 @@ public class DoubleScore : Effect
     public override void Start()
     {
         base.Start();
-        fixedEffectTime = effectTime;
+    //    fixedEffectTime = effectTime;
     }
 
     public override string ToString()
@@ -30,20 +30,20 @@ public class DoubleScore : Effect
     public override void Update()
     {
         base.Update();
-        lensDistortion.intensity.value = effect_func.Evaluate(effectTime / 100);
+       // lensDistortion.intensity.value = effect_func.Evaluate(effectTime / 100);
     }
 
     public override void EffectStopped()
     {
-        lensDistortion.intensity.value = effect_func.Evaluate(effectTime / 100);
+      //  lensDistortion.intensity.value = effect_func.Evaluate(effectTime / 100);
         base.EffectStopped();
     }
 
     public override void EffectStart()
     {
         Debug.Log("Double");
-        volume = FindObjectOfType<PostProcessVolume>();
-        volume.profile.TryGetSettings(out lensDistortion);
+      //  volume = FindObjectOfType<PostProcessVolume>();
+    //    volume.profile.TryGetSettings(out lensDistortion);
         base.EffectStart();
     }
 }

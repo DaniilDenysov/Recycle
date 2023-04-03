@@ -34,12 +34,14 @@ public class ColiderTrigger : MonoBehaviour
 
     private void OnCollisionEnter2D (Collision2D collision)
     {
-
         if (!_gameStopped)
         {
-            if (TryGetComponent<Rigidbody2D>(out Rigidbody2D rigidbody)) ScreenShakeManager.instance.VelocityShake(rigidbody.velocity);
-            RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down,_dropEffectLayerMask);
-            if (hit) Instantiate(Resources.Load<GameObject>(_dropEffect), new Vector3(hit.point.x, hit.point.y, 1), Quaternion.identity);
+            if (collision.gameObject.tag == "Shakable")
+            {
+                if (TryGetComponent<Rigidbody2D>(out Rigidbody2D rigidbody)) ScreenShakeManager.instance.VelocityShake(rigidbody.velocity);
+                RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, _dropEffectLayerMask);
+                if (hit) Instantiate(Resources.Load<GameObject>(_dropEffect), new Vector3(hit.point.x, hit.point.y, 1), Quaternion.identity);
+            }
             if (garbage.gameObject.layer == collision.gameObject.layer && collision.gameObject.GetComponent<Bin>())
             {
                 ScoreManager.instance.AddScore(1);

@@ -16,6 +16,17 @@ public class EffectsManager : MonoBehaviour
         instance = this;
     }
 
+    public Effect GetEffectOfType (Type effect)
+    {
+        return (Effect)GetComponent(effect);
+    }
+
+    public bool CheckEffects (Type effect)
+    {
+        if (GetComponent(effect) != null) return true;
+        return false;
+    }
+
     public  AudioMixer GetMixer()
     {
         return mixer;

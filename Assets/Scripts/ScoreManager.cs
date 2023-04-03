@@ -31,7 +31,7 @@ public class ScoreManager : MonoBehaviour
         
     }
 
-    private void Effect_onEffectStopped(object sender, GameObject e)
+    private void Effect_onEffectStopped(object sender, Effect e)
     {
         if (e.TryGetComponent<Protect>(out Protect protect))
         {
@@ -45,7 +45,7 @@ public class ScoreManager : MonoBehaviour
         }
     }
 
-    private void Effect_onEffectStarted(object sender, GameObject e)
+    private void Effect_onEffectStarted(object sender, Effect e)
     {
         if (e.TryGetComponent<Protect>(out Protect protect))
         {

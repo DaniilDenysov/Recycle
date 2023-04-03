@@ -6,16 +6,14 @@ using UnityEngine.Rendering.PostProcessing;
 public class Protect : Effect
 {
     private PostProcessVolume volume;
-    private Vignette vignette;
+    private ChromaticAberration vignette;
 
     public override object GetEffect() => true;
-    private float fixedEffectTime;
     public override Effect GetEffectType() => this;
 
     public override void Start()
     {
         base.Start();
-        fixedEffectTime = effectTime;
     }
 
     public override string ToString()
@@ -26,7 +24,7 @@ public class Protect : Effect
     public override void Update()
     {
         base.Update();
-        vignette.intensity.value = effect_func.Evaluate(effectTime/100);
+     //   vignette.intensity.value = effect_func.Evaluate(effectTime/100);
         //vignette.intensity.value -= (0.2f / fixedEffectTime) * Time.unscaledDeltaTime;
     }
 
@@ -38,8 +36,8 @@ public class Protect : Effect
     public override void EffectStart()
     {
         Debug.Log("Protect");
-        volume = FindObjectOfType<PostProcessVolume>();
-        volume.profile.TryGetSettings(out vignette);
+        //volume = FindObjectOfType<PostProcessVolume>();
+       // volume.profile.TryGetSettings(out vignette);
         base.EffectStart();
     }
 }

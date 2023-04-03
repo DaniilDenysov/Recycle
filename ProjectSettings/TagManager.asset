@@ -10,6 +10,7 @@ TagManager:
   - Graund
   - Garbage
   - Bomb
+  - Shakable
   layers:
   - Default
   - TransparentFX

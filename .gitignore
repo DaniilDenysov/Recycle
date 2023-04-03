@@ -2381,3 +2381,5 @@ Library/Bee/tundra.digestcache
 Library/Bee/tundra.log.json
 Library/Bee/tundra.scancache
 Library/Bee/TundraBuildState.state
+Library/PackageCache/com.unity.burst@1.7.3/.Runtime/libburst-llvm-12.dylib
+Library/PackageCache/com.unity.burst@1.7.3/.Runtime/hostmac/lld

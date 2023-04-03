@@ -1,5 +1,6 @@
 Library\Bee\artifacts\mvdfrm\Unity.Recorder.Base.ref.dll_67DDE14987D48D53.mvfrm
 Library\Bee\artifacts\mvdfrm\Unity.Recorder.ref.dll_CC1C080121606342.mvfrm
+Library\Bee\artifacts\mvdfrm\Unity.RenderPipelines.Core.Runtime.ref.dll_CA4A63933BEF3AB0.mvfrm
 Library\Bee\artifacts\mvdfrm\Unity.Timeline.Editor.ref.dll_17F688653313AA4C.mvfrm
 Library\Bee\artifacts\mvdfrm\Unity.Timeline.ref.dll_16F8EA6B67022FB5.mvfrm
 Library\Bee\artifacts\mvdfrm\UnityEditor.TestRunner.ref.dll_A805A84D9B0C22D9.mvfrm
@@ -97,6 +98,11 @@ Library\Bee\artifacts\mvdfrm\UnityEditor.WindowsStandalone.Extensions.dll_4F743A
 Library\Bee\artifacts\mvdfrm\Unity.Analytics.StandardEvents.dll_07577E3D0979795C.mvfrm
 Library\Bee\artifacts\mvdfrm\Unity.Analytics.Editor.dll_526A51F5127233C0.mvfrm
 Library\Bee\artifacts\mvdfrm\Unity.Analytics.Tracker.dll_561C643E4639CBF1.mvfrm
+Library\Bee\artifacts\mvdfrm\Unity.Burst.Cecil.dll_1B2C6ACCBA2758FB.mvfrm
+Library\Bee\artifacts\mvdfrm\Unity.Burst.Cecil.Mdb.dll_01372A8D18B982F8.mvfrm
+Library\Bee\artifacts\mvdfrm\Unity.Burst.Cecil.Pdb.dll_1889A2FC976E847B.mvfrm
+Library\Bee\artifacts\mvdfrm\Unity.Burst.Cecil.Rocks.dll_4CEBB547982B31FB.mvfrm
+Library\Bee\artifacts\mvdfrm\Unity.Burst.Unsafe.dll_97EC7530C720EE28.mvfrm
 Library\Bee\artifacts\mvdfrm\Unity.Plastic.Antlr3.Runtime.dll_44FB5BA19B51E763.mvfrm
 Library\Bee\artifacts\mvdfrm\Unity.Plastic.Newtonsoft.Json.dll_35D12A0265013222.mvfrm
 Library\Bee\artifacts\mvdfrm\Unity.VisualScripting.IonicZip.dll_71AC93A1A5E6C87D.mvfrm

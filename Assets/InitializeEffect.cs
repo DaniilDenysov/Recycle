@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.Events;
 using System;
 
@@ -11,6 +12,8 @@ public class InitializeEffect : MonoBehaviour,IWarning
     [SerializeField] private AudioClip soundEffect;
     [SerializeField] private GameObject warningPref;
     private GameObject warning;
+
+    [SerializeField] private object Sc;
 
     private void Start()
     {
@@ -29,12 +32,21 @@ public class InitializeEffect : MonoBehaviour,IWarning
         ParticleSystem vfx = GetComponentInChildren<ParticleSystem>();
         vfx.Play();
         vfx.transform.SetParent(null);
-        object temp = EffectsManager.instance.gameObject.AddComponent(System.Type.GetType(effect));
-        Effect newEffect = (Effect)temp;
-        newEffect.SetTimeFunc(time_func);
-        newEffect.SetEffectFunc(effect_func);
-        SoundManager.instance.PlaySound(soundEffect);
-        DestroyObject();
+        Type type = System.Type.GetType(effect);
+        if (EffectsManager.instance.CheckEffects(type))
+        {
+            EffectsManager.instance.GetEffectOfType(type).SetEffectTime(60); 
+            DestroyObject();
+        }
+        else
+        {
+            object temp = EffectsManager.instance.gameObject.AddComponent(type);
+            Effect newEffect = (Effect)temp;
+            newEffect.SetTimeFunc(time_func);
+            newEffect.SetEffectFunc(effect_func);
+            SoundManager.instance.PlaySound(soundEffect);
+            DestroyObject();
+        }
     }
 
     private void DestroyObject ()
