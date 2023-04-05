@@ -119,8 +119,6 @@ ScriptsOnlyBuild:
     - TMPro.TMP_SpriteAsset
     - TMPro.TMP_StyleSheet
     - TMPro.TextMeshProUGUI
-    Unity.Timeline.dll:
-    - UnityEngine.Timeline.TimelineAsset
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
@@ -459,13 +457,13 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 14386}
     - Class: 114
-      Script: {instanceID: 31568}
+      Script: {instanceID: 31570}
     - Class: 114
-      Script: {instanceID: 95926}
+      Script: {instanceID: 60466}
     - Class: 114
-      Script: {instanceID: 95936}
+      Script: {instanceID: 60476}
     - Class: 114
-      Script: {instanceID: 95944}
+      Script: {instanceID: 60484}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -626,7 +624,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 14970}
     - Class: 114
-      Script: {instanceID: 31568}
+      Script: {instanceID: 31570}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -3056,4 +3054,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/Menu.unity
   - Assets/Scenes/Main.unity
   - Assets/Scenes/Arcade.unity
-  playerPath: C:/Users/Administrator/Desktop/Recycling.apk
+  playerPath: C:/Users/Ebakryak/Desktop/Recycling.apk

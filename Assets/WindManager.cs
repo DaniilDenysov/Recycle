@@ -29,8 +29,8 @@ public class WindManager : MonoBehaviour
         if (chance == 50)
         {
             wind.forceMagnitude = wind.forceMagnitude * -1f;
-            Debug.Log("Changed");
-            main.simulationSpeed = 0;
+            //Debug.Log("Changed");
+          //  main.simulationSpeed = 0;
         }
     }
 }

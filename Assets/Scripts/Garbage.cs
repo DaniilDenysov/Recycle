@@ -80,7 +80,7 @@ public class Garbage : Dragable
         if (!_isTaken) return;
         transform.position = _camera.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y,2));
         ChangeDragPointRadius();
-        RaycastHit2D hit = Physics2D.Raycast(new Vector3(point.transform.position.x, point.transform.position.y, -1), Vector2.down);
+        RaycastHit2D hit = Physics2D.Raycast(new Vector3(transform.position.x, transform.position.y - _circleCollider2D.radius, -1), Vector2.down);
         if (hit.collider)
            if (hit.collider.TryGetComponent<Help>(out Help help))
                   help.Check(gameObject.layer);
