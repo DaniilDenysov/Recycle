@@ -10,12 +10,9 @@ public class AsteroidSpawn : Spawn
     }
     public override void SpawnObject()
     {
-       /* GameObject temp = _cashedList[UnityEngine.Random.Range(0, _cashedList.Count)];
-        if (CanBeSpawned(temp))
-        {
-            GameObject spawned = Instantiate(temp, new Vector3(Random.Range(-_spawnRange,_spawnRange),
-            transform.position.y, 2), Quaternion.identity);
-            spawned.GetComponent<Asteroid>().SetAngle(Random.Range(10,90));
-        }*/
+        int _localRange = UnityEngine.Random.Range(0, _resourcesLink.Count);
+        int _prefabNumber = UnityEngine.Random.Range(1, Resources.LoadAll<GameObject>(_resourcesLink[_localRange]).Length);
+        GameObject temp = Resources.Load<GameObject>(_resourcesLink[_localRange] + _prefabName + _prefabNumber);
+        if (CanBeSpawned(temp)) Instantiate(temp, new Vector3(UnityEngine.Random.Range(_spawnRange, -_spawnRange), transform.position.y, 2), Quaternion.identity);
     }
 }

@@ -6,10 +6,19 @@ public class Dragable : MonoBehaviour
 {
     protected Rigidbody2D _rigidbody;
     protected bool _isTaken = false;
+    protected bool _gameStopped = false;
+    protected Camera _camera;
 
     protected virtual void Start()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
+        _camera = Camera.main;
+        GameBrakeManager.OnBrake += GameBrakeManager_OnBrake;
+    }
+
+    protected virtual void GameBrakeManager_OnBrake(object sender, bool e)
+    {
+        _gameStopped = e;
     }
 
     protected virtual void OnMouseDown()
@@ -19,13 +28,15 @@ public class Dragable : MonoBehaviour
      _rigidbody.constraints = RigidbodyConstraints2D.FreezeAll;
      _rigidbody.Sleep();
     }
-    protected virtual void OnMouseExit()
+
+
+    protected virtual void FixedUpdate()
     {
-      if (_rigidbody == null) return;
-     _isTaken = false;
-     _rigidbody.constraints = RigidbodyConstraints2D.None;
-     _rigidbody.WakeUp();
+        if (_gameStopped) return;
+        if (!_isTaken) return;
+        transform.position = _camera.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 2));
     }
+
     protected virtual void OnMouseUp()
     {
      if (_rigidbody == null) return;
@@ -34,10 +45,4 @@ public class Dragable : MonoBehaviour
      _rigidbody.WakeUp();
     }
 
-    /*
-      public void OnMouseOver()
-    {
-       if (_isTaken == true) transform.position = _camera.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 3));
-    }
-     */
 }

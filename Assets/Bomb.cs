@@ -12,8 +12,10 @@ public class Bomb : MonoBehaviour,IWarning
     private bool _exploded = false;
     private const string _dropEffect = "Prefabs\\Effects\\VFX\\DropEffect";
     private Camera _camera;
+    [SerializeField] private AudioClip _fallenBomb;
     [SerializeField] private GameObject warningPref;
     private GameObject warning;
+    private bool _playOnce = true;
   //  private CinemachineImpulseSource _cinemachineImpulseSource;
 
     private void Start()
@@ -56,10 +58,13 @@ public class Bomb : MonoBehaviour,IWarning
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        if (!_playOnce) return;
         if (collision.gameObject.tag != "Shakable") return;
+        SoundManager.instance.PlaySound(_fallenBomb);
         if (TryGetComponent<Rigidbody2D>(out Rigidbody2D rigidbody)) ScreenShakeManager.instance.VelocityShake(rigidbody.velocity);
         RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down);
         if (hit) Instantiate(Resources.Load<GameObject>(_dropEffect),new Vector3(hit.point.x, hit.point.y, 1), Quaternion.identity);
+        _playOnce = false;
     }
 
     public void Deffuse ()

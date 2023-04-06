@@ -255,9 +255,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.65}
+  m_Offset: {x: 0, y: -0.9}
   serializedVersion: 2
-  m_Radius: 1
+  m_Radius: 2
 --- !u!50 &211510209205461078
 Rigidbody2D:
   serializedVersion: 4
@@ -291,14 +291,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e49cae4049dadf4ab22005fc8646419, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  point: {fileID: 2402841722904716450}
   texture: {fileID: 8686404361628133526}
   particles: {fileID: 1297868062850697475, guid: 156a47e9f630e1543877ca7446612e84, type: 3}
   ObjectTaken: {fileID: 8300000, guid: eec2e988bab127f429d295c4af96fce0, type: 3}
   ObjectDropped: {fileID: 8300000, guid: 2251cf170f24b2546bb3c819787584dd, type: 3}
-  collisionIgnore:
-    serializedVersion: 2
-    m_Bits: 2048
 --- !u!212 &2066606148600906052
 SpriteRenderer:
   m_ObjectHideFlags: 0

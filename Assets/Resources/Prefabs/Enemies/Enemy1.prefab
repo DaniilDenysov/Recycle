@@ -29816,6 +29816,7 @@ MonoBehaviour:
   _damage: 100
   _bombTimer: 10
   _particleSystem: {fileID: 661971503827957823}
+  _fallenBomb: {fileID: 8300000, guid: 3041c378b4db09e4581cbb062a84e695, type: 3}
   warningPref: {fileID: 7280028516623079184, guid: 076af5933d3862d44893f2defa55d326, type: 3}
 --- !u!50 &9022546980434868213
 Rigidbody2D:
