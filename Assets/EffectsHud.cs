@@ -27,3 +27,4 @@ public class EffectsHud : MonoBehaviour
             e.SetProgress(_temp.GetComponent<Image>());
     }
 }
+ 

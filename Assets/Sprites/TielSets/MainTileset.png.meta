@@ -1211,12 +1211,12 @@ TextureImporter:
       name: MainTileset_51
       rect:
         serializedVersion: 2
-        x: 4467
-        y: 559
-        width: 285
-        height: 871
+        x: 4402
+        y: 562
+        width: 476
+        height: 667
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1224,6 +1224,90 @@ TextureImporter:
       bones: []
       spriteID: e1f8cdc8eadb821449603a9df7154426
       internalID: -1788343149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MainTileset_52
+      rect:
+        serializedVersion: 2
+        x: 3889
+        y: 966
+        width: 147
+        height: 415
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffd14cdda2f2b1b45b2dd3f7bc97a700
+      internalID: 2099742267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MainTileset_53
+      rect:
+        serializedVersion: 2
+        x: 1058
+        y: 25
+        width: 182
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32241a8ab22facf43ae8cc575e6a36fd
+      internalID: 402954806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MainTileset_54
+      rect:
+        serializedVersion: 2
+        x: 1289
+        y: 26
+        width: 183
+        height: 266
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c37393d2ce7c4340bffa1c9dde831d7
+      internalID: -501788363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MainTileset_55
+      rect:
+        serializedVersion: 2
+        x: 1543
+        y: 49
+        width: 98
+        height: 214
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd5f55972b77d914483eb797bca629be
+      internalID: 408203166
       vertices: []
       indices: 
       edges: []
@@ -1244,6 +1328,7 @@ TextureImporter:
       MainTileset_36: -1047619572
       MainTileset_49: -1863508700
       1pixel: -2084667936
+      MainTileset_53: 402954806
       MainTileset_37: 1368183072
       MainTileset_2: 1725391303
       MainTileset_50: 698714005
@@ -1264,8 +1349,8 @@ TextureImporter:
       MainTileset_41: 1820962760
       MainTileset_39: 50673049
       MainTileset_42: 1941100587
-      MainTileset_34: 152520291
       MainTileset_12: -32176468
+      MainTileset_34: 152520291
       MainTileset_9: -865578059
       MainTileset_27: -2021693815
       MainTileset_40: 1882287731
@@ -1273,6 +1358,7 @@ TextureImporter:
       MainTileset_45: -2093739243
       MainTileset_26: -708459009
       MainTileset_28: 1771060981
+      MainTileset_52: 2099742267
       MainTileset_29: 1583551074
       MainTileset_6: 1312204542
       MainTileset_1: 1107458103
@@ -1289,9 +1375,11 @@ TextureImporter:
       MainTileset_38: 1591357358
       MainTileset_3: 643844921
       MainTileset_23: 4451514
+      MainTileset_55: 408203166
       MainTileset_14: 946721065
       MainTileset_16: -1918828779
       MainTileset_51: -1788343149
+      MainTileset_54: -501788363
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

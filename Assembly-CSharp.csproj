@@ -103,6 +103,7 @@
     <Compile Include="Assets\Scripts\Spawn.cs" />
     <Compile Include="Assets\Scripts\FPS_Limit.cs" />
     <Compile Include="Assets\DisableOrEnable.cs" />
+    <Compile Include="Assets\GuideManager.cs" />
     <Compile Include="Assets\Scripts\DefeatManager.cs" />
     <Compile Include="Assets\Scripts\MainMenu.cs" />
     <Compile Include="Assets\Scripts\WeatherManager.cs" />
@@ -111,6 +112,8 @@
     <Compile Include="Assets\EnemySpawner.cs" />
     <Compile Include="Assets\Scripts\Bin.cs" />
     <Compile Include="Assets\Scripts\BinChanger.cs" />
+    <Compile Include="Assets\LanguageManager.cs" />
+    <Compile Include="Assets\Translate.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

@@ -25,7 +25,8 @@ public class Spawn : MonoBehaviour
             _cashedList.AddRange(Resources.Load<GameObject>(_resourcesLink[UnityEngine.Random.Range(0, _resourcesLink.Count)]));
         }*/
        // Thread newThread = new Thread(new ThreadStart(FixedUpdate));
-       Thread newThread2 = new Thread(new ThreadStart(SpawnObject));
+       Thread spawnThread = new Thread(new ThreadStart(SpawnObject));
+       Thread updateThread = new Thread(new ThreadStart(FixedUpdate));
         //_timeRange *= 10;
         _timeToNextSpawn = _timeRange;
         SubscribeToTimeChanges();
@@ -72,16 +73,13 @@ public class Spawn : MonoBehaviour
         SpawnObject();
     }
 
-/*
-
- * 
     private void OnDrawGizmos()
     {
         Gizmos.color = _spawnRangeGizmosColor;
         Gizmos.DrawCube(new Vector3(transform.position.x, transform.position.y, transform.position.z),
          new Vector3(_spawnRange, 0.1f, 0));
     }
-    */
+   
     public virtual bool CanBeSpawned (GameObject prefab)
     {
         return true;
@@ -90,7 +88,7 @@ public class Spawn : MonoBehaviour
     public virtual void SpawnObject ()
     {
           int _localRange = UnityEngine.Random.Range(0, _resourcesLink.Count);
-          int _prefabNumber = UnityEngine.Random.Range(1, Resources.LoadAll<GameObject>(_resourcesLink[_localRange]).Length);
+          int _prefabNumber = UnityEngine.Random.Range(1, Resources.LoadAll<GameObject>(_resourcesLink[_localRange]).Length + 1);
           GameObject temp = Resources.Load<GameObject>(_resourcesLink[_localRange] + _prefabName + _prefabNumber);
         //  Debug.Log("Temp:" + temp + " " + _prefabName + _prefabNumber + " " + _resourcesLink[_localRange]);
      //   GameObject temp = _cashedList[UnityEngine.Random.Range(0, _cashedList.Count)];

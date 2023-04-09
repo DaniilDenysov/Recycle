@@ -103,6 +103,7 @@ public class Rocket : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (stop) return;
+        if (collision.gameObject.tag != "Shakable") return;
         stop = true;
         ScreenShakeManager.instance.Shake(200);
         //  _animator.Play("Asteroid_Destroy");
