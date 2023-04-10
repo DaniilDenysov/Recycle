@@ -9,7 +9,9 @@ public class GameBrakeManager : MonoBehaviour
 
     public static event EventHandler<bool> OnBrake;
 
-    private bool _status = false;
+    [SerializeField] private bool _status = false;
+
+    private Animator _camera;
 
     private void Awake()
     {
@@ -21,6 +23,12 @@ public class GameBrakeManager : MonoBehaviour
         PauseManager.OnPaused += PauseManager_OnPaused;
         DefeatManager.OnDefeat += DefeatManager_OnDefeat;
         ScoreManager.OnDefeat += ScoreManager_OnDefeat;
+    }
+
+    public void ChangeState (bool _state)
+    {
+        _status = _state;
+        OnBrake?.Invoke(this, _status);
     }
 
     private void ScoreManager_OnDefeat(object sender, EventArgs e)

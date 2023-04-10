@@ -13,12 +13,14 @@ public class GuideManager : MonoBehaviour
     [Header("If true it isn't updating in editor, but updating on start of game")]
     [SerializeField] private bool _smartListUpdate;
     [SerializeField] private List<Slide> _slides;
-
+    [SerializeField] private bool _guide;
+    [SerializeField] private Animator _camera;
     private int _currentSlide;
 
     private void Start()
     {
         if (!_smartListUpdate) return;
+        GameBrakeManager.Instance.ChangeState(_guide);
         UpdateSlidesList();
         _slides[0].Enable();
     }
@@ -51,7 +53,7 @@ public class GuideManager : MonoBehaviour
 
     public void NextSlide (int _dir)
     {
-        if (_currentSlide + _dir < _slides.Count - 1 && _currentSlide + _dir > 0)
+        if (_currentSlide + _dir < _slides.Count - 1 && _currentSlide + _dir >= 0)
         {
            
             _slides[_currentSlide].Disable();
@@ -61,6 +63,7 @@ public class GuideManager : MonoBehaviour
         else
         {
             _slides[_currentSlide].Disable();
+            GameBrakeManager.Instance.ChangeState(false);
             gameObject.SetActive(false);
         }
     }

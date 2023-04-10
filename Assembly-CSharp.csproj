@@ -55,6 +55,7 @@
   <ItemGroup>
     <Compile Include="Assets\ScreenShakeManager.cs" />
     <Compile Include="Assets\Trophey.cs" />
+    <Compile Include="Assets\LanguageManager.cs" />
     <Compile Include="Assets\Scripts\Pause.cs" />
     <Compile Include="Assets\Scripts\GarbageCollector.cs" />
     <Compile Include="Assets\Scripts\SpawnTrophey.cs" />
@@ -99,6 +100,7 @@
     <Compile Include="Assets\Scripts\VerticalDropdown.cs" />
     <Compile Include="Assets\Scripts\MapManager.cs" />
     <Compile Include="Assets\AsteroidSpawn.cs" />
+    <Compile Include="Assets\Translate.cs" />
     <Compile Include="Assets\Scripts\FPS.cs" />
     <Compile Include="Assets\Scripts\Spawn.cs" />
     <Compile Include="Assets\Scripts\FPS_Limit.cs" />
@@ -112,8 +114,6 @@
     <Compile Include="Assets\EnemySpawner.cs" />
     <Compile Include="Assets\Scripts\Bin.cs" />
     <Compile Include="Assets\Scripts\BinChanger.cs" />
-    <Compile Include="Assets\LanguageManager.cs" />
-    <Compile Include="Assets\Translate.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

@@ -13,6 +13,7 @@ public class Translate : MonoBehaviour
     {
         LanguageManager.OnLanguageChanged += LanguageManager_OnLanguageChanged;
         _text = GetComponent<TMP_Text>();
+        _text.text = _lines[LanguageManager.Instance.GetCurrentLanguage()];
     }
 
     private void LanguageManager_OnLanguageChanged(object sender, int e)
