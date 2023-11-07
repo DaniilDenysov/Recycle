@@ -51,6 +51,4 @@ public class PauseManager : MonoBehaviour
         OnPaused?.Invoke(this, _paused);
         FindObjectOfType<CinemachineVirtualCamera>().gameObject.GetComponent<Animator>().SetBool("Pause",_paused);
     }
-
-
 }

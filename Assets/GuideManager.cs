@@ -53,7 +53,7 @@ public class GuideManager : MonoBehaviour
 
     public void NextSlide (int _dir)
     {
-        if (_currentSlide + _dir < _slides.Count - 1 && _currentSlide + _dir >= 0)
+        if (_currentSlide + _dir <= _slides.Count - 1 && _currentSlide + _dir >= 0)
         {
            
             _slides[_currentSlide].Disable();
