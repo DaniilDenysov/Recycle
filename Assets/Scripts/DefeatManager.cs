@@ -3,29 +3,39 @@ using UnityEngine.SceneManagement;
 using UnityEngine;
 using System;
 using Cinemachine;
+using UnityEngine.Events;
 
 public class DefeatManager : MonoBehaviour
 {
-    public static DefeatManager instance { get; set; }
+    private bool _defeat;
 
-    public static event EventHandler<bool> OnDefeat;
+    [SerializeField] private UnityEvent OnDefeat;
 
     [SerializeField] private GameObject[] DefeatMenu;
 
-    private void Awake()
+
+    private void Start()
     {
-        instance = this;
+        EventManager.OnDefeat += EventManager_OnDefeat;
     }
 
+    private void EventManager_OnDefeat()
+    {
+        Defeat();
+    }
 
-    public void ActivateDefeatMenu ()
+    public void ChangeDefeatMenuState ()
     {
         DefeatMenu[MapManager.instance.GetMapID()].SetActive(true);
     }
 
     public void Defeat()
     {
-        OnDefeat?.Invoke(this, true);
-        FindObjectOfType<CinemachineVirtualCamera>().gameObject.GetComponent<Animator>().Play("DefeatAnim");
+        if (!_defeat)
+        {
+            OnDefeat?.Invoke();
+            EventManager.FireEvent(EventManager.OnGameStateChanged);
+            _defeat = !_defeat;
+        }
     }
 }

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,15 +6,20 @@ using UnityEngine;
 public class Dragable : MonoBehaviour
 {
     protected Rigidbody2D _rigidbody;
-    protected bool _isTaken = false;
-    protected bool _gameStopped = false;
+    [SerializeField] protected bool _isTaken = false;
+    [SerializeField] protected bool _gameStopped = false;
     protected Camera _camera;
 
     protected virtual void Start()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
         _camera = Camera.main;
-        GameBrakeManager.OnBrake += GameBrakeManager_OnBrake;
+        EventManager.OnGameStateChanged += EventManager_OnGameStateChanged;
+    }
+
+    private void EventManager_OnGameStateChanged()
+    {
+        _gameStopped = !_gameStopped;
     }
 
     protected virtual void GameBrakeManager_OnBrake(object sender, bool e)

@@ -105,7 +105,7 @@ public class Rocket : MonoBehaviour
         if (stop) return;
         if (collision.gameObject.tag != "Shakable") return;
         stop = true;
-        ScreenShakeManager.instance.Shake(200);
+        EventManager.FireEvent(EventManager.OnShake, 200f);
         //  _animator.Play("Asteroid_Destroy");
         _rigidbody.constraints = RigidbodyConstraints2D.FreezeAll;
         //Destroy(GetComponentInChildren<ParticleSystem>().gameObject);

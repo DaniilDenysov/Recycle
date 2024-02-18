@@ -82,8 +82,8 @@ public class Asteroid : MonoBehaviour
     {
         if (stop) return;
         stop = true;
-        ScreenShakeManager.instance.Shake(200);
-      //  _animator.Play("Asteroid_Destroy");
+        EventManager.FireEvent(EventManager.OnShake, 200f);
+        //  _animator.Play("Asteroid_Destroy");
         Destroy(gameObject);
         //Destroy(GetComponentInChildren<ParticleSystem>().gameObject);
     }

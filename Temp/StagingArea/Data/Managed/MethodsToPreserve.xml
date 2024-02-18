@@ -1,0 +1,128 @@
+<linker>
+	<assembly fullname="Assembly-CSharp" ignoreIfMissing="1">
+		<type fullname="Bomb">
+			<method name="Deffuse"/>
+			<method name="Deffuse"/>
+		</type>
+		<type fullname="Case">
+			<method name="openCase"/>
+			<method name="openCase"/>
+			<method name="openCase"/>
+		</type>
+		<type fullname="GuideManager">
+			<method name="NextSlide"/>
+			<method name="NextSlide"/>
+			<method name="NextSlide"/>
+			<method name="NextSlide"/>
+			<method name="NextSlide"/>
+			<method name="NextSlide"/>
+			<method name="NextSlide"/>
+			<method name="NextSlide"/>
+			<method name="NextSlide"/>
+			<method name="NextSlide"/>
+			<method name="NextSlide"/>
+			<method name="NextSlide"/>
+			<method name="NextSlide"/>
+			<method name="NextSlide"/>
+			<method name="NextSlide"/>
+		</type>
+		<type fullname="ImageSlider">
+			<method name="Button"/>
+			<method name="Button"/>
+			<method name="Button"/>
+			<method name="Button"/>
+		</type>
+		<type fullname="LanguageManager">
+			<method name="ChangeLanguage"/>
+			<method name="ChangeLanguage"/>
+			<method name="ChangeLanguage"/>
+			<method name="ChangeLanguage"/>
+			<method name="ChangeLanguage"/>
+			<method name="ChangeLanguage"/>
+			<method name="ChangeLanguage"/>
+			<method name="ChangeLanguage"/>
+			<method name="ChangeLanguage"/>
+			<method name="ChangeLanguage"/>
+			<method name="ChangeLanguage"/>
+			<method name="ChangeLanguage"/>
+			<method name="ChangeLanguage"/>
+			<method name="ChangeLanguage"/>
+			<method name="ChangeLanguage"/>
+			<method name="ChangeLanguage"/>
+		</type>
+		<type fullname="MainMenu">
+			<method name="Arcade"/>
+			<method name="Arcade"/>
+			<method name="Arcade"/>
+			<method name="Arcade"/>
+			<method name="SetVolume"/>
+			<method name="SetVolume"/>
+			<method name="SetVolume"/>
+			<method name="SetVolume"/>
+		</type>
+		<type fullname="PauseManager">
+			<method name="Pause"/>
+			<method name="Pause"/>
+			<method name="Pause"/>
+			<method name="Pause"/>
+			<method name="Pause"/>
+		</type>
+		<type fullname="SettingsManager">
+			<method name="HelpStateChange"/>
+			<method name="HelpStateChange"/>
+			<method name="HelpStateChange"/>
+			<method name="HelpStateChange"/>
+			<method name="MusicStateChange"/>
+			<method name="MusicStateChange"/>
+			<method name="MusicStateChange"/>
+			<method name="MusicStateChange"/>
+		</type>
+		<type fullname="VerticalDropdown">
+			<method name="Swipe"/>
+			<method name="Swipe"/>
+			<method name="Swipe"/>
+			<method name="Swipe"/>
+			<method name="Swipe"/>
+			<method name="Swipe"/>
+			<method name="Swipe"/>
+			<method name="Swipe"/>
+		</type>
+	</assembly>
+	<assembly fullname="Unity.RenderPipelines.Core.Runtime" ignoreIfMissing="1">
+		<type fullname="UnityEngine.Rendering.UI.DebugUIHandlerIntField">
+			<method name="OnDecrement"/>
+			<method name="OnDecrement"/>
+			<method name="OnIncrement"/>
+			<method name="OnIncrement"/>
+		</type>
+		<type fullname="UnityEngine.Rendering.UI.DebugUIHandlerObjectPopupField">
+			<method name="OnDecrement"/>
+			<method name="OnIncrement"/>
+		</type>
+		<type fullname="UnityEngine.Rendering.UI.DebugUIHandlerPanel">
+			<method name="OnScrollbarClicked"/>
+			<method name="OnScrollbarClicked"/>
+			<method name="ResetDebugManager"/>
+		</type>
+		<type fullname="UnityEngine.Rendering.UI.DebugUIHandlerUIntField">
+			<method name="OnDecrement"/>
+			<method name="OnDecrement"/>
+			<method name="OnIncrement"/>
+			<method name="OnIncrement"/>
+		</type>
+	</assembly>
+	<assembly fullname="UnityEngine.AnimationModule" ignoreIfMissing="1">
+		<type fullname="UnityEngine.Animator">
+			<method name="Play"/>
+			<method name="Play"/>
+			<method name="Play"/>
+			<method name="Play"/>
+			<method name="Play"/>
+			<method name="Play"/>
+			<method name="Play"/>
+			<method name="Play"/>
+			<method name="Play"/>
+			<method name="SetTrigger"/>
+		</type>
+	</assembly>
+</linker>

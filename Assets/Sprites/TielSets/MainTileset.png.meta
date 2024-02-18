@@ -3,7 +3,7 @@ guid: e63804b12bc49e840ba0cc568bf23795
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -20,11 +20,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -63,6 +64,8 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -74,6 +77,7 @@ TextureImporter:
     crunchedCompression: 1
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -86,6 +90,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -98,6 +103,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -110,6 +116,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
@@ -1043,10 +1050,10 @@ TextureImporter:
       name: MainTileset_43
       rect:
         serializedVersion: 2
-        x: 2732
-        y: 325
-        width: 460
-        height: 678
+        x: 2852
+        y: 429
+        width: 379
+        height: 434
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1258,7 +1265,7 @@ TextureImporter:
         width: 182
         height: 268
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1279,7 +1286,7 @@ TextureImporter:
         width: 183
         height: 266
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1300,7 +1307,7 @@ TextureImporter:
         width: 98
         height: 214
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1323,66 +1330,65 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      MainTileset_19: -185574629
-      MainTileset_18: 1399099469
-      MainTileset_36: -1047619572
-      MainTileset_49: -1863508700
       1pixel: -2084667936
-      MainTileset_53: 402954806
-      MainTileset_37: 1368183072
-      MainTileset_2: 1725391303
-      MainTileset_50: 698714005
-      MainTileset_7: 783281820
-      MainTileset_33: 1128033723
-      MainTileset_46: 1257542651
-      MainTileset_15: 1350123188
-      MainTileset_35: 386188094
+      MainTileset_0: -383900103
+      MainTileset_1: 1107458103
+      MainTileset_10: 397915506
       MainTileset_11: 371897645
-      MainTileset_22: 517479675
+      MainTileset_12: -32176468
+      MainTileset_13: -369547019
+      MainTileset_14: 946721065
+      MainTileset_15: 1350123188
+      MainTileset_16: -1918828779
       MainTileset_17: -1353314434
+      MainTileset_18: 1399099469
+      MainTileset_19: -185574629
+      MainTileset_2: 1725391303
       MainTileset_20: 863280896
       MainTileset_21: 1345055156
-      MainTileset_48: 105718951
-      MainTileset_31: -770945072
-      MainTileset_30: -1965685956
-      MainTileset_24: -1802923251
-      MainTileset_41: 1820962760
-      MainTileset_39: 50673049
-      MainTileset_42: 1941100587
-      MainTileset_12: -32176468
-      MainTileset_34: 152520291
-      MainTileset_9: -865578059
-      MainTileset_27: -2021693815
-      MainTileset_40: 1882287731
-      MainTileset_25: 597355782
-      MainTileset_45: -2093739243
-      MainTileset_26: -708459009
-      MainTileset_28: 1771060981
-      MainTileset_52: 2099742267
-      MainTileset_29: 1583551074
-      MainTileset_6: 1312204542
-      MainTileset_1: 1107458103
-      MainTileset_43: -1357649328
-      MainTileset_4: -1034647438
-      MainTileset_0: -383900103
-      MainTileset_5: 589680257
-      MainTileset_32: 1857997809
-      MainTileset_44: 953214714
-      MainTileset_10: 397915506
-      MainTileset_47: 1668397749
-      MainTileset_8: -1690883822
-      MainTileset_13: -369547019
-      MainTileset_38: 1591357358
-      MainTileset_3: 643844921
+      MainTileset_22: 517479675
       MainTileset_23: 4451514
-      MainTileset_55: 408203166
-      MainTileset_14: 946721065
-      MainTileset_16: -1918828779
+      MainTileset_24: -1802923251
+      MainTileset_25: 597355782
+      MainTileset_26: -708459009
+      MainTileset_27: -2021693815
+      MainTileset_28: 1771060981
+      MainTileset_29: 1583551074
+      MainTileset_3: 643844921
+      MainTileset_30: -1965685956
+      MainTileset_31: -770945072
+      MainTileset_32: 1857997809
+      MainTileset_33: 1128033723
+      MainTileset_34: 152520291
+      MainTileset_35: 386188094
+      MainTileset_36: -1047619572
+      MainTileset_37: 1368183072
+      MainTileset_38: 1591357358
+      MainTileset_39: 50673049
+      MainTileset_4: -1034647438
+      MainTileset_40: 1882287731
+      MainTileset_41: 1820962760
+      MainTileset_42: 1941100587
+      MainTileset_43: -1357649328
+      MainTileset_44: 953214714
+      MainTileset_45: -2093739243
+      MainTileset_46: 1257542651
+      MainTileset_47: 1668397749
+      MainTileset_48: 105718951
+      MainTileset_49: -1863508700
+      MainTileset_5: 589680257
+      MainTileset_50: 698714005
       MainTileset_51: -1788343149
+      MainTileset_52: 2099742267
+      MainTileset_53: 402954806
       MainTileset_54: -501788363
-  spritePackingTag: 
+      MainTileset_55: 408203166
+      MainTileset_6: 1312204542
+      MainTileset_7: 783281820
+      MainTileset_8: -1690883822
+      MainTileset_9: -865578059
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

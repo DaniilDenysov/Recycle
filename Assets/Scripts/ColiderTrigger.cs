@@ -13,12 +13,12 @@ public class ColiderTrigger : MonoBehaviour
 
     private void Start()
     {
-        GameBrakeManager.OnBrake += GameBrakeManager_OnBrake;
+        EventManager.OnGameStateChanged += EventManager_OnGameStateChanged;
     }
 
-    private void GameBrakeManager_OnBrake(object sender, bool e)
+    private void EventManager_OnGameStateChanged()
     {
-        _gameStopped = e;
+        _gameStopped = !_gameStopped;
     }
 
     private void Update()
@@ -34,33 +34,36 @@ public class ColiderTrigger : MonoBehaviour
 
     private void OnCollisionEnter2D (Collision2D collision)
     {
-        if (!_gameStopped)
+        if (_gameStopped==false)
         {
             if (collision.gameObject.tag == "Shakable")
             {
-                if (TryGetComponent<Rigidbody2D>(out Rigidbody2D rigidbody)) ScreenShakeManager.instance.VelocityShake(rigidbody.velocity);
+                if (TryGetComponent<Rigidbody2D>(out Rigidbody2D rigidbody)) EventManager.FireEvent(EventManager.OnVelocityShake,rigidbody.velocity);
                 RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, _dropEffectLayerMask);
                 if (hit) Instantiate(Resources.Load<GameObject>(_dropEffect), new Vector3(hit.point.x, hit.point.y, 1), Quaternion.identity);
             }
             if (garbage.gameObject.layer == collision.gameObject.layer && collision.gameObject.GetComponent<Bin>())
             {
-                ScoreManager.instance.AddScore(1);
+                EventManager.FireEvent(EventManager.OnScoreChanges, 1);
                 collision.gameObject.GetComponent<Bin>().PlaySound();
                 collision.gameObject.GetComponent<BinVFX>().Particles();
+                Debug.Log("Correct");
                 garbage.Destroy();
             }
             else if (collision.gameObject.layer == 15)
             {
                 garbage.SpawnParticles();
-                ScoreManager.instance.AddScore(-6);
+                EventManager.FireEvent(EventManager.OnScoreChanges,-6);
+                Debug.Log("Ground");
                 garbage.Destroy();
             }
             else if (collision.gameObject.layer != garbage.gameObject.layer && collision.gameObject.GetComponent<Bin>())
             {
-                ScoreManager.instance.AddScore(-3);
+                EventManager.FireEvent(EventManager.OnScoreChanges, -3);
                 Bin bin = collision.gameObject.GetComponent<Bin>();
                 collision.gameObject.GetComponent<Bin>().PlaySound();
                 collision.gameObject.GetComponent<BinVFX>().Particles();
+                Debug.Log("Wrong");
                 garbage.Destroy();
             }
         }

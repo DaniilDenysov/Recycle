@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Help : MonoBehaviour
 {
     private int Acceptable = 0;
-    private Animator tick_anim;
+
+    [SerializeField] private UnityEvent OnCorrect, OnIncorrect;
 
     void Start()
     {
@@ -17,13 +19,12 @@ public class Help : MonoBehaviour
             }
         }
         Acceptable = gameObject.layer;
-        tick_anim = GetComponentInChildren<Animator>();
     }
 
 
     public void Check(int Garbage_ID)
     {
-       if (Garbage_ID == Acceptable) tick_anim.Play("Accepted");
-       else tick_anim.Play("NotAccepted");
+       if (Garbage_ID == Acceptable) OnCorrect?.Invoke();
+       else OnIncorrect?.Invoke();
     }
 }

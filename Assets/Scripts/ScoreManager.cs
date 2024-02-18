@@ -5,88 +5,86 @@ using System;
 
 public class ScoreManager : MonoBehaviour
 {
-    public static ScoreManager instance { get; set; }
-    
-
-    public float Score, Level, CurrentLevelScore,Increase = 1;
+   
+    [SerializeField] private float _score = 0, _level = 10,_increase = 1;
     [SerializeField] private TextMeshProUGUI Display;
-    public bool Protection;
+    [SerializeField] private bool _protection;
 
-    public static event EventHandler OnDefeat;
+    private Image _effectDisplay;
 
-    private void Awake()
-    {
-        instance = this;
-    }
 
     private void Start()
     {
-       // Garbage.OnScore += Garbage_OnScore;
-        Effect.onEffectStarted += Effect_onEffectStarted;
-        Effect.onEffectStopped += Effect_onEffectStopped;
+        EventManager.OnScoreChanges += EventManager_OnScoreChanges;
+        EventManager.OnEffectStarted += EventManager_OnEffectStarted;
+        EventManager.OnEffectStopped += EventManager_OnEffectStopped;
+        _effectDisplay = GetComponent<Image>();
     }
 
-    private void Garbage_OnScore(object sender, int score)
+    private void EventManager_OnEffectStarted(Effect obj)
     {
-        
+        if (obj.TryGetComponent<Protect>(out Protect protect))
+        {
+            _protection = true;
+            return;
+        }
+        if (obj.TryGetComponent<DoubleScore>(out DoubleScore doubleScore))
+        {
+            _increase = (int)doubleScore.GetEffect();
+            return;
+        }
     }
 
-    private void Effect_onEffectStopped(object sender, Effect e)
+    private void EventManager_OnEffectStopped(Effect obj)
     {
-        if (e.TryGetComponent<Protect>(out Protect protect))
+        if (obj.TryGetComponent<Protect>(out Protect protect))
         {
-            Protection = false;
+            _protection = false;
             return;
         }
-        if (e.TryGetComponent<DoubleScore>(out DoubleScore doubleScore))
+        if (obj.TryGetComponent<DoubleScore>(out DoubleScore doubleScore))
         {
-            Increase = 1;
+            _increase = 1;
             return;
         }
     }
 
-    private void Effect_onEffectStarted(object sender, Effect e)
+    private void EventManager_OnScoreChanges(float obj)
     {
-        if (e.TryGetComponent<Protect>(out Protect protect))
-        {
-            Protection = (bool)protect.GetEffect();
-            return;
-        }
-        if (e.TryGetComponent<DoubleScore>(out DoubleScore doubleScore))
-        {
-            Increase = (int)doubleScore.GetEffect();
-            return;
-        }
+       AddScore(obj);
     }
-
 
     public void AddScore(float score)
     {
         if (score > 0)
         {
-            _Score(score);
-        } else if (!Protection)
+            SetScore(score);
+        }
+        else if (!_protection)
         {
-            _Score(score);
+            SetScore(score);
         }
     }
-    public void _Score (float score)
+    public void SetScore (float score)
     {
-        if (Score + (score * Increase) < 0)
+        if (_score + (score * _increase) < 0)
         {
-            OnDefeat?.Invoke(this,EventArgs.Empty);
+            EventManager.FireEvent(EventManager.OnDefeat);
+            _score = 0;
+            _effectDisplay.fillAmount = 0;
+            Display.text = "";
             return;
         }
-        if (Score + (score * Increase) > Level * 10) Level += 1;
-        Score += (score * Increase);
-        GetComponent<Image>().fillAmount = Score * (1f / (Level * 10f));
-        Display.text = Score.ToString();
-    }
-    public void SetScore(float score)
-    {     
-        Score = score;
-        GetComponent<Image>().fillAmount = score * (1f / (Level * 10f));
-        Display.text = Score.ToString(); 
+        if (_score + (score * _increase) > _level) _level *= 10;
+        _score += (score * _increase);
+        _effectDisplay.fillAmount = _score * (1f / (_level));
+        Display.text = _score.ToString();
     }
 
+    private void OnDestroy()
+    {
+        EventManager.OnScoreChanges -= EventManager_OnScoreChanges;
+        EventManager.OnEffectStarted -= EventManager_OnEffectStarted;
+        EventManager.OnEffectStopped -= EventManager_OnEffectStopped;
+    }
 }

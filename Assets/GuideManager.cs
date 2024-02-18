@@ -20,7 +20,7 @@ public class GuideManager : MonoBehaviour
     private void Start()
     {
         if (!_smartListUpdate) return;
-        GameBrakeManager.Instance.ChangeState(_guide);
+       // GameBrakeManager.Instance.ChangeState(_guide);
         UpdateSlidesList();
         _slides[0].Enable();
     }
@@ -63,7 +63,7 @@ public class GuideManager : MonoBehaviour
         else
         {
             _slides[_currentSlide].Disable();
-            GameBrakeManager.Instance.ChangeState(false);
+           // GameBrakeManager.Instance.ChangeState(false);
             gameObject.SetActive(false);
         }
     }

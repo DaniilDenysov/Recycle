@@ -28,7 +28,7 @@ const Il2CppCodeGenModule g_Unity_RenderPipeline_Universal_ShaderLibrary_CodeGen
 	0,
 	NULL,
 	NULL,
-	NULL, // module initializer,
+	NULL,
 	NULL,
 	NULL,
 	NULL,

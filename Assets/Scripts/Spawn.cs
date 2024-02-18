@@ -18,20 +18,23 @@ public class Spawn : MonoBehaviour
     [Range(0, 3)]
     [SerializeField] protected int _stackSize = 3;
     private float _timeToNextSpawn;
-    protected List<GameObject> _cashedList;
+    private int _resourcesCount;
     private bool _gameStopped = false;
-    protected ObservableCollection<StackPlate> stack = new ObservableCollection<StackPlate>();
+    protected Queue<ObjectData> stack = new Queue<ObjectData>();
+
     public virtual void Start()
     {
-        _cashedList = new List<GameObject>();
-        GameBrakeManager.OnBrake += GameBrakeManager_OnBrake;
-      //  Thread spawnThread = new Thread(new ThreadStart(SpawnObject));
-      //  Thread updateThread = new Thread(new ThreadStart(FixedUpdate));
+        EventManager.OnGameStateChanged += EventManager_OnGameStateChanged;
         _timeToNextSpawn = _timeRange;
         SubscribeToTimeChanges();
-
-        stack.CollectionChanged += OnStackChanged;
+        _resourcesCount = CountAllObjects();
     }
+
+    private void EventManager_OnGameStateChanged()
+    {
+        _gameStopped = !_gameStopped;
+    }
+
     public string GetPrefabName() { return _prefabName; }
     public List<string> GetResourcesLinks () { return _resourcesLink; }
     public void ClearRescources ()
@@ -43,10 +46,11 @@ public class Spawn : MonoBehaviour
         _resources = list;
     }
 
-    public class StackPlate 
-{
+    public class ObjectData 
+    {
         private int _localRange = 0, _prefabNumber = 0;
-        public StackPlate(int _localRange, int _prefabNumber)
+
+        public ObjectData(int _localRange, int _prefabNumber)
         {
             this._localRange = _localRange;
             this._prefabNumber = _prefabNumber;
@@ -61,7 +65,7 @@ public class Spawn : MonoBehaviour
         }
         public override bool Equals(object obj)
         {
-            return ((StackPlate)obj).GetLocalRange() == _localRange && ((StackPlate)obj).GetPrefabNumber() == _prefabNumber;
+            return ((ObjectData)obj).GetLocalRange() == _localRange && ((ObjectData)obj).GetPrefabNumber() == _prefabNumber;
         }
         public override string ToString()
         {
@@ -69,27 +73,10 @@ public class Spawn : MonoBehaviour
         }
     }
 
-    public virtual void OnStackChanged (object sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
-    {
-        if (stack.Count > _stackSize)
-        {
-            stack.RemoveAt(0);
-        }
-        foreach (StackPlate s in stack)
-        {
-            Debug.Log(s);
-        }
-    }
-
-    public virtual bool InStack (StackPlate garbage)
+    public virtual bool InStack (ObjectData garbage)
     {
         Debug.Log("Contains " + garbage + " " + stack.Contains(garbage));
         return stack.Contains(garbage);
-    }
-
-    private void GameBrakeManager_OnBrake(object sender, bool e)
-    {
-        _gameStopped = e;
     }
 
     IEnumerator Spawning ()
@@ -138,23 +125,30 @@ public class Spawn : MonoBehaviour
 
     public virtual void SpawnObject ()
     {
+
         if (!_loadDirectly)
         {
 
             int _localRange = UnityEngine.Random.Range(0, _resourcesLink.Count);
-            int _prefabNumber = UnityEngine.Random.Range(1, Resources.LoadAll<GameObject>(_resourcesLink[_localRange]).Length + 1);
+            int _prefabNumber = UnityEngine.Random.Range(1, Resources.LoadAll<GameObject>(_resourcesLink[_localRange]).Length+1);
 
-            while (stack.Contains(new StackPlate(_localRange, _prefabNumber)))
+            if (stack.Count>=_resourcesCount)
+            {
+                Debug.Log("Stack overflow!");
+                stack.Clear();
+            }
+
+            while (stack.Contains(new ObjectData(_localRange, _prefabNumber)))
             {
                 _localRange = UnityEngine.Random.Range(0, _resourcesLink.Count);
-                _prefabNumber = UnityEngine.Random.Range(1, Resources.LoadAll<GameObject>(_resourcesLink[_localRange]).Length + 1);
+                _prefabNumber = UnityEngine.Random.Range(1, Resources.LoadAll<GameObject>(_resourcesLink[_localRange]).Length+1);
             }
 
             GameObject temp = Resources.Load<GameObject>(_resourcesLink[_localRange] + _prefabName + _prefabNumber);
           //  if (CanBeSpawned(temp))
        //     {
                 Instantiate(temp, new Vector3(UnityEngine.Random.Range(_spawnRange, -_spawnRange), transform.position.y, 2), Quaternion.identity);
-                stack.Add(new StackPlate(_localRange, _prefabNumber));
+                stack.Enqueue(new ObjectData(_localRange, _prefabNumber));
           //  }
         }
         else
@@ -162,5 +156,15 @@ public class Spawn : MonoBehaviour
             int _chapter = UnityEngine.Random.Range(0, _resources.Count);
             Instantiate(_resources[_chapter]._resources[UnityEngine.Random.Range(0, _resources[_chapter]._resources.Count)].GetPrefab(), new Vector3(UnityEngine.Random.Range(_spawnRange, -_spawnRange), transform.position.y, 2), Quaternion.identity);
         }
+    }
+
+    private int CountAllObjects()
+    {
+        int _count = 0;
+        foreach (string _path in _resourcesLink)
+        {
+            _count += Resources.LoadAll<GameObject>(_path).Length;
+        }
+        return _count;
     }
 }

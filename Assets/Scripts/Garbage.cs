@@ -43,9 +43,9 @@ public class Garbage : Dragable
 
     protected override void FixedUpdate()
     {
+        base.FixedUpdate();
         if (_gameStopped) return;
         if (!_isTaken) return;
-        base.FixedUpdate();
         RaycastHit2D hit = Physics2D.Raycast(new Vector3(_circleCollider2D.bounds.center.x, _circleCollider2D.bounds.center.y - _circleCollider2D.radius - 0.1f, -1), Vector2.down);
         if (hit.collider)
             if (hit.collider.TryGetComponent<Help>(out Help help))

@@ -12,25 +12,24 @@ public class Bomb : MonoBehaviour,IWarning
     private bool _exploded = false;
     private const string _dropEffect = "Prefabs\\Effects\\VFX\\DropEffect";
     private Camera _camera;
-    [SerializeField] private AudioClip _fallenBomb;
+    [SerializeField] private AudioClip _fallenBomb,_deffuse;
     [SerializeField] private GameObject warningPref;
     private GameObject warning;
     private bool _playOnce = true;
-  //  private CinemachineImpulseSource _cinemachineImpulseSource;
+    private Rigidbody2D _rigidbody;
+
 
     private void Start()
     {
-        warning = Instantiate(warningPref, transform.position, Quaternion.identity);  
+        warning = Instantiate(warningPref, transform.position, Quaternion.identity);
+        _rigidbody = GetComponent<Rigidbody2D>();
         _camera = Camera.main;
-     //   _cinemachineImpulseSource = FindObjectOfType<CinemachineImpulseSource>(); 
         Invoke(nameof(Explode),_bombTimer);
     }
 
     void Update()
     {
         Follow();
-      //  bombTimer -= Time.deltaTime;
-       // if (bombTimer <= 0) Explode();
     }
 
     private void OnDestroy()
@@ -42,7 +41,7 @@ public class Bomb : MonoBehaviour,IWarning
     {
         if (_exploded) return;
         List<Collider2D> list = new List<Collider2D>();
-        ScreenShakeManager.instance.Shake(50f);
+        EventManager.FireEvent(EventManager.OnShake, 50f);
         list.AddRange(Physics2D.OverlapCircleAll(transform.position, _explosionRadius));
         ExplodeDamage(list);
         ExplosionPhysics(Physics2D.OverlapCircleAll(transform.position, _explosionRadius));
@@ -61,7 +60,7 @@ public class Bomb : MonoBehaviour,IWarning
         if (!_playOnce) return;
         if (collision.gameObject.tag != "Shakable") return;
         SoundManager.instance.PlaySound(_fallenBomb);
-        if (TryGetComponent<Rigidbody2D>(out Rigidbody2D rigidbody)) ScreenShakeManager.instance.VelocityShake(rigidbody.velocity);
+        EventManager.FireEvent(EventManager.OnVelocityShake , _rigidbody.velocity);
         RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down);
         if (hit) Instantiate(Resources.Load<GameObject>(_dropEffect),new Vector3(hit.point.x, hit.point.y, 1), Quaternion.identity);
         _playOnce = false;
@@ -69,7 +68,9 @@ public class Bomb : MonoBehaviour,IWarning
 
     public void Deffuse ()
     {
-        GetComponent<AudioSource>().Play();
+
+        EventManager.FireEvent(EventManager.OnSoundPlayed,_deffuse);
+       // GetComponent<AudioSource>().Play();
         Destroy(GetComponent<Rigidbody2D>());
         _exploded = true;
         Destroy(warning);

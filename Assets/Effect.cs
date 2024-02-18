@@ -1,7 +1,5 @@
 using System;
 using UnityEngine.UI;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Effect : MonoBehaviour
@@ -9,7 +7,7 @@ public class Effect : MonoBehaviour
     [Range(0, 600)]
     [SerializeField] protected float _effectTime = 60f;
     protected float _fixedEffectTime;
-    public static event EventHandler<Effect> onEffectStarted, onEffectStopped;
+
     [SerializeField] protected Image _progress;
     [SerializeField] protected AnimationCurve _effect_func, _time_func;
     private float timeSpend = 0f;
@@ -49,12 +47,12 @@ public class Effect : MonoBehaviour
 
     public virtual void EffectStart ()
     {
-        onEffectStarted?.Invoke(this, this);
+        EventManager.FireEvent(EventManager.OnEffectStarted, this);
     }
 
     public virtual void EffectStopped ()
     {
-        onEffectStopped?.Invoke(this, this);
+        EventManager.FireEvent(EventManager.OnEffectStopped, this);
         Destroy(_progress.gameObject);
         Destroy(this);
     }

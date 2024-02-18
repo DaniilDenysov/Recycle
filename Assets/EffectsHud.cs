@@ -11,20 +11,25 @@ public class EffectsHud : MonoBehaviour
 
     void Start()
     {
-        Effect.onEffectStarted += Effect_onEffectStarted;
-        //Effect.onEffectStopped += Effect_onEffectStopped;
+        EventManager.OnEffectStarted += EventManager_OnEffectStarted;
+        EventManager.OnEffectStopped += EventManager_OnEffectStopped;
     }
 
-    private void Effect_onEffectStopped(object sender, GameObject e)
+    private void EventManager_OnEffectStarted(Effect obj)
+    {
+        GameObject _temp = Instantiate(Resources.Load<GameObject>(_rescourceLink + obj.ToString()), transform);
+        obj.SetProgress(_temp.GetComponent<Image>());
+    }
+
+    private void EventManager_OnEffectStopped(Effect obj)
     {
 
     }
 
-    private void Effect_onEffectStarted(object sender, Effect e)
+    private void OnDestroy()
     {
-            Debug.Log("Effect: " + _rescourceLink + e.ToString());
-            GameObject _temp = Instantiate(Resources.Load<GameObject>(_rescourceLink + e.ToString()), transform);
-            e.SetProgress(_temp.GetComponent<Image>());
+        EventManager.OnEffectStarted -= EventManager_OnEffectStarted;
+        EventManager.OnEffectStopped += EventManager_OnEffectStopped;
     }
 }
  

@@ -3,19 +3,16 @@ using UnityEngine.UI;
 
 public class Bin : MonoBehaviour,IDamagable
 {
-     private int Acceptable;
     [SerializeField] private AudioClip audioClip;
-    [SerializeField] private Image hp_bar_UI;
-    [SerializeField] private Animator hp_bar;
     private float _health = 100f;
 
     public void Damage(float damage)
     {
         _health -= damage;
-        if (_health <= 0) DefeatManager.instance.Defeat();
+        if (_health <= 0) EventManager.FireEvent(EventManager.OnDefeat);
     }
     public void PlaySound ()
     {
-        SoundManager.instance.PlaySound(audioClip);
+        EventManager.FireEvent(EventManager.OnSoundPlayed,audioClip);
     }
 }
